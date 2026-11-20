@@ -11,7 +11,7 @@
       },
       {
         "slug": "sorted-enumeration",
-        "title": "排序与去重"
+        "title": "排序后枚举与去重"
       },
       {
         "slug": "same-direction",
@@ -49,7 +49,7 @@
     "topics": [
       {
         "slug": "permutations",
-        "title": "排列与组合"
+        "title": "排列枚举"
       },
       {
         "slug": "pruning",
@@ -74,7 +74,7 @@
     "topics": [
       {
         "slug": "grid-traversal",
-        "title": "网格遍历与连通分量"
+        "title": "网格建模与邻接关系"
       },
       {
         "slug": "graph-traversal",
@@ -82,7 +82,7 @@
       },
       {
         "slug": "connected-components",
-        "title": "连通分量"
+        "title": "连通分量与区域计数"
       }
     ],
     "domain": "graphs-grids"
