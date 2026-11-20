@@ -354,10 +354,10 @@ def topic_labels(categories):
 
 def build_topics(categories,posts,base,domains):
     published=[p for p in posts if p['status']=='published']
-    category_labels=topic_labels(categories)
     ordered_domains=sorted(domains,key=lambda d:d['order'])
+    domain_counts={d['slug']:sum(p['category'] in {c['slug'] for c in categories if c['domain']==d['slug']} for p in published) for d in ordered_domains}
     summary=''.join(
-        f'<a href="#domain-{H(d["slug"])}">{H(d["title"])} <small>{sum(p["category"] in {c["slug"] for c in categories if c["domain"]==d["slug"]} for p in published):02d} 篇</small></a>'
+        f'<a href="#domain-{H(d["slug"])}">{H(d["title"])} <small>{domain_counts[d["slug"]]:02d} 篇</small></a>'
         for d in ordered_domains
     )
     groups=[]
