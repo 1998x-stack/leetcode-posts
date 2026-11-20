@@ -254,7 +254,7 @@ def test_registry_and_original_svg_covers():
         assert post["topic"] in registered[post["category"]]
         assert set(post["facets"]) == set(allowed) | {"learning_stage"}
         for field, values in allowed.items():
-            assert set(post["facets"][field]) >= set(values) if False else set(post["facets"][field]) <= values
+            assert set(post["facets"][field]) <= values
         assert post["facets"]["learning_stage"] in stages
         folder = ROOT / "posts" / post["category"] / post["slug"]
         assert (folder / post["cover"]["src"]).is_file()
