@@ -7,7 +7,7 @@ description: Convert LeetCode problems into rigorous, readable Chinese HTML expl
 Adapted from xm-posts' editorial and visual production system. Audience: undergraduate/graduate students and interview learners. Outputs are independently written; no wholesale copying of LeetCode statements or third-party diagrams.
 
 ## Mandatory workflow
-1. Read AGENTS.md, README.md, the taxonomy, publishing manifest, existing posts and design assets.
+1. Read AGENTS.md, README.md, docs/taxonomy.md, content/domains.json, content/categories.json, content/facets.json, publishing manifest, existing posts and design assets.
 2. Verify the official LeetCode title, number, difficulty, I/O and relevant constraints; summarize the prompt in original words. Put provenance in evidence.json. Do not invent metrics or reproduce full copyrighted statement.
 3. Design the progression: concrete example → naive baseline → invariant → state transitions → correctness argument → complexity with output/stack assumptions → Python code → edge-case tests.
 4. Draw at least three original, accessible, self-standing SVG figures: mechanism cover, trace and counterexample. Use viewBox, title/description, clear labels, accurate colors, and 360px legibility. Avoid generic/shared thumbnails.
@@ -19,6 +19,11 @@ Adapted from xm-posts' editorial and visual production system. Audience: undergr
 
 ## Artifact contract
 posts/<category>/<slug>/index.html; assets/cover.svg, assets/trace.svg, assets/pitfall.svg; solution.py; evidence.json; tests/test_<slug>.py. Register a real LeetCode problem_url in content/posts.json with a unique explained cover.caption and published or draft status.
+
+## Taxonomy and knowledge links
+- Give every published post exactly one primary category and one L3 topic. Preserve existing slugs and article URLs.
+- Populate the six controlled facet fields (`structures`, `techniques`, `problem_shapes`, `reasoning`, `prerequisites`, `learning_stage`) using only `content/facets.json` values.
+- Treat domains as knowledge navigation, categories as algorithm families, topics as reusable problem patterns, and learning paths as ordered prerequisite journeys. Never create a category solely for one problem.
 
 ## Critical correctness
 - Sliding window: define valid state and monotone left bound.

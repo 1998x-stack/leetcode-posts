@@ -1,0 +1,176 @@
+{
+  "version": 1,
+  "description": "Cross-cutting controlled vocabulary. These facets complement the single primary category/topic; they never replace it.",
+  "structures": [
+    {
+      "slug": "array",
+      "title": "数组"
+    },
+    {
+      "slug": "string",
+      "title": "字符串"
+    },
+    {
+      "slug": "hash-map",
+      "title": "哈希表"
+    },
+    {
+      "slug": "grid",
+      "title": "二维网格"
+    },
+    {
+      "slug": "implicit-graph",
+      "title": "隐式图"
+    },
+    {
+      "slug": "recursion-state",
+      "title": "递归状态"
+    }
+  ],
+  "techniques": [
+    {
+      "slug": "sliding-window",
+      "title": "滑动窗口"
+    },
+    {
+      "slug": "last-seen-index",
+      "title": "最后出现位置"
+    },
+    {
+      "slug": "two-pointers",
+      "title": "双指针"
+    },
+    {
+      "slug": "greedy-choice",
+      "title": "贪心选择"
+    },
+    {
+      "slug": "sorting",
+      "title": "排序"
+    },
+    {
+      "slug": "deduplication",
+      "title": "去重"
+    },
+    {
+      "slug": "backtracking",
+      "title": "回溯"
+    },
+    {
+      "slug": "depth-first-search",
+      "title": "深度优先搜索"
+    },
+    {
+      "slug": "flood-fill",
+      "title": "洪水填充"
+    }
+  ],
+  "problem_shapes": [
+    {
+      "slug": "longest-unique-substring",
+      "title": "最长无重复子串"
+    },
+    {
+      "slug": "maximum-area-pair",
+      "title": "最大面积二元选择"
+    },
+    {
+      "slug": "k-sum-triplets",
+      "title": "K 数之和与三元组"
+    },
+    {
+      "slug": "permutation-enumeration",
+      "title": "排列枚举"
+    },
+    {
+      "slug": "connected-component-count",
+      "title": "连通分量计数"
+    }
+  ],
+  "reasoning": [
+    {
+      "slug": "window-invariant",
+      "title": "窗口不变量"
+    },
+    {
+      "slug": "monotonic-left-boundary",
+      "title": "左边界单调性"
+    },
+    {
+      "slug": "candidate-elimination",
+      "title": "候选淘汰证明"
+    },
+    {
+      "slug": "upper-bound-proof",
+      "title": "上界证明"
+    },
+    {
+      "slug": "sorted-order",
+      "title": "有序性推理"
+    },
+    {
+      "slug": "duplicate-elimination",
+      "title": "重复解消除"
+    },
+    {
+      "slug": "choice-explore-undo",
+      "title": "选择—探索—撤销"
+    },
+    {
+      "slug": "state-restoration",
+      "title": "状态恢复"
+    },
+    {
+      "slug": "visited-on-discovery",
+      "title": "发现时标记访问"
+    },
+    {
+      "slug": "graph-modeling",
+      "title": "图建模"
+    }
+  ],
+  "prerequisites": [
+    {
+      "slug": "array-indexing",
+      "title": "数组与下标"
+    },
+    {
+      "slug": "hash-map-basics",
+      "title": "哈希表基础"
+    },
+    {
+      "slug": "two-pointer-basics",
+      "title": "双指针基础"
+    },
+    {
+      "slug": "sorting-basics",
+      "title": "排序基础"
+    },
+    {
+      "slug": "recursion-basics",
+      "title": "递归基础"
+    },
+    {
+      "slug": "graph-modeling-basics",
+      "title": "图建模基础"
+    },
+    {
+      "slug": "dfs-basics",
+      "title": "DFS 基础"
+    }
+  ],
+  "learning_stages": [
+    {
+      "slug": "foundation",
+      "title": "基础建立"
+    },
+    {
+      "slug": "core",
+      "title": "核心模式"
+    },
+    {
+      "slug": "advanced",
+      "title": "进阶技巧"
+    }
+  ]
+}

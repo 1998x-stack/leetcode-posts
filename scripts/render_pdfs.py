@@ -176,7 +176,7 @@ class PdfCache:
 def export(out: Path, base_url: str = DEFAULT_URL, only: str | None = None,
            cache_dir: Path | None = None, force: bool = False) -> list[dict]:
     out = out.resolve()
-    _, posts = data(ROOT)
+    _, posts, _, _ = data(ROOT)
     all_published = [p for p in posts if p["status"] == "published"]
     published = all_published
     if only:

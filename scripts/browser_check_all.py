@@ -85,7 +85,7 @@ def _check_shard(shard: int, articles: list[tuple[str, str]], output: str) -> di
 def run(workers: int, output: Path) -> dict:
     if not 1 <= workers <= 4:
         raise ValueError("The supported worker count is 1–4 (resource bounded)")
-    _, posts = data(ROOT)
+    _, posts, _, _ = data(ROOT)
     articles = [(p["slug"], p["category"]) for p in posts if p["status"] == "published"]
     if not articles:
         raise ValueError("No published articles found; cannot silently skip QA")

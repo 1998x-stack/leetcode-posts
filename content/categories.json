@@ -11,9 +11,14 @@
       },
       {
         "slug": "sorted-enumeration",
-        "title": "排序与去重"
+        "title": "排序后枚举与去重"
+      },
+      {
+        "slug": "same-direction",
+        "title": "同向双指针"
       }
-    ]
+    ],
+    "domain": "linear-patterns"
   },
   {
     "slug": "sliding-window",
@@ -28,8 +33,13 @@
       {
         "slug": "window-counting",
         "title": "窗口计数"
+      },
+      {
+        "slug": "fixed-window",
+        "title": "定长窗口"
       }
-    ]
+    ],
+    "domain": "linear-patterns"
   },
   {
     "slug": "backtracking",
@@ -39,13 +49,22 @@
     "topics": [
       {
         "slug": "permutations",
-        "title": "排列与组合"
+        "title": "排列枚举"
       },
       {
         "slug": "pruning",
         "title": "剪枝与约束"
+      },
+      {
+        "slug": "combinations",
+        "title": "组合枚举"
+      },
+      {
+        "slug": "subsets",
+        "title": "子集枚举"
       }
-    ]
+    ],
+    "domain": "search-enumeration"
   },
   {
     "slug": "graphs",
@@ -55,12 +74,17 @@
     "topics": [
       {
         "slug": "grid-traversal",
-        "title": "网格遍历与连通分量"
+        "title": "网格建模与邻接关系"
       },
       {
-        "slug": "shortest-path",
-        "title": "最短路径"
+        "slug": "graph-traversal",
+        "title": "图遍历与访问状态"
+      },
+      {
+        "slug": "connected-components",
+        "title": "连通分量与区域计数"
       }
-    ]
+    ],
+    "domain": "graphs-grids"
   }
 ]

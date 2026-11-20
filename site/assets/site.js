@@ -64,7 +64,7 @@
     card.dataset.category = post.category;
     card.dataset.search = normalized([
       post.title, post.subtitle, post.summary, post.category, post.category_title,
-      post.topic, post.topic_title, ...(post.tags || [])
+      post.topic, post.topic_title, ...(post.tags || []), ...Object.values(post.facets || {}).flatMap(value => Array.isArray(value) ? value : [value])
     ].join(' '));
 
     card.append(element('span', 'index-order', String(index + 1).padStart(2, '0')));
@@ -157,7 +157,7 @@
     const matching = catalogue.filter(post => {
       const text = normalized([
         post.title, post.subtitle, post.summary, post.category, post.category_title,
-        post.topic, post.topic_title, ...(post.tags || [])
+        post.topic, post.topic_title, ...(post.tags || []), ...Object.values(post.facets || {}).flatMap(value => Array.isArray(value) ? value : [value])
       ].join(' '));
       return (!category || post.category === category) && terms.every(term => text.includes(term));
     });

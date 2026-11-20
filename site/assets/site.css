@@ -454,3 +454,33 @@
   .pagination .page-control{min-width:77px}
 }
 @media print{.pagination{display:none!important}}
+
+
+/* Hierarchical taxonomy: domain > family > problem pattern; planned items stay lightweight. */
+.taxonomy-domain{padding:38px 0;border-top:1px solid var(--line);scroll-margin-top:18px}
+.taxonomy-domain-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:22px}
+.taxonomy-domain-heading h2{font-size:clamp(25px,3vw,34px);line-height:1.35;letter-spacing:-.045em;margin:7px 0 0}
+.taxonomy-domain-heading>span{font-size:11px;color:#81928a;white-space:nowrap;padding-bottom:7px}
+.taxonomy-domain-description{max-width:800px;color:#71847d;font-size:13px;line-height:1.85;margin:12px 0 22px}
+.taxonomy-active-families{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:14px}
+.taxonomy-family{min-width:0;border:1px solid #dfe8e1;background:#fffefa;border-radius:7px;padding:19px 20px}
+.taxonomy-family-heading{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
+.taxonomy-family-heading h3{font-size:18px;margin:0;line-height:1.45}
+.taxonomy-family-heading>span{font-size:10px;color:#8b9b91;white-space:nowrap}
+.taxonomy-family>p{font-size:12px;line-height:1.75;color:#72847c;margin:7px 0 0}
+.taxonomy-family .taxonomy-links{grid-template-columns:1fr;margin-top:13px}
+.taxonomy-roadmap{margin-top:22px;padding:19px 20px;border:1px dashed #cbd9cd;border-radius:7px;background:#f6f7f0}
+.taxonomy-roadmap>.eyebrow{margin-bottom:12px}
+.taxonomy-planned-family{border-top:1px solid #e2e8de;padding:10px 0}
+.taxonomy-planned-family:first-of-type{border-top:0}
+.taxonomy-planned-family summary{display:flex;align-items:center;justify-content:space-between;gap:12px;cursor:pointer;color:#506d62;font-size:13px;font-weight:720;list-style:none}
+.taxonomy-planned-family summary::-webkit-details-marker{display:none}
+.taxonomy-planned-family summary:after{content:"+";color:#7e9b8a;font-size:16px;margin-left:auto}
+.taxonomy-planned-family[open] summary:after{content:"−"}
+.taxonomy-planned-family summary small{font-size:10px;color:#9aa99a;font-weight:600}
+.taxonomy-planned-family>p{font-size:12px;color:#72847c;line-height:1.7;margin:8px 0}
+.taxonomy-pattern-chips{display:flex;flex-wrap:wrap;gap:6px}
+.taxonomy-pattern-chips span{padding:4px 8px;border-radius:4px;background:#e9f0e8;color:#648073;font-size:10px}
+.taxonomy-roadmap-note{font-size:12px;color:#839188;padding:15px;border:1px dashed #d4dfd5;border-radius:5px}
+@media(max-width:760px){.taxonomy-domain{padding:28px 0}.taxonomy-domain-heading{align-items:flex-start;flex-direction:column;gap:7px}.taxonomy-active-families{grid-template-columns:1fr}.taxonomy-family{padding:16px}.taxonomy-roadmap{padding:14px}}
+@media print{.taxonomy-roadmap{break-inside:avoid}.taxonomy-planned-family:not([open])>*:not(summary){display:none}}

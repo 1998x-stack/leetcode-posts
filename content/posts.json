@@ -22,6 +22,28 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "重复 a 出现后，窗口左界跳过旧位置"
+    },
+    "facets": {
+      "structures": [
+        "string",
+        "hash-map"
+      ],
+      "techniques": [
+        "sliding-window",
+        "last-seen-index"
+      ],
+      "problem_shapes": [
+        "longest-unique-substring"
+      ],
+      "reasoning": [
+        "window-invariant",
+        "monotonic-left-boundary"
+      ],
+      "prerequisites": [
+        "array-indexing",
+        "hash-map-basics"
+      ],
+      "learning_stage": "core"
     }
   },
   {
@@ -47,6 +69,27 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "两根柱的短边与宽度共同决定盛水面积"
+    },
+    "facets": {
+      "structures": [
+        "array"
+      ],
+      "techniques": [
+        "two-pointers",
+        "greedy-choice"
+      ],
+      "problem_shapes": [
+        "maximum-area-pair"
+      ],
+      "reasoning": [
+        "candidate-elimination",
+        "upper-bound-proof"
+      ],
+      "prerequisites": [
+        "array-indexing",
+        "two-pointer-basics"
+      ],
+      "learning_stage": "core"
     }
   },
   {
@@ -72,6 +115,28 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "排序后固定一个数，再收缩左右指针找到零和"
+    },
+    "facets": {
+      "structures": [
+        "array"
+      ],
+      "techniques": [
+        "sorting",
+        "two-pointers",
+        "deduplication"
+      ],
+      "problem_shapes": [
+        "k-sum-triplets"
+      ],
+      "reasoning": [
+        "sorted-order",
+        "duplicate-elimination"
+      ],
+      "prerequisites": [
+        "sorting-basics",
+        "two-pointer-basics"
+      ],
+      "learning_stage": "core"
     }
   },
   {
@@ -97,6 +162,28 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "回溯树按选择、递归、撤销展开不同排列"
+    },
+    "facets": {
+      "structures": [
+        "array",
+        "recursion-state"
+      ],
+      "techniques": [
+        "backtracking",
+        "depth-first-search"
+      ],
+      "problem_shapes": [
+        "permutation-enumeration"
+      ],
+      "reasoning": [
+        "choice-explore-undo",
+        "state-restoration"
+      ],
+      "prerequisites": [
+        "array-indexing",
+        "recursion-basics"
+      ],
+      "learning_stage": "core"
     }
   },
   {
@@ -104,7 +191,7 @@
     "title": "LeetCode 200 · 岛屿数量",
     "subtitle": "二维网格也是图：一次 DFS 如何恰好数出一个连通块？",
     "category": "graphs",
-    "topic": "grid-traversal",
+    "topic": "connected-components",
     "status": "published",
     "published": "2026-11-20",
     "updated": "2026-11-20",
@@ -122,6 +209,28 @@
     "cover": {
       "src": "assets/cover.svg",
       "caption": "四邻接网格中颜色区分三座独立岛屿"
+    },
+    "facets": {
+      "structures": [
+        "grid",
+        "implicit-graph"
+      ],
+      "techniques": [
+        "depth-first-search",
+        "flood-fill"
+      ],
+      "problem_shapes": [
+        "connected-component-count"
+      ],
+      "reasoning": [
+        "visited-on-discovery",
+        "graph-modeling"
+      ],
+      "prerequisites": [
+        "graph-modeling-basics",
+        "dfs-basics"
+      ],
+      "learning_stage": "core"
     }
   }
 ]

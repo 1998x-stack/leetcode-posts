@@ -1,0 +1,285 @@
+[
+  {
+    "slug": "linear-data-structures",
+    "title": "线性数据结构与字符串",
+    "english": "Linear Data Structures & Strings",
+    "order": 10,
+    "description": "理解数据如何存放、查找、更新与组织；先掌握数组、哈希、链表、栈队列和堆等基础工具。",
+    "planned_categories": [
+      {
+        "slug": "arrays-hashing",
+        "title": "数组与哈希表",
+        "scope": "连续存储、索引访问、频次统计、集合判重与映射查找。",
+        "topics": [
+          "数组遍历与原地修改",
+          "哈希计数与索引映射",
+          "集合、去重与查找"
+        ]
+      },
+      {
+        "slug": "strings",
+        "title": "字符串",
+        "scope": "把字符串看作字符序列，处理匹配、回文、字符计数与编码。",
+        "topics": [
+          "字符扫描与频次",
+          "回文与双向比较",
+          "字符串匹配与构造"
+        ]
+      },
+      {
+        "slug": "linked-list",
+        "title": "链表",
+        "scope": "通过节点引用组织序列，重点理解指针改写、反转、合并与环。",
+        "topics": [
+          "链表反转与局部重连",
+          "快慢指针与环检测",
+          "有序链表合并"
+        ]
+      },
+      {
+        "slug": "stack-queue",
+        "title": "栈、队列与双端队列",
+        "scope": "用受限访问顺序管理待处理元素，支撑括号匹配、层序处理和窗口维护。",
+        "topics": [
+          "栈与括号匹配",
+          "队列与层序处理",
+          "双端队列与窗口维护"
+        ]
+      },
+      {
+        "slug": "heap-priority-queue",
+        "title": "堆与优先队列",
+        "scope": "动态维护最小值、最大值或 Top-K 候选，理解堆序性质与复杂度。",
+        "topics": [
+          "Top-K 与第 K 大",
+          "多路归并",
+          "动态中位数与双堆"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "linear-patterns",
+    "title": "线性扫描与区间技巧",
+    "english": "Linear Scanning & Range Patterns",
+    "order": 20,
+    "description": "通过有方向的扫描、边界收缩、区间维护和有序性，把重复枚举转化为线性或对数级处理。",
+    "planned_categories": [
+      {
+        "slug": "prefix-sum",
+        "title": "前缀和与差分",
+        "scope": "把区间累计转化为前缀状态差，或把多次区间修改转化为边界增量。",
+        "topics": [
+          "一维前缀和",
+          "二维前缀和",
+          "差分数组与区间更新"
+        ]
+      },
+      {
+        "slug": "binary-search",
+        "title": "二分查找",
+        "scope": "维护真假边界或候选区间，明确单调性、搜索空间和循环不变量。",
+        "topics": [
+          "精确查找与边界查找",
+          "旋转数组与局部有序",
+          "答案空间二分"
+        ]
+      },
+      {
+        "slug": "sorting-intervals",
+        "title": "排序与区间",
+        "scope": "先建立顺序，再处理重叠、合并、调度与扫描线事件。",
+        "topics": [
+          "排序与自定义比较",
+          "区间合并与交集",
+          "区间调度与扫描线"
+        ]
+      },
+      {
+        "slug": "monotonic-structures",
+        "title": "单调栈与单调队列",
+        "scope": "维护单调候选结构，快速找到下一个更大/更小元素或窗口极值。",
+        "topics": [
+          "下一个更大元素",
+          "柱状图与边界贡献",
+          "滑动窗口最大值"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "trees-recursion",
+    "title": "树、递归与分治",
+    "english": "Trees, Recursion & Divide and Conquer",
+    "order": 30,
+    "description": "从递归子问题、树的遍历顺序和结构性质出发，理解局部信息如何汇总成全局答案。",
+    "planned_categories": [
+      {
+        "slug": "binary-tree",
+        "title": "二叉树",
+        "scope": "围绕前序、中序、后序、层序及路径状态组织递归与迭代解法。",
+        "topics": [
+          "深度优先遍历",
+          "层序遍历与层级信息",
+          "路径、直径与子树状态"
+        ]
+      },
+      {
+        "slug": "binary-search-tree",
+        "title": "二叉搜索树",
+        "scope": "利用左小右大的有序性质完成查找、插入、删除和顺序统计。",
+        "topics": [
+          "BST 性质与查找",
+          "插入、删除与验证",
+          "第 K 小与前驱后继"
+        ]
+      },
+      {
+        "slug": "trie",
+        "title": "字典树",
+        "scope": "用共享前缀的树结构处理字符串集合、前缀查询与词典搜索。",
+        "topics": [
+          "前缀树构建",
+          "前缀查询与删除",
+          "通配符与多词搜索"
+        ]
+      },
+      {
+        "slug": "divide-and-conquer",
+        "title": "分治算法",
+        "scope": "将问题拆成规模更小的子问题，再合并子结果并分析递归代价。",
+        "topics": [
+          "分解与合并",
+          "归并思想与递归复杂度",
+          "快速选择与划分"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "graphs-grids",
+    "title": "图论与网格",
+    "english": "Graphs & Grids",
+    "order": 40,
+    "description": "将关系、连通性和状态转移建模为图；从遍历开始，逐步学习连通分量、依赖顺序与路径代价。",
+    "planned_categories": [
+      {
+        "slug": "union-find",
+        "title": "并查集",
+        "scope": "维护动态连通分量，支持合并、连通性判断和冗余边检测。",
+        "topics": [
+          "路径压缩与按秩合并",
+          "连通分量计数",
+          "冗余连接与动态合并"
+        ]
+      },
+      {
+        "slug": "topological-sort",
+        "title": "拓扑排序",
+        "scope": "处理有向无环图中的先后依赖、课程安排和任务调度。",
+        "topics": [
+          "入度与 Kahn 算法",
+          "DFS 后序与拓扑序",
+          "环检测与依赖可行性"
+        ]
+      },
+      {
+        "slug": "shortest-path",
+        "title": "最短路径",
+        "scope": "根据边权和图结构选择 BFS、Dijkstra 或 Bellman-Ford。",
+        "topics": [
+          "无权图 BFS 最短路",
+          "Dijkstra 与非负权",
+          "负权边与 Bellman-Ford"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "search-enumeration",
+    "title": "搜索与组合枚举",
+    "english": "Search & Enumeration",
+    "order": 50,
+    "description": "显式维护搜索状态与决策过程，理解如何枚举候选、恢复状态，并用约束减少搜索空间。",
+    "planned_categories": []
+  },
+  {
+    "slug": "optimization",
+    "title": "动态规划与贪心优化",
+    "english": "Dynamic Programming & Greedy Optimization",
+    "order": 60,
+    "description": "识别最优子结构、状态依赖或可证明的局部选择，将指数搜索压缩为可复用的状态计算。",
+    "planned_categories": [
+      {
+        "slug": "dynamic-programming",
+        "title": "动态规划",
+        "scope": "定义状态、转移、边界和计算顺序，避免重复求解子问题。",
+        "topics": [
+          "一维状态与滚动数组",
+          "网格路径与二维 DP",
+          "背包与容量状态",
+          "子序列与字符串 DP",
+          "区间 DP 与状态机"
+        ]
+      },
+      {
+        "slug": "greedy",
+        "title": "贪心算法",
+        "scope": "寻找可证明安全的局部选择，常用交换论证、反证或边界性质。",
+        "topics": [
+          "区间选择与调度",
+          "排序后的局部决策",
+          "覆盖、跳跃与资源分配"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "math-bits",
+    "title": "数学与位运算",
+    "english": "Mathematics & Bit Manipulation",
+    "order": 70,
+    "description": "利用整数性质、模运算、组合计数和二进制表示，解决状态压缩与数值结构问题。",
+    "planned_categories": [
+      {
+        "slug": "bit-manipulation",
+        "title": "位运算",
+        "scope": "直接操作二进制位，理解掩码、异或、位计数与状态压缩。",
+        "topics": [
+          "位掩码与集合状态",
+          "异或性质与单次出现",
+          "位计数与低位技巧"
+        ]
+      },
+      {
+        "slug": "math-combinatorics",
+        "title": "数学与组合计数",
+        "scope": "用数论、模运算、排列组合和计数原理减少枚举。",
+        "topics": [
+          "最大公约数与素数",
+          "模运算与快速幂",
+          "排列组合与计数"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "advanced-data-structures",
+    "title": "高级数据结构与区间查询",
+    "english": "Advanced Data Structures & Range Queries",
+    "order": 80,
+    "description": "当普通数组或树结构无法满足频繁更新与区间查询时，学习更高效的数据组织方式。",
+    "planned_categories": [
+      {
+        "slug": "range-query-structures",
+        "title": "树状数组与线段树",
+        "scope": "支持区间聚合、单点或区间更新，理解树状数组和线段树的适用边界。",
+        "topics": [
+          "树状数组与前缀聚合",
+          "线段树与区间查询",
+          "懒惰标记与区间更新"
+        ]
+      }
+    ]
+  }
+]
