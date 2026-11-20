@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-11-20",
+  "updated": "2026-11-21",
   "policy": "Do not calculate a coverage percentage until the full dated source list has been imported and every item mapped, excluded or marked unresolved.",
   "target_sets": [
     {
@@ -196,54 +196,49 @@
       "category": "data-structures",
       "topic": "linked-list-reversal",
       "learning_stage": "foundation"
+    },
+    {
+      "slug": "linked-list-cycle",
+      "problem_number": 141,
+      "title": "LeetCode 141 · 环形链表",
+      "category": "data-structures",
+      "topic": "fast-slow-pointers",
+      "learning_stage": "foundation"
+    },
+    {
+      "slug": "valid-palindrome",
+      "problem_number": 125,
+      "title": "LeetCode 125 · 验证回文串",
+      "category": "two-pointer",
+      "topic": "opposite-direction",
+      "learning_stage": "foundation"
+    },
+    {
+      "slug": "trapping-rain-water",
+      "problem_number": 42,
+      "title": "LeetCode 42 · 接雨水",
+      "category": "two-pointer",
+      "topic": "boundary-maxima",
+      "learning_stage": "advanced"
+    },
+    {
+      "slug": "longest-repeating-character-replacement",
+      "problem_number": 424,
+      "title": "LeetCode 424 · 替换后的最长重复字符",
+      "category": "sliding-window",
+      "topic": "replacement-budget-window",
+      "learning_stage": "core"
+    },
+    {
+      "slug": "minimum-window-substring",
+      "problem_number": 76,
+      "title": "LeetCode 76 · 最小覆盖子串",
+      "category": "sliding-window",
+      "topic": "minimum-cover-window",
+      "learning_stage": "advanced"
     }
   ],
   "priority_queue": [
-    {
-      "problem_number": 141,
-      "slug": "linked-list-cycle",
-      "title": "Linked List Cycle",
-      "category": "data-structures",
-      "topic": "fast-slow-pointers",
-      "priority": "P1",
-      "reason": "快慢指针与环检测"
-    },
-    {
-      "problem_number": 125,
-      "slug": "valid-palindrome",
-      "title": "Valid Palindrome",
-      "category": "two-pointer",
-      "topic": "opposite-direction",
-      "priority": "P1",
-      "reason": "双指针基础阶梯"
-    },
-    {
-      "problem_number": 42,
-      "slug": "trapping-rain-water",
-      "title": "Trapping Rain Water",
-      "category": "two-pointer",
-      "topic": "same-direction",
-      "priority": "P1",
-      "reason": "边界信息与逐位置贡献"
-    },
-    {
-      "problem_number": 424,
-      "slug": "longest-repeating-character-replacement",
-      "title": "Longest Repeating Character Replacement",
-      "category": "sliding-window",
-      "topic": "variable-window",
-      "priority": "P1",
-      "reason": "频次约束与窗口合法性"
-    },
-    {
-      "problem_number": 76,
-      "slug": "minimum-window-substring",
-      "title": "Minimum Window Substring",
-      "category": "sliding-window",
-      "topic": "window-counting",
-      "priority": "P1",
-      "reason": "双向频次约束与最小覆盖"
-    },
     {
       "problem_number": 150,
       "slug": "evaluate-reverse-polish-notation",
