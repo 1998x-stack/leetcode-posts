@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 320" role="img" aria-labelledby="rotated-pitfall-title rotated-pitfall-desc"><title id="rotated-pitfall-title">旋转数组解法依赖元素互不相同</title><desc id="rotated-pitfall-desc">当数组允许重复值时，nums[left]、nums[mid]、nums[right] 可能相等，无法判断哪一半严格有序。</desc>
+<rect x="28" y="24" width="904" height="272" rx="18" fill="#fff" stroke="#d5e3da"/><text x="58" y="64" font-size="21" font-weight="700" fill="#19393d">题目假设：所有元素互不相同</text>
+<rect x="80" y="100" width="350" height="78" rx="10" fill="#edf4ed" stroke="#9ebdb0"/><text x="255" y="132" text-anchor="middle" font-size="19" fill="#176c6d">唯一值</text><text x="255" y="158" text-anchor="middle" font-size="16" fill="#19393d">至少一半能明确判断为有序</text>
+<rect x="530" y="100" width="350" height="78" rx="10" fill="#fae4d9" stroke="#c66e52"/><text x="705" y="132" text-anchor="middle" font-size="19" fill="#8c432a">允许重复值</text><text x="705" y="158" text-anchor="middle" font-size="16" fill="#8c432a">[2,2,2,3,2] 边界可能无法区分</text>
+<text x="480" y="230" text-anchor="middle" font-size="18" fill="#19393d">重复值版本可能需要逐步收缩边界，最坏时间退化到 O(n)</text></svg>
