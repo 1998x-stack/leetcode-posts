@@ -23,7 +23,7 @@
   "published_posts": [
     {
       "slug": "longest-substring-without-repeating-characters",
-      "problem_number": 0,
+      "problem_number": 3,
       "title": "LeetCode 3 · 无重复字符的最长子串",
       "category": "sliding-window",
       "topic": "variable-window",
@@ -31,7 +31,7 @@
     },
     {
       "slug": "container-with-most-water",
-      "problem_number": 0,
+      "problem_number": 11,
       "title": "LeetCode 11 · 盛最多水的容器",
       "category": "two-pointer",
       "topic": "opposite-direction",
@@ -39,7 +39,7 @@
     },
     {
       "slug": "three-sum",
-      "problem_number": 0,
+      "problem_number": 15,
       "title": "LeetCode 15 · 三数之和",
       "category": "two-pointer",
       "topic": "sorted-enumeration",
@@ -47,7 +47,7 @@
     },
     {
       "slug": "permutations",
-      "problem_number": 0,
+      "problem_number": 46,
       "title": "LeetCode 46 · 全排列",
       "category": "backtracking",
       "topic": "permutations",
@@ -55,7 +55,7 @@
     },
     {
       "slug": "number-of-islands",
-      "problem_number": 0,
+      "problem_number": 200,
       "title": "LeetCode 200 · 岛屿数量",
       "category": "graphs",
       "topic": "connected-components",
@@ -63,7 +63,7 @@
     },
     {
       "slug": "two-sum",
-      "problem_number": 0,
+      "problem_number": 1,
       "title": "LeetCode 1 · 两数之和",
       "category": "arrays-hashing",
       "topic": "hash-lookup",
@@ -71,7 +71,7 @@
     },
     {
       "slug": "contains-duplicate",
-      "problem_number": 0,
+      "problem_number": 217,
       "title": "LeetCode 217 · 存在重复元素",
       "category": "arrays-hashing",
       "topic": "set-membership",
@@ -79,7 +79,7 @@
     },
     {
       "slug": "product-of-array-except-self",
-      "problem_number": 0,
+      "problem_number": 238,
       "title": "LeetCode 238 · 除自身以外数组的乘积",
       "category": "arrays-hashing",
       "topic": "prefix-suffix",
@@ -87,7 +87,7 @@
     },
     {
       "slug": "binary-search",
-      "problem_number": 0,
+      "problem_number": 704,
       "title": "LeetCode 704 · 二分查找",
       "category": "binary-search",
       "topic": "exact-search",
@@ -95,7 +95,7 @@
     },
     {
       "slug": "find-first-and-last-position",
-      "problem_number": 0,
+      "problem_number": 34,
       "title": "LeetCode 34 · 在排序数组中查找元素的第一个和最后一个位置",
       "category": "binary-search",
       "topic": "boundary-search",
@@ -103,7 +103,7 @@
     },
     {
       "slug": "search-in-rotated-sorted-array",
-      "problem_number": 0,
+      "problem_number": 33,
       "title": "LeetCode 33 · 搜索旋转排序数组",
       "category": "binary-search",
       "topic": "rotated-array",
@@ -111,7 +111,7 @@
     },
     {
       "slug": "maximum-depth-of-binary-tree",
-      "problem_number": 0,
+      "problem_number": 104,
       "title": "LeetCode 104 · 二叉树的最大深度",
       "category": "binary-tree",
       "topic": "recursive-depth",
@@ -119,7 +119,7 @@
     },
     {
       "slug": "binary-tree-level-order-traversal",
-      "problem_number": 0,
+      "problem_number": 102,
       "title": "LeetCode 102 · 二叉树的层序遍历",
       "category": "binary-tree",
       "topic": "level-order",
@@ -127,7 +127,7 @@
     },
     {
       "slug": "diameter-of-binary-tree",
-      "problem_number": 0,
+      "problem_number": 543,
       "title": "LeetCode 543 · 二叉树的直径",
       "category": "binary-tree",
       "topic": "postorder-aggregation",
@@ -135,7 +135,7 @@
     },
     {
       "slug": "coin-change",
-      "problem_number": 0,
+      "problem_number": 322,
       "title": "LeetCode 322 · 零钱兑换",
       "category": "dynamic-programming",
       "topic": "unbounded-knapsack",
@@ -143,7 +143,7 @@
     },
     {
       "slug": "daily-temperatures",
-      "problem_number": 0,
+      "problem_number": 739,
       "title": "LeetCode 739 · 每日温度",
       "category": "monotonic-stack",
       "topic": "next-warmer-day",
@@ -151,7 +151,7 @@
     },
     {
       "slug": "lru-cache",
-      "problem_number": 0,
+      "problem_number": 146,
       "title": "LeetCode 146 · LRU 缓存",
       "category": "data-structures",
       "topic": "lru-cache",
