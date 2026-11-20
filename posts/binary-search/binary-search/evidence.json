@@ -1,0 +1,32 @@
+{
+  "problem": {
+    "number": 704,
+    "title": "Binary Search",
+    "difficulty": "Easy",
+    "url": "https://leetcode.com/problems/binary-search/",
+    "source": "Official LeetCode problem page; Chinese explanation independently paraphrased",
+    "facts": [
+      "Input array is sorted in ascending order and contains unique integers.",
+      "Return the target index or -1 if absent.",
+      "The required runtime is O(log n).",
+      "1 <= nums.length <= 10^4."
+    ]
+  },
+  "claims": [
+    {
+      "type": "derived",
+      "claim": "At the start of each iteration, if target exists, it is inside the closed interval [left,right].",
+      "validation": "Closed-interval loop invariant."
+    },
+    {
+      "type": "derived",
+      "claim": "Because nums is ascending, comparing nums[mid] with target safely discards one side including mid.",
+      "validation": "Monotonic ordering argument."
+    },
+    {
+      "type": "derived",
+      "claim": "The interval shrinks by at least half per iteration, giving O(log n) time and O(1) auxiliary space.",
+      "validation": "Binary search recurrence and constant scalar state."
+    }
+  ]
+}

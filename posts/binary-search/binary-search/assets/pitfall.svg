@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 320" role="img" aria-labelledby="binary-pitfall-title binary-pitfall-desc"><title id="binary-pitfall-title">区间语义必须与循环条件一致</title><desc id="binary-pitfall-desc">闭区间写法如果使用 left < right，最后只剩一个候选时可能直接退出，漏掉最后一个位置。</desc>
+<rect x="28" y="24" width="904" height="272" rx="18" fill="#fff" stroke="#d5e3da"/>
+<text x="58" y="64" font-size="21" font-weight="700" fill="#19393d">最后只剩一个元素时怎么办？</text>
+<rect x="90" y="102" width="150" height="70" rx="10" fill="#d5ede4" stroke="#2f8681"/><text x="165" y="144" text-anchor="middle" font-size="22" font-weight="700" fill="#124d4b">9</text><text x="165" y="198" text-anchor="middle" font-size="15" fill="#124d4b">left = right = 4</text>
+<rect x="285" y="102" width="270" height="70" rx="10" fill="#fae4d9" stroke="#c66e52"/><text x="420" y="144" text-anchor="middle" font-size="19" fill="#8c432a">while left &lt; right</text><text x="420" y="198" text-anchor="middle" font-size="15" fill="#8c432a">条件为假，直接退出</text>
+<rect x="600" y="102" width="270" height="70" rx="10" fill="#edf4ed" stroke="#9ebdb0"/><text x="735" y="144" text-anchor="middle" font-size="19" fill="#176c6d">while left &lt;= right</text><text x="735" y="198" text-anchor="middle" font-size="15" fill="#176c6d">检查最后一个候选</text>
+<text x="480" y="250" text-anchor="middle" font-size="18" fill="#19393d">闭区间模板：while left &lt;= right，排除中点时使用 mid ± 1</text></svg>
