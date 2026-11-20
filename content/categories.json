@@ -77,10 +77,6 @@
         "title": "网格遍历与连通分量"
       },
       {
-        "slug": "shortest-path",
-        "title": "最短路径"
-      },
-      {
         "slug": "graph-traversal",
         "title": "图遍历与访问状态"
       },
