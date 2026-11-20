@@ -133,5 +133,32 @@
     "posts": [
       "reverse-linked-list"
     ]
+  },
+  {
+    "id": "linked-list-cycle-foundation",
+    "title": "链表环检测：从指针移动到相遇证明",
+    "description": "先掌握单链表 next 指针，再用快慢指针的相对速度证明有环时必然相遇。",
+    "posts": [
+      "reverse-linked-list",
+      "linked-list-cycle"
+    ]
+  },
+  {
+    "id": "two-pointer-symmetry-to-boundary",
+    "title": "对向双指针：从对称比较到边界贡献",
+    "description": "先用两端比较建立对向指针直觉，再理解左右边界如何决定逐列蓄水量。",
+    "posts": [
+      "valid-palindrome",
+      "trapping-rain-water"
+    ]
+  },
+  {
+    "id": "sliding-window-budget-to-cover",
+    "title": "滑动窗口：从预算约束到最小覆盖",
+    "description": "先用最高频字符与替换预算判断窗口可行，再用 deficit 计数解决带重复字符的最小覆盖。",
+    "posts": [
+      "longest-repeating-character-replacement",
+      "minimum-window-substring"
+    ]
   }
 ]
