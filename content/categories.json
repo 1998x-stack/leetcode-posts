@@ -160,7 +160,8 @@
         "slug": "unbounded-knapsack",
         "title": "完全背包与零钱兑换"
       }
-    ]
+    ],
+    "domain": "optimization"
   },
   {
     "slug": "monotonic-stack",
@@ -172,7 +173,8 @@
         "slug": "next-warmer-day",
         "title": "下一个更大元素"
       }
-    ]
+    ],
+    "domain": "linear-patterns"
   },
   {
     "slug": "data-structures",
@@ -184,6 +186,7 @@
         "slug": "lru-cache",
         "title": "LRU 缓存"
       }
-    ]
+    ],
+    "domain": "linear-data-structures"
   }
 ]
