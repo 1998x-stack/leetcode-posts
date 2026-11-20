@@ -50,6 +50,15 @@ def _check_shard(shard: int, articles: list[tuple[str, str]], output: str) -> di
                     if set(report["viewports"]) != {label for label, _, _ in SIZES}:
                         raise ValueError(f"{slug}: missing viewport evidence")
                     if not report["pass"]:
+                        details = {
+                            "viewports": {name: {k: v for k, v in result.items()
+                                if k in ("pass", "scrollWidth", "viewport", "brokenImages",
+                                         "blankSVG", "mathWrongNamespace", "errors", "external_requests")}
+                                for name, result in report["viewports"].items()},
+                            "interaction": report["interaction"],
+                        }
+                        print("BROWSER FAILURE DETAIL", slug,
+                              json.dumps(details, ensure_ascii=False), flush=True)
                         failures.append(f"{slug}: semantic/visual/interactivity QA failed")
                     else:
                         checked.append(slug)
