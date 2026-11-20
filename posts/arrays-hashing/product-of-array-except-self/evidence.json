@@ -1,0 +1,32 @@
+{
+  "problem": {
+    "number": 238,
+    "title": "Product of Array Except Self",
+    "difficulty": "Medium",
+    "url": "https://leetcode.com/problems/product-of-array-except-self/",
+    "source": "Official LeetCode problem page; Chinese explanation independently paraphrased",
+    "facts": [
+      "Return answer[i] as the product of every nums[j] where j != i.",
+      "The algorithm must run in O(n) time and must not use division.",
+      "The follow-up asks for O(1) extra space excluding the output array.",
+      "2 <= nums.length <= 10^5; each nums[i] is between -30 and 30; each prefix/suffix product fits in 32-bit integer."
+    ]
+  },
+  "claims": [
+    {
+      "type": "derived",
+      "claim": "answer[i] equals product(nums[0:i]) multiplied by product(nums[i+1:n]).",
+      "validation": "Prefix and suffix definitions in article."
+    },
+    {
+      "type": "derived",
+      "claim": "A left-to-right pass writes each strict prefix product into the output array; a right-to-left pass multiplies the strict suffix product into it.",
+      "validation": "Loop invariant for both passes and solution.py."
+    },
+    {
+      "type": "derived",
+      "claim": "Time O(n); O(1) auxiliary variables beyond the output array; zeros work without special cases.",
+      "validation": "Two linear passes and exhaustive tests including zero-heavy inputs."
+    }
+  ]
+}
