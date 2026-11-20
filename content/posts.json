@@ -761,5 +761,225 @@
       ],
       "learning_stage": "advanced"
     }
+  },
+  {
+    "slug": "valid-anagram",
+    "problem_number": 242,
+    "title": "LeetCode 242 · 有效的字母异位词",
+    "subtitle": "把两个单词变成同一张频次表：顺序不同，字符数量必须完全一致。",
+    "category": "arrays-hashing",
+    "topic": "hash-lookup",
+    "reading_minutes": 10,
+    "tags": [
+      "Easy",
+      "String",
+      "Frequency Count",
+      "Hashing"
+    ],
+    "summary": "用固定 26 位频次向量比较两个小写字符串，解释为什么字符顺序无关、重复次数必须相同，并用 O(n) 扫描与 O(1) 辅助空间完成判定。",
+    "problem_url": "https://leetcode.com/problems/valid-anagram/",
+    "illustration": "valid-anagram",
+    "cover": {
+      "src": "assets/cover.svg"
+    },
+    "facets": {
+      "structures": [
+        "string",
+        "array"
+      ],
+      "techniques": [
+        "frequency-counting"
+      ],
+      "problem_shapes": [
+        "anagram-equivalence"
+      ],
+      "reasoning": [
+        "frequency-vector-equality"
+      ],
+      "prerequisites": [
+        "array-indexing"
+      ],
+      "learning_stage": "foundation"
+    },
+    "status": "published",
+    "published": "2026-11-20",
+    "updated": "2026-11-20"
+  },
+  {
+    "slug": "group-anagrams",
+    "problem_number": 49,
+    "title": "LeetCode 49 · 字母异位词分组",
+    "subtitle": "为每个单词生成规范化签名：签名相同，就进入同一个桶。",
+    "category": "arrays-hashing",
+    "topic": "hash-lookup",
+    "reading_minutes": 14,
+    "tags": [
+      "Medium",
+      "String",
+      "Hash Map",
+      "Frequency Signature"
+    ],
+    "summary": "将每个单词编码为 26 位字符频次签名，再用哈希表把相同签名的单词聚合，理解规范化键、分组不变量与 O(L+k) 时间界。",
+    "problem_url": "https://leetcode.com/problems/group-anagrams/",
+    "illustration": "group-anagrams",
+    "cover": {
+      "src": "assets/cover.svg"
+    },
+    "facets": {
+      "structures": [
+        "string",
+        "array",
+        "hash-map"
+      ],
+      "techniques": [
+        "frequency-counting",
+        "canonical-signature"
+      ],
+      "problem_shapes": [
+        "group-by-signature"
+      ],
+      "reasoning": [
+        "canonical-key-equivalence"
+      ],
+      "prerequisites": [
+        "array-indexing",
+        "hash-map-basics"
+      ],
+      "learning_stage": "core"
+    },
+    "status": "published",
+    "published": "2026-11-20",
+    "updated": "2026-11-20"
+  },
+  {
+    "slug": "top-k-frequent-elements",
+    "problem_number": 347,
+    "title": "LeetCode 347 · 前 K 个高频元素",
+    "subtitle": "先统计频次，再用容量为 k 的最小堆保留最强候选。",
+    "category": "data-structures",
+    "topic": "heap-top-k",
+    "reading_minutes": 15,
+    "tags": [
+      "Medium",
+      "Hash Map",
+      "Heap",
+      "Top K"
+    ],
+    "summary": "先用哈希表统计不同元素的频次，再用容量为 k 的最小堆维护当前 Top-K，逐步解释堆顶淘汰、正确性不变量与 O(n+u log k) 复杂度。",
+    "problem_url": "https://leetcode.com/problems/top-k-frequent-elements/",
+    "illustration": "top-k-frequent-elements",
+    "cover": {
+      "src": "assets/cover.svg"
+    },
+    "facets": {
+      "structures": [
+        "array",
+        "hash-map",
+        "heap"
+      ],
+      "techniques": [
+        "frequency-counting",
+        "heap-top-k"
+      ],
+      "problem_shapes": [
+        "top-k-frequency"
+      ],
+      "reasoning": [
+        "heap-boundary-invariant"
+      ],
+      "prerequisites": [
+        "hash-map-basics",
+        "heap-basics"
+      ],
+      "learning_stage": "core"
+    },
+    "status": "published",
+    "published": "2026-11-20",
+    "updated": "2026-11-20"
+  },
+  {
+    "slug": "valid-parentheses",
+    "problem_number": 20,
+    "title": "LeetCode 20 · 有效的括号",
+    "subtitle": "栈顶必须是最近一个尚未闭合的左括号：嵌套结构天然遵循后进先出。",
+    "category": "data-structures",
+    "topic": "stack-matching",
+    "reading_minutes": 10,
+    "tags": [
+      "Easy",
+      "Stack",
+      "String",
+      "Matching"
+    ],
+    "summary": "用栈保存尚未匹配的左括号，检查每个右括号是否关闭最近打开的同类型括号，解释前缀不变量、([)] 反例与 O(n) 时间复杂度。",
+    "problem_url": "https://leetcode.com/problems/valid-parentheses/",
+    "illustration": "valid-parentheses",
+    "cover": {
+      "src": "assets/cover.svg"
+    },
+    "facets": {
+      "structures": [
+        "string",
+        "stack"
+      ],
+      "techniques": [
+        "stack-matching"
+      ],
+      "problem_shapes": [
+        "bracket-validation"
+      ],
+      "reasoning": [
+        "stack-prefix-validity"
+      ],
+      "prerequisites": [
+        "stack-basics"
+      ],
+      "learning_stage": "foundation"
+    },
+    "status": "published",
+    "published": "2026-11-20",
+    "updated": "2026-11-20"
+  },
+  {
+    "slug": "reverse-linked-list",
+    "problem_number": 206,
+    "title": "LeetCode 206 · 反转链表",
+    "subtitle": "用 prev、curr、next 三个引用：先保存后继，再把当前指针反向连接。",
+    "category": "data-structures",
+    "topic": "linked-list-reversal",
+    "reading_minutes": 12,
+    "tags": [
+      "Easy",
+      "Linked List",
+      "Pointers",
+      "In-place"
+    ],
+    "summary": "通过 prev、curr、next 三个引用逐个反转单链表的 next 指针，展示已反转与未处理部分的不变量，解释 O(n) 时间、O(1) 辅助空间及指针丢失陷阱。",
+    "problem_url": "https://leetcode.com/problems/reverse-linked-list/",
+    "illustration": "reverse-linked-list",
+    "cover": {
+      "src": "assets/cover.svg"
+    },
+    "facets": {
+      "structures": [
+        "linked-list"
+      ],
+      "techniques": [
+        "pointer-reversal"
+      ],
+      "problem_shapes": [
+        "linked-list-reversal"
+      ],
+      "reasoning": [
+        "pointer-separation-invariant"
+      ],
+      "prerequisites": [
+        "linked-list-basics"
+      ],
+      "learning_stage": "foundation"
+    },
+    "status": "published",
+    "published": "2026-11-20",
+    "updated": "2026-11-20"
   }
 ]

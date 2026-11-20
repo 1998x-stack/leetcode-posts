@@ -914,6 +914,230 @@
       "id": "path:maintaining-live-state",
       "type": "learning_path",
       "label": "持续维护状态：从单调栈到 LRU 缓存"
+    },
+    {
+      "id": "topic:data-structures/stack-matching",
+      "type": "topic",
+      "label": "栈与括号匹配"
+    },
+    {
+      "id": "topic:data-structures/linked-list-reversal",
+      "type": "topic",
+      "label": "链表反转与指针重连"
+    },
+    {
+      "id": "topic:data-structures/heap-top-k",
+      "type": "topic",
+      "label": "堆与 Top-K 优先队列"
+    },
+    {
+      "id": "post:valid-anagram",
+      "type": "problem",
+      "label": "LeetCode 242 · 有效的字母异位词",
+      "slug": "valid-anagram",
+      "category": "arrays-hashing",
+      "topic": "hash-lookup",
+      "problem_url": "https://leetcode.com/problems/valid-anagram/"
+    },
+    {
+      "id": "facet:techniques:frequency-counting",
+      "type": "concept",
+      "facet_type": "techniques",
+      "slug": "frequency-counting",
+      "label": "字符或元素频次统计"
+    },
+    {
+      "id": "facet:problem_shapes:anagram-equivalence",
+      "type": "concept",
+      "facet_type": "problem_shapes",
+      "slug": "anagram-equivalence",
+      "label": "字母异位词判定"
+    },
+    {
+      "id": "facet:reasoning:frequency-vector-equality",
+      "type": "concept",
+      "facet_type": "reasoning",
+      "slug": "frequency-vector-equality",
+      "label": "频次向量相等"
+    },
+    {
+      "id": "post:group-anagrams",
+      "type": "problem",
+      "label": "LeetCode 49 · 字母异位词分组",
+      "slug": "group-anagrams",
+      "category": "arrays-hashing",
+      "topic": "hash-lookup",
+      "problem_url": "https://leetcode.com/problems/group-anagrams/"
+    },
+    {
+      "id": "facet:techniques:canonical-signature",
+      "type": "concept",
+      "facet_type": "techniques",
+      "slug": "canonical-signature",
+      "label": "规范化频次签名"
+    },
+    {
+      "id": "facet:problem_shapes:group-by-signature",
+      "type": "concept",
+      "facet_type": "problem_shapes",
+      "slug": "group-by-signature",
+      "label": "按规范化签名分组"
+    },
+    {
+      "id": "facet:reasoning:canonical-key-equivalence",
+      "type": "concept",
+      "facet_type": "reasoning",
+      "slug": "canonical-key-equivalence",
+      "label": "规范化键等价性"
+    },
+    {
+      "id": "post:top-k-frequent-elements",
+      "type": "problem",
+      "label": "LeetCode 347 · 前 K 个高频元素",
+      "slug": "top-k-frequent-elements",
+      "category": "data-structures",
+      "topic": "heap-top-k",
+      "problem_url": "https://leetcode.com/problems/top-k-frequent-elements/"
+    },
+    {
+      "id": "facet:structures:heap",
+      "type": "concept",
+      "facet_type": "structures",
+      "slug": "heap",
+      "label": "最小堆 / 优先队列"
+    },
+    {
+      "id": "facet:techniques:heap-top-k",
+      "type": "concept",
+      "facet_type": "techniques",
+      "slug": "heap-top-k",
+      "label": "容量受限的 Top-K 最小堆"
+    },
+    {
+      "id": "facet:problem_shapes:top-k-frequency",
+      "type": "concept",
+      "facet_type": "problem_shapes",
+      "slug": "top-k-frequency",
+      "label": "高频元素 Top-K"
+    },
+    {
+      "id": "facet:reasoning:heap-boundary-invariant",
+      "type": "concept",
+      "facet_type": "reasoning",
+      "slug": "heap-boundary-invariant",
+      "label": "Top-K 堆边界不变量"
+    },
+    {
+      "id": "facet:prerequisites:heap-basics",
+      "type": "prerequisite",
+      "facet_type": "prerequisites",
+      "slug": "heap-basics",
+      "label": "堆与优先队列基础"
+    },
+    {
+      "id": "post:valid-parentheses",
+      "type": "problem",
+      "label": "LeetCode 20 · 有效的括号",
+      "slug": "valid-parentheses",
+      "category": "data-structures",
+      "topic": "stack-matching",
+      "problem_url": "https://leetcode.com/problems/valid-parentheses/"
+    },
+    {
+      "id": "facet:structures:stack",
+      "type": "concept",
+      "facet_type": "structures",
+      "slug": "stack",
+      "label": "栈"
+    },
+    {
+      "id": "facet:techniques:stack-matching",
+      "type": "concept",
+      "facet_type": "techniques",
+      "slug": "stack-matching",
+      "label": "栈式括号匹配"
+    },
+    {
+      "id": "facet:problem_shapes:bracket-validation",
+      "type": "concept",
+      "facet_type": "problem_shapes",
+      "slug": "bracket-validation",
+      "label": "括号嵌套合法性"
+    },
+    {
+      "id": "facet:reasoning:stack-prefix-validity",
+      "type": "concept",
+      "facet_type": "reasoning",
+      "slug": "stack-prefix-validity",
+      "label": "前缀括号栈不变量"
+    },
+    {
+      "id": "facet:prerequisites:stack-basics",
+      "type": "prerequisite",
+      "facet_type": "prerequisites",
+      "slug": "stack-basics",
+      "label": "栈与后进先出基础"
+    },
+    {
+      "id": "post:reverse-linked-list",
+      "type": "problem",
+      "label": "LeetCode 206 · 反转链表",
+      "slug": "reverse-linked-list",
+      "category": "data-structures",
+      "topic": "linked-list-reversal",
+      "problem_url": "https://leetcode.com/problems/reverse-linked-list/"
+    },
+    {
+      "id": "facet:structures:linked-list",
+      "type": "concept",
+      "facet_type": "structures",
+      "slug": "linked-list",
+      "label": "单链表"
+    },
+    {
+      "id": "facet:techniques:pointer-reversal",
+      "type": "concept",
+      "facet_type": "techniques",
+      "slug": "pointer-reversal",
+      "label": "链表指针反转"
+    },
+    {
+      "id": "facet:problem_shapes:linked-list-reversal",
+      "type": "concept",
+      "facet_type": "problem_shapes",
+      "slug": "linked-list-reversal",
+      "label": "单链表反转"
+    },
+    {
+      "id": "facet:reasoning:pointer-separation-invariant",
+      "type": "concept",
+      "facet_type": "reasoning",
+      "slug": "pointer-separation-invariant",
+      "label": "已反转与未处理链表分离不变量"
+    },
+    {
+      "id": "path:anagram-frequency-progression",
+      "type": "learning_path",
+      "label": "异位词：从频次判定到规范化分组",
+      "slug": "anagram-frequency-progression"
+    },
+    {
+      "id": "path:frequency-to-top-k",
+      "type": "learning_path",
+      "label": "频次统计：从字符计数到高频候选",
+      "slug": "frequency-to-top-k"
+    },
+    {
+      "id": "path:stack-matching-foundation",
+      "type": "learning_path",
+      "label": "栈的基础：括号匹配与嵌套顺序",
+      "slug": "stack-matching-foundation"
+    },
+    {
+      "id": "path:linked-list-pointer-reversal",
+      "type": "learning_path",
+      "label": "链表基础：逐个重连 next 指针",
+      "slug": "linked-list-pointer-reversal"
     }
   ],
   "edges": [
@@ -2185,6 +2409,324 @@
       "target": "post:coin-change",
       "type": "contrasts",
       "reason": "对比显式枚举与合并重叠子问题的动态规划"
+    },
+    {
+      "source": "post:valid-anagram",
+      "target": "category:arrays-hashing",
+      "type": "classified_as"
+    },
+    {
+      "source": "post:valid-anagram",
+      "target": "topic:arrays-hashing/hash-lookup",
+      "type": "instantiates"
+    },
+    {
+      "source": "post:valid-anagram",
+      "target": "facet:structures:string",
+      "type": "uses_structure"
+    },
+    {
+      "source": "post:valid-anagram",
+      "target": "facet:structures:array",
+      "type": "uses_structure"
+    },
+    {
+      "source": "post:valid-anagram",
+      "target": "facet:techniques:frequency-counting",
+      "type": "uses_technique"
+    },
+    {
+      "source": "post:valid-anagram",
+      "target": "facet:problem_shapes:anagram-equivalence",
+      "type": "models"
+    },
+    {
+      "source": "post:valid-anagram",
+      "target": "facet:reasoning:frequency-vector-equality",
+      "type": "proved_by"
+    },
+    {
+      "source": "post:valid-anagram",
+      "target": "facet:prerequisites:array-indexing",
+      "type": "requires"
+    },
+    {
+      "source": "post:valid-anagram",
+      "target": "facet:learning_stages:foundation",
+      "type": "targets_stage"
+    },
+    {
+      "source": "post:group-anagrams",
+      "target": "category:arrays-hashing",
+      "type": "classified_as"
+    },
+    {
+      "source": "post:group-anagrams",
+      "target": "topic:arrays-hashing/hash-lookup",
+      "type": "instantiates"
+    },
+    {
+      "source": "post:group-anagrams",
+      "target": "facet:structures:string",
+      "type": "uses_structure"
+    },
+    {
+      "source": "post:group-anagrams",
+      "target": "facet:structures:array",
+      "type": "uses_structure"
+    },
+    {
+      "source": "post:group-anagrams",
+      "target": "facet:structures:hash-map",
+      "type": "uses_structure"
+    },
+    {
+      "source": "post:group-anagrams",
+      "target": "facet:techniques:frequency-counting",
+      "type": "uses_technique"
+    },
+    {
+      "source": "post:group-anagrams",
+      "target": "facet:techniques:canonical-signature",
+      "type": "uses_technique"
+    },
+    {
+      "source": "post:group-anagrams",
+      "target": "facet:problem_shapes:group-by-signature",
+      "type": "models"
+    },
+    {
+      "source": "post:group-anagrams",
+      "target": "facet:reasoning:canonical-key-equivalence",
+      "type": "proved_by"
+    },
+    {
+      "source": "post:group-anagrams",
+      "target": "facet:prerequisites:array-indexing",
+      "type": "requires"
+    },
+    {
+      "source": "post:group-anagrams",
+      "target": "facet:prerequisites:hash-map-basics",
+      "type": "requires"
+    },
+    {
+      "source": "post:group-anagrams",
+      "target": "facet:learning_stages:core",
+      "type": "targets_stage"
+    },
+    {
+      "source": "post:top-k-frequent-elements",
+      "target": "category:data-structures",
+      "type": "classified_as"
+    },
+    {
+      "source": "post:top-k-frequent-elements",
+      "target": "topic:data-structures/heap-top-k",
+      "type": "instantiates"
+    },
+    {
+      "source": "post:top-k-frequent-elements",
+      "target": "facet:structures:array",
+      "type": "uses_structure"
+    },
+    {
+      "source": "post:top-k-frequent-elements",
+      "target": "facet:structures:hash-map",
+      "type": "uses_structure"
+    },
+    {
+      "source": "post:top-k-frequent-elements",
+      "target": "facet:structures:heap",
+      "type": "uses_structure"
+    },
+    {
+      "source": "post:top-k-frequent-elements",
+      "target": "facet:techniques:frequency-counting",
+      "type": "uses_technique"
+    },
+    {
+      "source": "post:top-k-frequent-elements",
+      "target": "facet:techniques:heap-top-k",
+      "type": "uses_technique"
+    },
+    {
+      "source": "post:top-k-frequent-elements",
+      "target": "facet:problem_shapes:top-k-frequency",
+      "type": "models"
+    },
+    {
+      "source": "post:top-k-frequent-elements",
+      "target": "facet:reasoning:heap-boundary-invariant",
+      "type": "proved_by"
+    },
+    {
+      "source": "post:top-k-frequent-elements",
+      "target": "facet:prerequisites:hash-map-basics",
+      "type": "requires"
+    },
+    {
+      "source": "post:top-k-frequent-elements",
+      "target": "facet:prerequisites:heap-basics",
+      "type": "requires"
+    },
+    {
+      "source": "post:top-k-frequent-elements",
+      "target": "facet:learning_stages:core",
+      "type": "targets_stage"
+    },
+    {
+      "source": "post:valid-parentheses",
+      "target": "category:data-structures",
+      "type": "classified_as"
+    },
+    {
+      "source": "post:valid-parentheses",
+      "target": "topic:data-structures/stack-matching",
+      "type": "instantiates"
+    },
+    {
+      "source": "post:valid-parentheses",
+      "target": "facet:structures:string",
+      "type": "uses_structure"
+    },
+    {
+      "source": "post:valid-parentheses",
+      "target": "facet:structures:stack",
+      "type": "uses_structure"
+    },
+    {
+      "source": "post:valid-parentheses",
+      "target": "facet:techniques:stack-matching",
+      "type": "uses_technique"
+    },
+    {
+      "source": "post:valid-parentheses",
+      "target": "facet:problem_shapes:bracket-validation",
+      "type": "models"
+    },
+    {
+      "source": "post:valid-parentheses",
+      "target": "facet:reasoning:stack-prefix-validity",
+      "type": "proved_by"
+    },
+    {
+      "source": "post:valid-parentheses",
+      "target": "facet:prerequisites:stack-basics",
+      "type": "requires"
+    },
+    {
+      "source": "post:valid-parentheses",
+      "target": "facet:learning_stages:foundation",
+      "type": "targets_stage"
+    },
+    {
+      "source": "post:reverse-linked-list",
+      "target": "category:data-structures",
+      "type": "classified_as"
+    },
+    {
+      "source": "post:reverse-linked-list",
+      "target": "topic:data-structures/linked-list-reversal",
+      "type": "instantiates"
+    },
+    {
+      "source": "post:reverse-linked-list",
+      "target": "facet:structures:linked-list",
+      "type": "uses_structure"
+    },
+    {
+      "source": "post:reverse-linked-list",
+      "target": "facet:techniques:pointer-reversal",
+      "type": "uses_technique"
+    },
+    {
+      "source": "post:reverse-linked-list",
+      "target": "facet:problem_shapes:linked-list-reversal",
+      "type": "models"
+    },
+    {
+      "source": "post:reverse-linked-list",
+      "target": "facet:reasoning:pointer-separation-invariant",
+      "type": "proved_by"
+    },
+    {
+      "source": "post:reverse-linked-list",
+      "target": "facet:prerequisites:linked-list-basics",
+      "type": "requires"
+    },
+    {
+      "source": "post:reverse-linked-list",
+      "target": "facet:learning_stages:foundation",
+      "type": "targets_stage"
+    },
+    {
+      "source": "path:anagram-frequency-progression",
+      "target": "post:valid-anagram",
+      "type": "includes",
+      "position": 1
+    },
+    {
+      "source": "path:anagram-frequency-progression",
+      "target": "post:group-anagrams",
+      "type": "includes",
+      "position": 2
+    },
+    {
+      "source": "post:valid-anagram",
+      "target": "post:group-anagrams",
+      "type": "precedes_in_path",
+      "path": "anagram-frequency-progression",
+      "position": 2
+    },
+    {
+      "source": "path:frequency-to-top-k",
+      "target": "post:valid-anagram",
+      "type": "includes",
+      "position": 1
+    },
+    {
+      "source": "path:frequency-to-top-k",
+      "target": "post:top-k-frequent-elements",
+      "type": "includes",
+      "position": 2
+    },
+    {
+      "source": "post:valid-anagram",
+      "target": "post:top-k-frequent-elements",
+      "type": "precedes_in_path",
+      "path": "frequency-to-top-k",
+      "position": 2
+    },
+    {
+      "source": "path:stack-matching-foundation",
+      "target": "post:valid-parentheses",
+      "type": "includes",
+      "position": 1
+    },
+    {
+      "source": "path:linked-list-pointer-reversal",
+      "target": "post:reverse-linked-list",
+      "type": "includes",
+      "position": 1
+    },
+    {
+      "source": "post:valid-anagram",
+      "target": "post:group-anagrams",
+      "type": "extends",
+      "reason": "从判断两个字符串的频次向量是否相等，扩展到用同一频次向量作为规范化键聚合多个字符串。"
+    },
+    {
+      "source": "post:valid-anagram",
+      "target": "post:top-k-frequent-elements",
+      "type": "extends",
+      "reason": "从字符频次统计迁移到一般元素频次统计，再增加堆结构按频率筛选 Top-K。"
+    },
+    {
+      "source": "post:reverse-linked-list",
+      "target": "post:lru-cache",
+      "type": "extends",
+      "reason": "先掌握单链表 next 指针的安全重连，再理解 LRU 中双向链表的节点摘除与移动。"
     }
   ]
 }

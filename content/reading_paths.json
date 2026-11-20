@@ -99,5 +99,39 @@
       "daily-temperatures",
       "lru-cache"
     ]
+  },
+  {
+    "id": "anagram-frequency-progression",
+    "title": "异位词：从频次判定到规范化分组",
+    "description": "先验证两个字符串的频次向量，再把同一思想变成哈希键，对多个单词进行聚合。",
+    "posts": [
+      "valid-anagram",
+      "group-anagrams"
+    ]
+  },
+  {
+    "id": "frequency-to-top-k",
+    "title": "频次统计：从字符计数到高频候选",
+    "description": "将频次表示迁移到整数数组，再通过容量受限的最小堆选择 Top-K。",
+    "posts": [
+      "valid-anagram",
+      "top-k-frequent-elements"
+    ]
+  },
+  {
+    "id": "stack-matching-foundation",
+    "title": "栈的基础：括号匹配与嵌套顺序",
+    "description": "用最近打开、最先关闭的规则理解栈的后进先出语义。",
+    "posts": [
+      "valid-parentheses"
+    ]
+  },
+  {
+    "id": "linked-list-pointer-reversal",
+    "title": "链表基础：逐个重连 next 指针",
+    "description": "从单链表反转理解节点引用、后继保存和原地指针更新。",
+    "posts": [
+      "reverse-linked-list"
+    ]
   }
 ]

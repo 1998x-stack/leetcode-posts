@@ -156,54 +156,49 @@
       "category": "data-structures",
       "topic": "lru-cache",
       "learning_stage": "advanced"
+    },
+    {
+      "slug": "valid-anagram",
+      "problem_number": 242,
+      "title": "LeetCode 242 · 有效的字母异位词",
+      "category": "arrays-hashing",
+      "topic": "hash-lookup",
+      "learning_stage": "foundation"
+    },
+    {
+      "slug": "group-anagrams",
+      "problem_number": 49,
+      "title": "LeetCode 49 · 字母异位词分组",
+      "category": "arrays-hashing",
+      "topic": "hash-lookup",
+      "learning_stage": "core"
+    },
+    {
+      "slug": "top-k-frequent-elements",
+      "problem_number": 347,
+      "title": "LeetCode 347 · 前 K 个高频元素",
+      "category": "data-structures",
+      "topic": "heap-top-k",
+      "learning_stage": "core"
+    },
+    {
+      "slug": "valid-parentheses",
+      "problem_number": 20,
+      "title": "LeetCode 20 · 有效的括号",
+      "category": "data-structures",
+      "topic": "stack-matching",
+      "learning_stage": "foundation"
+    },
+    {
+      "slug": "reverse-linked-list",
+      "problem_number": 206,
+      "title": "LeetCode 206 · 反转链表",
+      "category": "data-structures",
+      "topic": "linked-list-reversal",
+      "learning_stage": "foundation"
     }
   ],
   "priority_queue": [
-    {
-      "problem_number": 242,
-      "slug": "valid-anagram",
-      "title": "Valid Anagram",
-      "category": "arrays-hashing",
-      "topic": "hash-lookup",
-      "priority": "P0",
-      "reason": "补齐哈希频次与计数向量"
-    },
-    {
-      "problem_number": 49,
-      "slug": "group-anagrams",
-      "title": "Group Anagrams",
-      "category": "arrays-hashing",
-      "topic": "hash-lookup",
-      "priority": "P0",
-      "reason": "从单值查找扩展到规范化键分组"
-    },
-    {
-      "problem_number": 347,
-      "slug": "top-k-frequent-elements",
-      "title": "Top K Frequent Elements",
-      "category": "data-structures",
-      "topic": "heap-priority-queue",
-      "priority": "P0",
-      "reason": "频率统计与堆/桶排序选择"
-    },
-    {
-      "problem_number": 20,
-      "slug": "valid-parentheses",
-      "title": "Valid Parentheses",
-      "category": "data-structures",
-      "topic": "stack-matching",
-      "priority": "P0",
-      "reason": "建立栈的后进先出与匹配不变量"
-    },
-    {
-      "problem_number": 206,
-      "slug": "reverse-linked-list",
-      "title": "Reverse Linked List",
-      "category": "data-structures",
-      "topic": "pointer-rewiring",
-      "priority": "P0",
-      "reason": "建立节点引用重连与迭代不变量"
-    },
     {
       "problem_number": 141,
       "slug": "linked-list-cycle",
