@@ -33,6 +33,12 @@ def check_article(page_file: Path, output: Path, browser, click: str = 'button')
         page.on('console',lambda m,log=errors:log.append('console: '+m.text) if m.type=='error' else None)
         page.route('https?://**',lambda route,log=network:(log.append(route.request.url),route.abort()))
         page.goto(page_file.as_uri(), wait_until='load')
+        # Eagerly decode all standalone SVGs before visual QA, including lazy below-the-fold images.
+        page.evaluate('''async () => {
+          const images = [...document.images];
+          images.forEach(img => { img.loading = 'eager'; });
+          await Promise.all(images.map(img => img.decode().catch(() => null)));
+        }''')
         page.screenshot(path=str(output/f'{label}.png'),full_page=False)
         measure=page.evaluate('''() => {
           const math = [...document.querySelectorAll('math')];
@@ -76,7 +82,7 @@ def check_article(page_file: Path, output: Path, browser, click: str = 'button')
         report['viewports'][label]={'pass':okay,**measure,'errors':errors,'external_requests':network}
         if not okay:report['pass']=False
         if label=='desktop':
-            candidates=page.locator(click)
+            candidates=page.locator(click + ':not([disabled])')
             if candidates.count()>=2:
                 before=page.content();changed=False
                 for i in range(min(6,candidates.count())):
