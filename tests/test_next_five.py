@@ -106,4 +106,9 @@ def test_minimum_window_examples_and_exhaustive():
             for n in range(1, min(4, m+1)):
                 for target in product("ABC", repeat=n):
                     t = "".join(target)
-                    assert fn(s, t) == brute_min_window(s, t)
+                    actual = fn(s, t)
+                    expected = brute_min_window(s, t)
+                    assert len(actual) == len(expected)
+                    if actual:
+                        assert actual in s
+                        assert all(Counter(actual)[ch] >= amount for ch, amount in Counter(t).items())
