@@ -41,6 +41,11 @@
 
 采用 L0 学习阶段、L1 知识领域、L2 算法专题、L3 问题模式、L4 具体题目的纵向结构，并通过数据结构、技巧、问题形态、证明方法和前置知识建立横向关联。详见 [分类设计](docs/taxonomy.md)、[领域注册表](content/domains.json) 与 [横向标签词表](content/facets.json)。
 
+## 知识图谱、交互实验与题目覆盖
+
+- [知识图谱、交互实验与题集覆盖规范](docs/learning-system.md)：定义 typed edges、状态快照、Blind 75 / NeetCode 150 覆盖口径。
+- 机器可读数据：[知识图谱](content/knowledge_graph.json)、[覆盖登记表](content/coverage.json)。
+
 ## 架构
 
 ```text

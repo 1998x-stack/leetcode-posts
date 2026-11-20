@@ -1,0 +1,298 @@
+{
+  "schema_version": 1,
+  "updated": "2026-11-20",
+  "policy": "Do not calculate a coverage percentage until the full dated source list has been imported and every item mapped, excluded or marked unresolved.",
+  "target_sets": [
+    {
+      "id": "blind-75",
+      "name": "Blind 75",
+      "target_count": 75,
+      "source_url": "https://neetcode.io/practice",
+      "audit_status": "not-yet-mapped",
+      "coverage_count": null
+    },
+    {
+      "id": "neetcode-150",
+      "name": "NeetCode 150",
+      "target_count": 150,
+      "source_url": "https://neetcode.io/practice",
+      "audit_status": "not-yet-mapped",
+      "coverage_count": null
+    }
+  ],
+  "published_posts": [
+    {
+      "slug": "longest-substring-without-repeating-characters",
+      "problem_number": 3,
+      "title": "LeetCode 3 · 无重复字符的最长子串",
+      "category": "sliding-window",
+      "topic": "variable-window",
+      "learning_stage": "core"
+    },
+    {
+      "slug": "container-with-most-water",
+      "problem_number": 11,
+      "title": "LeetCode 11 · 盛最多水的容器",
+      "category": "two-pointer",
+      "topic": "opposite-direction",
+      "learning_stage": "core"
+    },
+    {
+      "slug": "three-sum",
+      "problem_number": 15,
+      "title": "LeetCode 15 · 三数之和",
+      "category": "two-pointer",
+      "topic": "sorted-enumeration",
+      "learning_stage": "core"
+    },
+    {
+      "slug": "permutations",
+      "problem_number": 46,
+      "title": "LeetCode 46 · 全排列",
+      "category": "backtracking",
+      "topic": "permutations",
+      "learning_stage": "core"
+    },
+    {
+      "slug": "number-of-islands",
+      "problem_number": 200,
+      "title": "LeetCode 200 · 岛屿数量",
+      "category": "graphs",
+      "topic": "connected-components",
+      "learning_stage": "core"
+    },
+    {
+      "slug": "two-sum",
+      "problem_number": 1,
+      "title": "LeetCode 1 · 两数之和",
+      "category": "arrays-hashing",
+      "topic": "hash-lookup",
+      "learning_stage": "foundation"
+    },
+    {
+      "slug": "contains-duplicate",
+      "problem_number": 217,
+      "title": "LeetCode 217 · 存在重复元素",
+      "category": "arrays-hashing",
+      "topic": "set-membership",
+      "learning_stage": "foundation"
+    },
+    {
+      "slug": "product-of-array-except-self",
+      "problem_number": 238,
+      "title": "LeetCode 238 · 除自身以外数组的乘积",
+      "category": "arrays-hashing",
+      "topic": "prefix-suffix",
+      "learning_stage": "core"
+    },
+    {
+      "slug": "binary-search",
+      "problem_number": 704,
+      "title": "LeetCode 704 · 二分查找",
+      "category": "binary-search",
+      "topic": "exact-search",
+      "learning_stage": "foundation"
+    },
+    {
+      "slug": "find-first-and-last-position",
+      "problem_number": 34,
+      "title": "LeetCode 34 · 在排序数组中查找元素的第一个和最后一个位置",
+      "category": "binary-search",
+      "topic": "boundary-search",
+      "learning_stage": "core"
+    },
+    {
+      "slug": "search-in-rotated-sorted-array",
+      "problem_number": 33,
+      "title": "LeetCode 33 · 搜索旋转排序数组",
+      "category": "binary-search",
+      "topic": "rotated-array",
+      "learning_stage": "advanced"
+    },
+    {
+      "slug": "maximum-depth-of-binary-tree",
+      "problem_number": 104,
+      "title": "LeetCode 104 · 二叉树的最大深度",
+      "category": "binary-tree",
+      "topic": "recursive-depth",
+      "learning_stage": "foundation"
+    },
+    {
+      "slug": "binary-tree-level-order-traversal",
+      "problem_number": 102,
+      "title": "LeetCode 102 · 二叉树的层序遍历",
+      "category": "binary-tree",
+      "topic": "level-order",
+      "learning_stage": "core"
+    },
+    {
+      "slug": "diameter-of-binary-tree",
+      "problem_number": 543,
+      "title": "LeetCode 543 · 二叉树的直径",
+      "category": "binary-tree",
+      "topic": "postorder-aggregation",
+      "learning_stage": "advanced"
+    },
+    {
+      "slug": "coin-change",
+      "problem_number": 322,
+      "title": "LeetCode 322 · 零钱兑换",
+      "category": "dynamic-programming",
+      "topic": "unbounded-knapsack",
+      "learning_stage": "core"
+    },
+    {
+      "slug": "daily-temperatures",
+      "problem_number": 739,
+      "title": "LeetCode 739 · 每日温度",
+      "category": "monotonic-stack",
+      "topic": "next-warmer-day",
+      "learning_stage": "core"
+    },
+    {
+      "slug": "lru-cache",
+      "problem_number": 146,
+      "title": "LeetCode 146 · LRU 缓存",
+      "category": "data-structures",
+      "topic": "lru-cache",
+      "learning_stage": "advanced"
+    }
+  ],
+  "priority_queue": [
+    {
+      "problem_number": 242,
+      "slug": "valid-anagram",
+      "title": "Valid Anagram",
+      "category": "arrays-hashing",
+      "topic": "hash-lookup",
+      "priority": "P0",
+      "reason": "补齐哈希频次与计数向量"
+    },
+    {
+      "problem_number": 49,
+      "slug": "group-anagrams",
+      "title": "Group Anagrams",
+      "category": "arrays-hashing",
+      "topic": "hash-lookup",
+      "priority": "P0",
+      "reason": "从单值查找扩展到规范化键分组"
+    },
+    {
+      "problem_number": 347,
+      "slug": "top-k-frequent-elements",
+      "title": "Top K Frequent Elements",
+      "category": "data-structures",
+      "topic": "heap-priority-queue",
+      "priority": "P0",
+      "reason": "频率统计与堆/桶排序选择"
+    },
+    {
+      "problem_number": 20,
+      "slug": "valid-parentheses",
+      "title": "Valid Parentheses",
+      "category": "data-structures",
+      "topic": "stack-matching",
+      "priority": "P0",
+      "reason": "建立栈的后进先出与匹配不变量"
+    },
+    {
+      "problem_number": 206,
+      "slug": "reverse-linked-list",
+      "title": "Reverse Linked List",
+      "category": "data-structures",
+      "topic": "pointer-rewiring",
+      "priority": "P0",
+      "reason": "建立节点引用重连与迭代不变量"
+    },
+    {
+      "problem_number": 141,
+      "slug": "linked-list-cycle",
+      "title": "Linked List Cycle",
+      "category": "data-structures",
+      "topic": "fast-slow-pointers",
+      "priority": "P1",
+      "reason": "快慢指针与环检测"
+    },
+    {
+      "problem_number": 125,
+      "slug": "valid-palindrome",
+      "title": "Valid Palindrome",
+      "category": "two-pointer",
+      "topic": "opposite-direction",
+      "priority": "P1",
+      "reason": "双指针基础阶梯"
+    },
+    {
+      "problem_number": 42,
+      "slug": "trapping-rain-water",
+      "title": "Trapping Rain Water",
+      "category": "two-pointer",
+      "topic": "same-direction",
+      "priority": "P1",
+      "reason": "边界信息与逐位置贡献"
+    },
+    {
+      "problem_number": 424,
+      "slug": "longest-repeating-character-replacement",
+      "title": "Longest Repeating Character Replacement",
+      "category": "sliding-window",
+      "topic": "variable-window",
+      "priority": "P1",
+      "reason": "频次约束与窗口合法性"
+    },
+    {
+      "problem_number": 76,
+      "slug": "minimum-window-substring",
+      "title": "Minimum Window Substring",
+      "category": "sliding-window",
+      "topic": "window-counting",
+      "priority": "P1",
+      "reason": "双向频次约束与最小覆盖"
+    },
+    {
+      "problem_number": 150,
+      "slug": "evaluate-reverse-polish-notation",
+      "title": "Evaluate Reverse Polish Notation",
+      "category": "data-structures",
+      "topic": "stack-evaluation",
+      "priority": "P1",
+      "reason": "栈式表达式求值"
+    },
+    {
+      "problem_number": 21,
+      "slug": "merge-two-sorted-lists",
+      "title": "Merge Two Sorted Lists",
+      "category": "data-structures",
+      "topic": "merge-relink",
+      "priority": "P1",
+      "reason": "哨兵节点与有序归并"
+    },
+    {
+      "problem_number": 70,
+      "slug": "climbing-stairs",
+      "title": "Climbing Stairs",
+      "category": "dynamic-programming",
+      "topic": "one-dimensional-dp",
+      "priority": "P1",
+      "reason": "一维 DP 入门"
+    },
+    {
+      "problem_number": 198,
+      "slug": "house-robber",
+      "title": "House Robber",
+      "category": "dynamic-programming",
+      "topic": "one-dimensional-dp",
+      "priority": "P1",
+      "reason": "选择/不选择状态转移"
+    },
+    {
+      "problem_number": 207,
+      "slug": "course-schedule",
+      "title": "Course Schedule",
+      "category": "graphs",
+      "topic": "topological-sort",
+      "priority": "P1",
+      "reason": "依赖图与有向环检测"
+    }
+  ]
+}

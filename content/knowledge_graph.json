@@ -1,0 +1,2190 @@
+{
+  "schema_version": 1,
+  "node_id_convention": "domain:<slug>, category:<slug>, topic:<category>/<topic>, post:<slug>, facet:<field>:<slug>, path:<id>",
+  "edge_semantics": {
+    "belongs_to": "专题属于领域",
+    "classified_as": "题目的唯一主归属",
+    "instantiates": "题目展示的 L3 模式",
+    "uses_structure": "使用的数据结构",
+    "uses_technique": "使用的算法技巧",
+    "models": "抽象问题形态",
+    "proved_by": "正确性推理工具",
+    "requires": "真正的先修概念",
+    "targets_stage": "建议学习阶段",
+    "includes": "学习路径包含题目",
+    "precedes_in_path": "路径中的先后关系",
+    "extends": "进阶迁移",
+    "contrasts": "范式对照"
+  },
+  "nodes": [
+    {
+      "id": "domain:linear-data-structures",
+      "type": "domain",
+      "label": "线性数据结构与字符串"
+    },
+    {
+      "id": "domain:linear-patterns",
+      "type": "domain",
+      "label": "线性扫描与区间技巧"
+    },
+    {
+      "id": "domain:trees-recursion",
+      "type": "domain",
+      "label": "树、递归与分治"
+    },
+    {
+      "id": "domain:graphs-grids",
+      "type": "domain",
+      "label": "图论与网格"
+    },
+    {
+      "id": "domain:search-enumeration",
+      "type": "domain",
+      "label": "搜索与组合枚举"
+    },
+    {
+      "id": "domain:optimization",
+      "type": "domain",
+      "label": "动态规划与贪心优化"
+    },
+    {
+      "id": "domain:math-bits",
+      "type": "domain",
+      "label": "数学与位运算"
+    },
+    {
+      "id": "domain:advanced-data-structures",
+      "type": "domain",
+      "label": "高级数据结构与区间查询"
+    },
+    {
+      "id": "category:two-pointer",
+      "type": "category",
+      "label": "双指针"
+    },
+    {
+      "id": "topic:two-pointer/opposite-direction",
+      "type": "topic",
+      "label": "对向双指针"
+    },
+    {
+      "id": "topic:two-pointer/sorted-enumeration",
+      "type": "topic",
+      "label": "排序后枚举与去重"
+    },
+    {
+      "id": "topic:two-pointer/same-direction",
+      "type": "topic",
+      "label": "同向双指针"
+    },
+    {
+      "id": "category:sliding-window",
+      "type": "category",
+      "label": "滑动窗口"
+    },
+    {
+      "id": "topic:sliding-window/variable-window",
+      "type": "topic",
+      "label": "可变长窗口"
+    },
+    {
+      "id": "topic:sliding-window/window-counting",
+      "type": "topic",
+      "label": "窗口计数"
+    },
+    {
+      "id": "topic:sliding-window/fixed-window",
+      "type": "topic",
+      "label": "定长窗口"
+    },
+    {
+      "id": "category:backtracking",
+      "type": "category",
+      "label": "回溯与搜索"
+    },
+    {
+      "id": "topic:backtracking/permutations",
+      "type": "topic",
+      "label": "排列枚举"
+    },
+    {
+      "id": "topic:backtracking/pruning",
+      "type": "topic",
+      "label": "剪枝与约束"
+    },
+    {
+      "id": "topic:backtracking/combinations",
+      "type": "topic",
+      "label": "组合枚举"
+    },
+    {
+      "id": "topic:backtracking/subsets",
+      "type": "topic",
+      "label": "子集枚举"
+    },
+    {
+      "id": "category:graphs",
+      "type": "category",
+      "label": "图与网格"
+    },
+    {
+      "id": "topic:graphs/grid-traversal",
+      "type": "topic",
+      "label": "网格建模与邻接关系"
+    },
+    {
+      "id": "topic:graphs/graph-traversal",
+      "type": "topic",
+      "label": "图遍历与访问状态"
+    },
+    {
+      "id": "topic:graphs/connected-components",
+      "type": "topic",
+      "label": "连通分量与区域计数"
+    },
+    {
+      "id": "category:arrays-hashing",
+      "type": "category",
+      "label": "数组与哈希表"
+    },
+    {
+      "id": "topic:arrays-hashing/hash-lookup",
+      "type": "topic",
+      "label": "哈希查找与补数映射"
+    },
+    {
+      "id": "topic:arrays-hashing/set-membership",
+      "type": "topic",
+      "label": "集合判重与成员查询"
+    },
+    {
+      "id": "topic:arrays-hashing/prefix-suffix",
+      "type": "topic",
+      "label": "前后缀累计与空间优化"
+    },
+    {
+      "id": "category:binary-search",
+      "type": "category",
+      "label": "二分查找"
+    },
+    {
+      "id": "topic:binary-search/exact-search",
+      "type": "topic",
+      "label": "精确查找与区间收缩"
+    },
+    {
+      "id": "topic:binary-search/boundary-search",
+      "type": "topic",
+      "label": "边界查找与重复值范围"
+    },
+    {
+      "id": "topic:binary-search/rotated-array",
+      "type": "topic",
+      "label": "旋转有序数组"
+    },
+    {
+      "id": "category:binary-tree",
+      "type": "category",
+      "label": "二叉树"
+    },
+    {
+      "id": "topic:binary-tree/recursive-depth",
+      "type": "topic",
+      "label": "递归定义与树高"
+    },
+    {
+      "id": "topic:binary-tree/level-order",
+      "type": "topic",
+      "label": "层序遍历与队列分层"
+    },
+    {
+      "id": "topic:binary-tree/postorder-aggregation",
+      "type": "topic",
+      "label": "后序遍历与子树信息汇总"
+    },
+    {
+      "id": "category:dynamic-programming",
+      "type": "category",
+      "label": "动态规划"
+    },
+    {
+      "id": "topic:dynamic-programming/unbounded-knapsack",
+      "type": "topic",
+      "label": "完全背包与零钱兑换"
+    },
+    {
+      "id": "category:monotonic-stack",
+      "type": "category",
+      "label": "单调栈"
+    },
+    {
+      "id": "topic:monotonic-stack/next-warmer-day",
+      "type": "topic",
+      "label": "下一个更大元素"
+    },
+    {
+      "id": "category:data-structures",
+      "type": "category",
+      "label": "数据结构设计"
+    },
+    {
+      "id": "topic:data-structures/lru-cache",
+      "type": "topic",
+      "label": "LRU 缓存"
+    },
+    {
+      "id": "post:longest-substring-without-repeating-characters",
+      "type": "problem",
+      "label": "LeetCode 3 · 无重复字符的最长子串",
+      "slug": "longest-substring-without-repeating-characters",
+      "category": "sliding-window",
+      "topic": "variable-window",
+      "problem_url": "https://leetcode.com/problems/longest-substring-without-repeating-characters/"
+    },
+    {
+      "id": "post:container-with-most-water",
+      "type": "problem",
+      "label": "LeetCode 11 · 盛最多水的容器",
+      "slug": "container-with-most-water",
+      "category": "two-pointer",
+      "topic": "opposite-direction",
+      "problem_url": "https://leetcode.com/problems/container-with-most-water/"
+    },
+    {
+      "id": "post:three-sum",
+      "type": "problem",
+      "label": "LeetCode 15 · 三数之和",
+      "slug": "three-sum",
+      "category": "two-pointer",
+      "topic": "sorted-enumeration",
+      "problem_url": "https://leetcode.com/problems/3sum/"
+    },
+    {
+      "id": "post:permutations",
+      "type": "problem",
+      "label": "LeetCode 46 · 全排列",
+      "slug": "permutations",
+      "category": "backtracking",
+      "topic": "permutations",
+      "problem_url": "https://leetcode.com/problems/permutations/"
+    },
+    {
+      "id": "post:number-of-islands",
+      "type": "problem",
+      "label": "LeetCode 200 · 岛屿数量",
+      "slug": "number-of-islands",
+      "category": "graphs",
+      "topic": "connected-components",
+      "problem_url": "https://leetcode.com/problems/number-of-islands/"
+    },
+    {
+      "id": "post:two-sum",
+      "type": "problem",
+      "label": "LeetCode 1 · 两数之和",
+      "slug": "two-sum",
+      "category": "arrays-hashing",
+      "topic": "hash-lookup",
+      "problem_url": "https://leetcode.com/problems/two-sum/"
+    },
+    {
+      "id": "post:contains-duplicate",
+      "type": "problem",
+      "label": "LeetCode 217 · 存在重复元素",
+      "slug": "contains-duplicate",
+      "category": "arrays-hashing",
+      "topic": "set-membership",
+      "problem_url": "https://leetcode.com/problems/contains-duplicate/"
+    },
+    {
+      "id": "post:product-of-array-except-self",
+      "type": "problem",
+      "label": "LeetCode 238 · 除自身以外数组的乘积",
+      "slug": "product-of-array-except-self",
+      "category": "arrays-hashing",
+      "topic": "prefix-suffix",
+      "problem_url": "https://leetcode.com/problems/product-of-array-except-self/"
+    },
+    {
+      "id": "post:binary-search",
+      "type": "problem",
+      "label": "LeetCode 704 · 二分查找",
+      "slug": "binary-search",
+      "category": "binary-search",
+      "topic": "exact-search",
+      "problem_url": "https://leetcode.com/problems/binary-search/"
+    },
+    {
+      "id": "post:find-first-and-last-position",
+      "type": "problem",
+      "label": "LeetCode 34 · 在排序数组中查找元素的第一个和最后一个位置",
+      "slug": "find-first-and-last-position",
+      "category": "binary-search",
+      "topic": "boundary-search",
+      "problem_url": "https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/"
+    },
+    {
+      "id": "post:search-in-rotated-sorted-array",
+      "type": "problem",
+      "label": "LeetCode 33 · 搜索旋转排序数组",
+      "slug": "search-in-rotated-sorted-array",
+      "category": "binary-search",
+      "topic": "rotated-array",
+      "problem_url": "https://leetcode.com/problems/search-in-rotated-sorted-array/"
+    },
+    {
+      "id": "post:maximum-depth-of-binary-tree",
+      "type": "problem",
+      "label": "LeetCode 104 · 二叉树的最大深度",
+      "slug": "maximum-depth-of-binary-tree",
+      "category": "binary-tree",
+      "topic": "recursive-depth",
+      "problem_url": "https://leetcode.com/problems/maximum-depth-of-binary-tree/"
+    },
+    {
+      "id": "post:binary-tree-level-order-traversal",
+      "type": "problem",
+      "label": "LeetCode 102 · 二叉树的层序遍历",
+      "slug": "binary-tree-level-order-traversal",
+      "category": "binary-tree",
+      "topic": "level-order",
+      "problem_url": "https://leetcode.com/problems/binary-tree-level-order-traversal/"
+    },
+    {
+      "id": "post:diameter-of-binary-tree",
+      "type": "problem",
+      "label": "LeetCode 543 · 二叉树的直径",
+      "slug": "diameter-of-binary-tree",
+      "category": "binary-tree",
+      "topic": "postorder-aggregation",
+      "problem_url": "https://leetcode.com/problems/diameter-of-binary-tree/"
+    },
+    {
+      "id": "post:coin-change",
+      "type": "problem",
+      "label": "LeetCode 322 · 零钱兑换",
+      "slug": "coin-change",
+      "category": "dynamic-programming",
+      "topic": "unbounded-knapsack",
+      "problem_url": "https://leetcode.com/problems/coin-change/"
+    },
+    {
+      "id": "post:daily-temperatures",
+      "type": "problem",
+      "label": "LeetCode 739 · 每日温度",
+      "slug": "daily-temperatures",
+      "category": "monotonic-stack",
+      "topic": "next-warmer-day",
+      "problem_url": "https://leetcode.com/problems/daily-temperatures/"
+    },
+    {
+      "id": "post:lru-cache",
+      "type": "problem",
+      "label": "LeetCode 146 · LRU 缓存",
+      "slug": "lru-cache",
+      "category": "data-structures",
+      "topic": "lru-cache",
+      "problem_url": "https://leetcode.com/problems/lru-cache/"
+    },
+    {
+      "id": "facet:structures:string",
+      "type": "concept",
+      "label": "字符串"
+    },
+    {
+      "id": "facet:structures:hash-map",
+      "type": "concept",
+      "label": "哈希表"
+    },
+    {
+      "id": "facet:techniques:sliding-window",
+      "type": "concept",
+      "label": "滑动窗口"
+    },
+    {
+      "id": "facet:techniques:last-seen-index",
+      "type": "concept",
+      "label": "最后出现位置"
+    },
+    {
+      "id": "facet:problem_shapes:longest-unique-substring",
+      "type": "concept",
+      "label": "最长无重复子串"
+    },
+    {
+      "id": "facet:reasoning:window-invariant",
+      "type": "concept",
+      "label": "窗口不变量"
+    },
+    {
+      "id": "facet:reasoning:monotonic-left-boundary",
+      "type": "concept",
+      "label": "左边界单调性"
+    },
+    {
+      "id": "facet:prerequisites:array-indexing",
+      "type": "prerequisite",
+      "label": "数组与下标"
+    },
+    {
+      "id": "facet:prerequisites:hash-map-basics",
+      "type": "prerequisite",
+      "label": "哈希表基础"
+    },
+    {
+      "id": "facet:structures:array",
+      "type": "concept",
+      "label": "数组"
+    },
+    {
+      "id": "facet:techniques:two-pointers",
+      "type": "concept",
+      "label": "双指针"
+    },
+    {
+      "id": "facet:techniques:greedy-choice",
+      "type": "concept",
+      "label": "贪心选择"
+    },
+    {
+      "id": "facet:problem_shapes:maximum-area-pair",
+      "type": "concept",
+      "label": "最大面积二元选择"
+    },
+    {
+      "id": "facet:reasoning:candidate-elimination",
+      "type": "concept",
+      "label": "候选淘汰证明"
+    },
+    {
+      "id": "facet:reasoning:upper-bound-proof",
+      "type": "concept",
+      "label": "上界证明"
+    },
+    {
+      "id": "facet:prerequisites:two-pointer-basics",
+      "type": "prerequisite",
+      "label": "双指针基础"
+    },
+    {
+      "id": "facet:techniques:sorting",
+      "type": "concept",
+      "label": "排序"
+    },
+    {
+      "id": "facet:techniques:deduplication",
+      "type": "concept",
+      "label": "去重"
+    },
+    {
+      "id": "facet:problem_shapes:k-sum-triplets",
+      "type": "concept",
+      "label": "K 数之和与三元组"
+    },
+    {
+      "id": "facet:reasoning:sorted-order",
+      "type": "concept",
+      "label": "有序性推理"
+    },
+    {
+      "id": "facet:reasoning:duplicate-elimination",
+      "type": "concept",
+      "label": "重复解消除"
+    },
+    {
+      "id": "facet:prerequisites:sorting-basics",
+      "type": "prerequisite",
+      "label": "排序基础"
+    },
+    {
+      "id": "facet:structures:recursion-state",
+      "type": "concept",
+      "label": "递归状态"
+    },
+    {
+      "id": "facet:techniques:backtracking",
+      "type": "concept",
+      "label": "回溯"
+    },
+    {
+      "id": "facet:techniques:depth-first-search",
+      "type": "concept",
+      "label": "深度优先搜索"
+    },
+    {
+      "id": "facet:problem_shapes:permutation-enumeration",
+      "type": "concept",
+      "label": "排列枚举"
+    },
+    {
+      "id": "facet:reasoning:choice-explore-undo",
+      "type": "concept",
+      "label": "选择—探索—撤销"
+    },
+    {
+      "id": "facet:reasoning:state-restoration",
+      "type": "concept",
+      "label": "状态恢复"
+    },
+    {
+      "id": "facet:prerequisites:recursion-basics",
+      "type": "prerequisite",
+      "label": "递归基础"
+    },
+    {
+      "id": "facet:structures:grid",
+      "type": "concept",
+      "label": "二维网格"
+    },
+    {
+      "id": "facet:structures:implicit-graph",
+      "type": "concept",
+      "label": "隐式图"
+    },
+    {
+      "id": "facet:techniques:flood-fill",
+      "type": "concept",
+      "label": "洪水填充"
+    },
+    {
+      "id": "facet:problem_shapes:connected-component-count",
+      "type": "concept",
+      "label": "连通分量计数"
+    },
+    {
+      "id": "facet:reasoning:visited-on-discovery",
+      "type": "concept",
+      "label": "发现时标记访问"
+    },
+    {
+      "id": "facet:reasoning:graph-modeling",
+      "type": "concept",
+      "label": "图建模"
+    },
+    {
+      "id": "facet:prerequisites:graph-modeling-basics",
+      "type": "prerequisite",
+      "label": "图建模基础"
+    },
+    {
+      "id": "facet:prerequisites:dfs-basics",
+      "type": "prerequisite",
+      "label": "DFS 基础"
+    },
+    {
+      "id": "facet:techniques:hash-lookup",
+      "type": "concept",
+      "label": "哈希查找"
+    },
+    {
+      "id": "facet:problem_shapes:pair-sum",
+      "type": "concept",
+      "label": "两数配对"
+    },
+    {
+      "id": "facet:reasoning:complement-invariant",
+      "type": "concept",
+      "label": "补数查找不变量"
+    },
+    {
+      "id": "facet:reasoning:check-before-insert",
+      "type": "concept",
+      "label": "先查找再写入"
+    },
+    {
+      "id": "facet:prerequisites:array-traversal-basics",
+      "type": "prerequisite",
+      "label": "数组遍历基础"
+    },
+    {
+      "id": "facet:structures:set",
+      "type": "concept",
+      "label": "集合"
+    },
+    {
+      "id": "facet:techniques:set-membership",
+      "type": "concept",
+      "label": "集合成员查询"
+    },
+    {
+      "id": "facet:problem_shapes:duplicate-detection",
+      "type": "concept",
+      "label": "重复元素检测"
+    },
+    {
+      "id": "facet:reasoning:set-prefix-invariant",
+      "type": "concept",
+      "label": "集合覆盖已扫描前缀"
+    },
+    {
+      "id": "facet:prerequisites:hash-set-basics",
+      "type": "prerequisite",
+      "label": "哈希集合基础"
+    },
+    {
+      "id": "facet:structures:prefix-products",
+      "type": "concept",
+      "label": "前后缀累计状态"
+    },
+    {
+      "id": "facet:techniques:prefix-suffix",
+      "type": "concept",
+      "label": "前后缀累计"
+    },
+    {
+      "id": "facet:problem_shapes:product-except-self",
+      "type": "concept",
+      "label": "除自身以外的乘积"
+    },
+    {
+      "id": "facet:reasoning:prefix-suffix-exclusion",
+      "type": "concept",
+      "label": "左右乘积排除当前元素"
+    },
+    {
+      "id": "facet:prerequisites:prefix-product-basics",
+      "type": "prerequisite",
+      "label": "前后缀累计基础"
+    },
+    {
+      "id": "facet:structures:sorted-array",
+      "type": "concept",
+      "label": "有序数组"
+    },
+    {
+      "id": "facet:techniques:binary-search",
+      "type": "concept",
+      "label": "二分查找"
+    },
+    {
+      "id": "facet:problem_shapes:exact-target-search",
+      "type": "concept",
+      "label": "有序数组精确查找"
+    },
+    {
+      "id": "facet:reasoning:closed-interval-invariant",
+      "type": "concept",
+      "label": "闭区间候选不变量"
+    },
+    {
+      "id": "facet:reasoning:sorted-half-elimination",
+      "type": "concept",
+      "label": "有序半区排除"
+    },
+    {
+      "id": "facet:prerequisites:sorted-array-basics",
+      "type": "prerequisite",
+      "label": "有序数组基础"
+    },
+    {
+      "id": "facet:techniques:lower-bound",
+      "type": "concept",
+      "label": "下界查找"
+    },
+    {
+      "id": "facet:techniques:upper-bound",
+      "type": "concept",
+      "label": "上界查找"
+    },
+    {
+      "id": "facet:problem_shapes:first-last-position",
+      "type": "concept",
+      "label": "目标值首末位置"
+    },
+    {
+      "id": "facet:reasoning:half-open-boundary-invariant",
+      "type": "concept",
+      "label": "半开区间边界不变量"
+    },
+    {
+      "id": "facet:prerequisites:binary-search-basics",
+      "type": "prerequisite",
+      "label": "二分区间基础"
+    },
+    {
+      "id": "facet:problem_shapes:rotated-array-search",
+      "type": "concept",
+      "label": "旋转数组查找"
+    },
+    {
+      "id": "facet:reasoning:unique-half-invariant",
+      "type": "concept",
+      "label": "唯一值下的有序半区"
+    },
+    {
+      "id": "facet:structures:binary-tree",
+      "type": "concept",
+      "label": "二叉树"
+    },
+    {
+      "id": "facet:structures:tree-node",
+      "type": "concept",
+      "label": "树节点"
+    },
+    {
+      "id": "facet:techniques:recursive-dfs",
+      "type": "concept",
+      "label": "递归深度优先搜索"
+    },
+    {
+      "id": "facet:problem_shapes:tree-height",
+      "type": "concept",
+      "label": "二叉树高度"
+    },
+    {
+      "id": "facet:reasoning:empty-tree-base-case",
+      "type": "concept",
+      "label": "空树递归基例"
+    },
+    {
+      "id": "facet:reasoning:postorder-dependency",
+      "type": "concept",
+      "label": "子树结果先于父节点"
+    },
+    {
+      "id": "facet:prerequisites:tree-recursion-basics",
+      "type": "prerequisite",
+      "label": "树递归基础"
+    },
+    {
+      "id": "facet:structures:queue",
+      "type": "concept",
+      "label": "队列"
+    },
+    {
+      "id": "facet:techniques:breadth-first-search",
+      "type": "concept",
+      "label": "广度优先搜索"
+    },
+    {
+      "id": "facet:problem_shapes:level-order-groups",
+      "type": "concept",
+      "label": "逐层分组遍历"
+    },
+    {
+      "id": "facet:reasoning:level-boundary-snapshot",
+      "type": "concept",
+      "label": "固定当前层队列边界"
+    },
+    {
+      "id": "facet:prerequisites:queue-basics",
+      "type": "prerequisite",
+      "label": "队列基础"
+    },
+    {
+      "id": "facet:techniques:postorder-traversal",
+      "type": "concept",
+      "label": "后序遍历"
+    },
+    {
+      "id": "facet:problem_shapes:tree-diameter",
+      "type": "concept",
+      "label": "二叉树直径"
+    },
+    {
+      "id": "facet:reasoning:diameter-through-lca",
+      "type": "concept",
+      "label": "路径最高点分解"
+    },
+    {
+      "id": "facet:techniques:dynamic-programming",
+      "type": "concept",
+      "label": "动态规划"
+    },
+    {
+      "id": "facet:problem_shapes:minimum-coin-count",
+      "type": "concept",
+      "label": "最少硬币数量"
+    },
+    {
+      "id": "facet:reasoning:optimal-substructure",
+      "type": "concept",
+      "label": "最优子结构"
+    },
+    {
+      "id": "facet:techniques:monotonic-stack",
+      "type": "concept",
+      "label": "单调栈"
+    },
+    {
+      "id": "facet:problem_shapes:next-warmer-element",
+      "type": "concept",
+      "label": "下一个更高温度"
+    },
+    {
+      "id": "facet:reasoning:monotonic-stack-invariant",
+      "type": "concept",
+      "label": "单调栈顺序不变量"
+    },
+    {
+      "id": "facet:structures:doubly-linked-list",
+      "type": "concept",
+      "label": "双向链表"
+    },
+    {
+      "id": "facet:techniques:recency-update",
+      "type": "concept",
+      "label": "最近使用顺序更新"
+    },
+    {
+      "id": "facet:problem_shapes:cache-eviction",
+      "type": "concept",
+      "label": "缓存淘汰与访问顺序"
+    },
+    {
+      "id": "facet:reasoning:map-list-bijection",
+      "type": "concept",
+      "label": "哈希表与链表一一对应"
+    },
+    {
+      "id": "facet:reasoning:constant-time-eviction",
+      "type": "concept",
+      "label": "常数时间定位与淘汰"
+    },
+    {
+      "id": "facet:prerequisites:linked-list-basics",
+      "type": "prerequisite",
+      "label": "链表基础"
+    },
+    {
+      "id": "facet:learning_stages:foundation",
+      "type": "learning_stage",
+      "label": "基础建立"
+    },
+    {
+      "id": "facet:learning_stages:core",
+      "type": "learning_stage",
+      "label": "核心模式"
+    },
+    {
+      "id": "facet:learning_stages:advanced",
+      "type": "learning_stage",
+      "label": "进阶技巧"
+    },
+    {
+      "id": "path:two-pointer-journey",
+      "type": "learning_path",
+      "label": "从基础双指针到去重"
+    },
+    {
+      "id": "path:state-and-search",
+      "type": "learning_path",
+      "label": "从连续窗口到状态空间搜索"
+    },
+    {
+      "id": "path:algorithm-toolbox",
+      "type": "learning_path",
+      "label": "跨专题综合练习：从窗口到图搜索"
+    },
+    {
+      "id": "path:arrays-hashing-foundations",
+      "type": "learning_path",
+      "label": "数组与哈希表：从查找到累计"
+    },
+    {
+      "id": "path:binary-search-foundations",
+      "type": "learning_path",
+      "label": "二分查找：从精确命中到边界定位"
+    },
+    {
+      "id": "path:binary-tree-foundations",
+      "type": "learning_path",
+      "label": "二叉树：从递归到层序与后序汇总"
+    },
+    {
+      "id": "path:ordered-search-patterns",
+      "type": "learning_path",
+      "label": "有序数组：从双指针到旋转二分"
+    },
+    {
+      "id": "path:state-space-optimization",
+      "type": "learning_path",
+      "label": "状态空间：从回溯枚举到动态规划"
+    },
+    {
+      "id": "path:frontier-data-structures",
+      "type": "learning_path",
+      "label": "前沿管理：单调栈与树的层序队列"
+    },
+    {
+      "id": "path:graph-and-tree-traversal",
+      "type": "learning_path",
+      "label": "树与图：遍历顺序如何定义"
+    },
+    {
+      "id": "path:maintaining-live-state",
+      "type": "learning_path",
+      "label": "持续维护状态：从单调栈到 LRU 缓存"
+    }
+  ],
+  "edges": [
+    {
+      "source": "category:two-pointer",
+      "target": "domain:linear-patterns",
+      "type": "belongs_to"
+    },
+    {
+      "source": "category:sliding-window",
+      "target": "domain:linear-patterns",
+      "type": "belongs_to"
+    },
+    {
+      "source": "category:backtracking",
+      "target": "domain:search-enumeration",
+      "type": "belongs_to"
+    },
+    {
+      "source": "category:graphs",
+      "target": "domain:graphs-grids",
+      "type": "belongs_to"
+    },
+    {
+      "source": "category:arrays-hashing",
+      "target": "domain:linear-data-structures",
+      "type": "belongs_to"
+    },
+    {
+      "source": "category:binary-search",
+      "target": "domain:linear-patterns",
+      "type": "belongs_to"
+    },
+    {
+      "source": "category:binary-tree",
+      "target": "domain:trees-recursion",
+      "type": "belongs_to"
+    },
+    {
+      "source": "category:dynamic-programming",
+      "target": "domain:optimization",
+      "type": "belongs_to"
+    },
+    {
+      "source": "category:monotonic-stack",
+      "target": "domain:linear-patterns",
+      "type": "belongs_to"
+    },
+    {
+      "source": "category:data-structures",
+      "target": "domain:linear-data-structures",
+      "type": "belongs_to"
+    },
+    {
+      "source": "post:longest-substring-without-repeating-characters",
+      "target": "category:sliding-window",
+      "type": "classified_as"
+    },
+    {
+      "source": "post:longest-substring-without-repeating-characters",
+      "target": "topic:sliding-window/variable-window",
+      "type": "instantiates"
+    },
+    {
+      "source": "post:longest-substring-without-repeating-characters",
+      "target": "facet:structures:string",
+      "type": "uses_structure"
+    },
+    {
+      "source": "post:longest-substring-without-repeating-characters",
+      "target": "facet:structures:hash-map",
+      "type": "uses_structure"
+    },
+    {
+      "source": "post:longest-substring-without-repeating-characters",
+      "target": "facet:techniques:sliding-window",
+      "type": "uses_technique"
+    },
+    {
+      "source": "post:longest-substring-without-repeating-characters",
+      "target": "facet:techniques:last-seen-index",
+      "type": "uses_technique"
+    },
+    {
+      "source": "post:longest-substring-without-repeating-characters",
+      "target": "facet:problem_shapes:longest-unique-substring",
+      "type": "models"
+    },
+    {
+      "source": "post:longest-substring-without-repeating-characters",
+      "target": "facet:reasoning:window-invariant",
+      "type": "proved_by"
+    },
+    {
+      "source": "post:longest-substring-without-repeating-characters",
+      "target": "facet:reasoning:monotonic-left-boundary",
+      "type": "proved_by"
+    },
+    {
+      "source": "post:longest-substring-without-repeating-characters",
+      "target": "facet:prerequisites:array-indexing",
+      "type": "requires"
+    },
+    {
+      "source": "post:longest-substring-without-repeating-characters",
+      "target": "facet:prerequisites:hash-map-basics",
+      "type": "requires"
+    },
+    {
+      "source": "post:longest-substring-without-repeating-characters",
+      "target": "facet:learning_stages:core",
+      "type": "targets_stage"
+    },
+    {
+      "source": "post:container-with-most-water",
+      "target": "category:two-pointer",
+      "type": "classified_as"
+    },
+    {
+      "source": "post:container-with-most-water",
+      "target": "topic:two-pointer/opposite-direction",
+      "type": "instantiates"
+    },
+    {
+      "source": "post:container-with-most-water",
+      "target": "facet:structures:array",
+      "type": "uses_structure"
+    },
+    {
+      "source": "post:container-with-most-water",
+      "target": "facet:techniques:two-pointers",
+      "type": "uses_technique"
+    },
+    {
+      "source": "post:container-with-most-water",
+      "target": "facet:techniques:greedy-choice",
+      "type": "uses_technique"
+    },
+    {
+      "source": "post:container-with-most-water",
+      "target": "facet:problem_shapes:maximum-area-pair",
+      "type": "models"
+    },
+    {
+      "source": "post:container-with-most-water",
+      "target": "facet:reasoning:candidate-elimination",
+      "type": "proved_by"
+    },
+    {
+      "source": "post:container-with-most-water",
+      "target": "facet:reasoning:upper-bound-proof",
+      "type": "proved_by"
+    },
+    {
+      "source": "post:container-with-most-water",
+      "target": "facet:prerequisites:array-indexing",
+      "type": "requires"
+    },
+    {
+      "source": "post:container-with-most-water",
+      "target": "facet:prerequisites:two-pointer-basics",
+      "type": "requires"
+    },
+    {
+      "source": "post:container-with-most-water",
+      "target": "facet:learning_stages:core",
+      "type": "targets_stage"
+    },
+    {
+      "source": "post:three-sum",
+      "target": "category:two-pointer",
+      "type": "classified_as"
+    },
+    {
+      "source": "post:three-sum",
+      "target": "topic:two-pointer/sorted-enumeration",
+      "type": "instantiates"
+    },
+    {
+      "source": "post:three-sum",
+      "target": "facet:structures:array",
+      "type": "uses_structure"
+    },
+    {
+      "source": "post:three-sum",
+      "target": "facet:techniques:sorting",
+      "type": "uses_technique"
+    },
+    {
+      "source": "post:three-sum",
+      "target": "facet:techniques:two-pointers",
+      "type": "uses_technique"
+    },
+    {
+      "source": "post:three-sum",
+      "target": "facet:techniques:deduplication",
+      "type": "uses_technique"
+    },
+    {
+      "source": "post:three-sum",
+      "target": "facet:problem_shapes:k-sum-triplets",
+      "type": "models"
+    },
+    {
+      "source": "post:three-sum",
+      "target": "facet:reasoning:sorted-order",
+      "type": "proved_by"
+    },
+    {
+      "source": "post:three-sum",
+      "target": "facet:reasoning:duplicate-elimination",
+      "type": "proved_by"
+    },
+    {
+      "source": "post:three-sum",
+      "target": "facet:prerequisites:sorting-basics",
+      "type": "requires"
+    },
+    {
+      "source": "post:three-sum",
+      "target": "facet:prerequisites:two-pointer-basics",
+      "type": "requires"
+    },
+    {
+      "source": "post:three-sum",
+      "target": "facet:learning_stages:core",
+      "type": "targets_stage"
+    },
+    {
+      "source": "post:permutations",
+      "target": "category:backtracking",
+      "type": "classified_as"
+    },
+    {
+      "source": "post:permutations",
+      "target": "topic:backtracking/permutations",
+      "type": "instantiates"
+    },
+    {
+      "source": "post:permutations",
+      "target": "facet:structures:array",
+      "type": "uses_structure"
+    },
+    {
+      "source": "post:permutations",
+      "target": "facet:structures:recursion-state",
+      "type": "uses_structure"
+    },
+    {
+      "source": "post:permutations",
+      "target": "facet:techniques:backtracking",
+      "type": "uses_technique"
+    },
+    {
+      "source": "post:permutations",
+      "target": "facet:techniques:depth-first-search",
+      "type": "uses_technique"
+    },
+    {
+      "source": "post:permutations",
+      "target": "facet:problem_shapes:permutation-enumeration",
+      "type": "models"
+    },
+    {
+      "source": "post:permutations",
+      "target": "facet:reasoning:choice-explore-undo",
+      "type": "proved_by"
+    },
+    {
+      "source": "post:permutations",
+      "target": "facet:reasoning:state-restoration",
+      "type": "proved_by"
+    },
+    {
+      "source": "post:permutations",
+      "target": "facet:prerequisites:array-indexing",
+      "type": "requires"
+    },
+    {
+      "source": "post:permutations",
+      "target": "facet:prerequisites:recursion-basics",
+      "type": "requires"
+    },
+    {
+      "source": "post:permutations",
+      "target": "facet:learning_stages:core",
+      "type": "targets_stage"
+    },
+    {
+      "source": "post:number-of-islands",
+      "target": "category:graphs",
+      "type": "classified_as"
+    },
+    {
+      "source": "post:number-of-islands",
+      "target": "topic:graphs/connected-components",
+      "type": "instantiates"
+    },
+    {
+      "source": "post:number-of-islands",
+      "target": "facet:structures:grid",
+      "type": "uses_structure"
+    },
+    {
+      "source": "post:number-of-islands",
+      "target": "facet:structures:implicit-graph",
+      "type": "uses_structure"
+    },
+    {
+      "source": "post:number-of-islands",
+      "target": "facet:techniques:depth-first-search",
+      "type": "uses_technique"
+    },
+    {
+      "source": "post:number-of-islands",
+      "target": "facet:techniques:flood-fill",
+      "type": "uses_technique"
+    },
+    {
+      "source": "post:number-of-islands",
+      "target": "facet:problem_shapes:connected-component-count",
+      "type": "models"
+    },
+    {
+      "source": "post:number-of-islands",
+      "target": "facet:reasoning:visited-on-discovery",
+      "type": "proved_by"
+    },
+    {
+      "source": "post:number-of-islands",
+      "target": "facet:reasoning:graph-modeling",
+      "type": "proved_by"
+    },
+    {
+      "source": "post:number-of-islands",
+      "target": "facet:prerequisites:graph-modeling-basics",
+      "type": "requires"
+    },
+    {
+      "source": "post:number-of-islands",
+      "target": "facet:prerequisites:dfs-basics",
+      "type": "requires"
+    },
+    {
+      "source": "post:number-of-islands",
+      "target": "facet:learning_stages:core",
+      "type": "targets_stage"
+    },
+    {
+      "source": "post:two-sum",
+      "target": "category:arrays-hashing",
+      "type": "classified_as"
+    },
+    {
+      "source": "post:two-sum",
+      "target": "topic:arrays-hashing/hash-lookup",
+      "type": "instantiates"
+    },
+    {
+      "source": "post:two-sum",
+      "target": "facet:structures:array",
+      "type": "uses_structure"
+    },
+    {
+      "source": "post:two-sum",
+      "target": "facet:structures:hash-map",
+      "type": "uses_structure"
+    },
+    {
+      "source": "post:two-sum",
+      "target": "facet:techniques:hash-lookup",
+      "type": "uses_technique"
+    },
+    {
+      "source": "post:two-sum",
+      "target": "facet:problem_shapes:pair-sum",
+      "type": "models"
+    },
+    {
+      "source": "post:two-sum",
+      "target": "facet:reasoning:complement-invariant",
+      "type": "proved_by"
+    },
+    {
+      "source": "post:two-sum",
+      "target": "facet:reasoning:check-before-insert",
+      "type": "proved_by"
+    },
+    {
+      "source": "post:two-sum",
+      "target": "facet:prerequisites:array-traversal-basics",
+      "type": "requires"
+    },
+    {
+      "source": "post:two-sum",
+      "target": "facet:learning_stages:foundation",
+      "type": "targets_stage"
+    },
+    {
+      "source": "post:contains-duplicate",
+      "target": "category:arrays-hashing",
+      "type": "classified_as"
+    },
+    {
+      "source": "post:contains-duplicate",
+      "target": "topic:arrays-hashing/set-membership",
+      "type": "instantiates"
+    },
+    {
+      "source": "post:contains-duplicate",
+      "target": "facet:structures:array",
+      "type": "uses_structure"
+    },
+    {
+      "source": "post:contains-duplicate",
+      "target": "facet:structures:set",
+      "type": "uses_structure"
+    },
+    {
+      "source": "post:contains-duplicate",
+      "target": "facet:techniques:set-membership",
+      "type": "uses_technique"
+    },
+    {
+      "source": "post:contains-duplicate",
+      "target": "facet:problem_shapes:duplicate-detection",
+      "type": "models"
+    },
+    {
+      "source": "post:contains-duplicate",
+      "target": "facet:reasoning:set-prefix-invariant",
+      "type": "proved_by"
+    },
+    {
+      "source": "post:contains-duplicate",
+      "target": "facet:prerequisites:array-traversal-basics",
+      "type": "requires"
+    },
+    {
+      "source": "post:contains-duplicate",
+      "target": "facet:prerequisites:hash-set-basics",
+      "type": "requires"
+    },
+    {
+      "source": "post:contains-duplicate",
+      "target": "facet:learning_stages:foundation",
+      "type": "targets_stage"
+    },
+    {
+      "source": "post:product-of-array-except-self",
+      "target": "category:arrays-hashing",
+      "type": "classified_as"
+    },
+    {
+      "source": "post:product-of-array-except-self",
+      "target": "topic:arrays-hashing/prefix-suffix",
+      "type": "instantiates"
+    },
+    {
+      "source": "post:product-of-array-except-self",
+      "target": "facet:structures:array",
+      "type": "uses_structure"
+    },
+    {
+      "source": "post:product-of-array-except-self",
+      "target": "facet:structures:prefix-products",
+      "type": "uses_structure"
+    },
+    {
+      "source": "post:product-of-array-except-self",
+      "target": "facet:techniques:prefix-suffix",
+      "type": "uses_technique"
+    },
+    {
+      "source": "post:product-of-array-except-self",
+      "target": "facet:problem_shapes:product-except-self",
+      "type": "models"
+    },
+    {
+      "source": "post:product-of-array-except-self",
+      "target": "facet:reasoning:prefix-suffix-exclusion",
+      "type": "proved_by"
+    },
+    {
+      "source": "post:product-of-array-except-self",
+      "target": "facet:prerequisites:array-traversal-basics",
+      "type": "requires"
+    },
+    {
+      "source": "post:product-of-array-except-self",
+      "target": "facet:prerequisites:prefix-product-basics",
+      "type": "requires"
+    },
+    {
+      "source": "post:product-of-array-except-self",
+      "target": "facet:learning_stages:core",
+      "type": "targets_stage"
+    },
+    {
+      "source": "post:binary-search",
+      "target": "category:binary-search",
+      "type": "classified_as"
+    },
+    {
+      "source": "post:binary-search",
+      "target": "topic:binary-search/exact-search",
+      "type": "instantiates"
+    },
+    {
+      "source": "post:binary-search",
+      "target": "facet:structures:sorted-array",
+      "type": "uses_structure"
+    },
+    {
+      "source": "post:binary-search",
+      "target": "facet:techniques:binary-search",
+      "type": "uses_technique"
+    },
+    {
+      "source": "post:binary-search",
+      "target": "facet:problem_shapes:exact-target-search",
+      "type": "models"
+    },
+    {
+      "source": "post:binary-search",
+      "target": "facet:reasoning:closed-interval-invariant",
+      "type": "proved_by"
+    },
+    {
+      "source": "post:binary-search",
+      "target": "facet:reasoning:sorted-half-elimination",
+      "type": "proved_by"
+    },
+    {
+      "source": "post:binary-search",
+      "target": "facet:prerequisites:sorted-array-basics",
+      "type": "requires"
+    },
+    {
+      "source": "post:binary-search",
+      "target": "facet:learning_stages:foundation",
+      "type": "targets_stage"
+    },
+    {
+      "source": "post:find-first-and-last-position",
+      "target": "category:binary-search",
+      "type": "classified_as"
+    },
+    {
+      "source": "post:find-first-and-last-position",
+      "target": "topic:binary-search/boundary-search",
+      "type": "instantiates"
+    },
+    {
+      "source": "post:find-first-and-last-position",
+      "target": "facet:structures:sorted-array",
+      "type": "uses_structure"
+    },
+    {
+      "source": "post:find-first-and-last-position",
+      "target": "facet:techniques:lower-bound",
+      "type": "uses_technique"
+    },
+    {
+      "source": "post:find-first-and-last-position",
+      "target": "facet:techniques:upper-bound",
+      "type": "uses_technique"
+    },
+    {
+      "source": "post:find-first-and-last-position",
+      "target": "facet:problem_shapes:first-last-position",
+      "type": "models"
+    },
+    {
+      "source": "post:find-first-and-last-position",
+      "target": "facet:reasoning:half-open-boundary-invariant",
+      "type": "proved_by"
+    },
+    {
+      "source": "post:find-first-and-last-position",
+      "target": "facet:prerequisites:sorted-array-basics",
+      "type": "requires"
+    },
+    {
+      "source": "post:find-first-and-last-position",
+      "target": "facet:prerequisites:binary-search-basics",
+      "type": "requires"
+    },
+    {
+      "source": "post:find-first-and-last-position",
+      "target": "facet:learning_stages:core",
+      "type": "targets_stage"
+    },
+    {
+      "source": "post:search-in-rotated-sorted-array",
+      "target": "category:binary-search",
+      "type": "classified_as"
+    },
+    {
+      "source": "post:search-in-rotated-sorted-array",
+      "target": "topic:binary-search/rotated-array",
+      "type": "instantiates"
+    },
+    {
+      "source": "post:search-in-rotated-sorted-array",
+      "target": "facet:structures:sorted-array",
+      "type": "uses_structure"
+    },
+    {
+      "source": "post:search-in-rotated-sorted-array",
+      "target": "facet:techniques:binary-search",
+      "type": "uses_technique"
+    },
+    {
+      "source": "post:search-in-rotated-sorted-array",
+      "target": "facet:problem_shapes:rotated-array-search",
+      "type": "models"
+    },
+    {
+      "source": "post:search-in-rotated-sorted-array",
+      "target": "facet:reasoning:sorted-half-elimination",
+      "type": "proved_by"
+    },
+    {
+      "source": "post:search-in-rotated-sorted-array",
+      "target": "facet:reasoning:unique-half-invariant",
+      "type": "proved_by"
+    },
+    {
+      "source": "post:search-in-rotated-sorted-array",
+      "target": "facet:prerequisites:sorted-array-basics",
+      "type": "requires"
+    },
+    {
+      "source": "post:search-in-rotated-sorted-array",
+      "target": "facet:prerequisites:binary-search-basics",
+      "type": "requires"
+    },
+    {
+      "source": "post:search-in-rotated-sorted-array",
+      "target": "facet:learning_stages:advanced",
+      "type": "targets_stage"
+    },
+    {
+      "source": "post:maximum-depth-of-binary-tree",
+      "target": "category:binary-tree",
+      "type": "classified_as"
+    },
+    {
+      "source": "post:maximum-depth-of-binary-tree",
+      "target": "topic:binary-tree/recursive-depth",
+      "type": "instantiates"
+    },
+    {
+      "source": "post:maximum-depth-of-binary-tree",
+      "target": "facet:structures:binary-tree",
+      "type": "uses_structure"
+    },
+    {
+      "source": "post:maximum-depth-of-binary-tree",
+      "target": "facet:structures:tree-node",
+      "type": "uses_structure"
+    },
+    {
+      "source": "post:maximum-depth-of-binary-tree",
+      "target": "facet:techniques:recursive-dfs",
+      "type": "uses_technique"
+    },
+    {
+      "source": "post:maximum-depth-of-binary-tree",
+      "target": "facet:problem_shapes:tree-height",
+      "type": "models"
+    },
+    {
+      "source": "post:maximum-depth-of-binary-tree",
+      "target": "facet:reasoning:empty-tree-base-case",
+      "type": "proved_by"
+    },
+    {
+      "source": "post:maximum-depth-of-binary-tree",
+      "target": "facet:reasoning:postorder-dependency",
+      "type": "proved_by"
+    },
+    {
+      "source": "post:maximum-depth-of-binary-tree",
+      "target": "facet:prerequisites:recursion-basics",
+      "type": "requires"
+    },
+    {
+      "source": "post:maximum-depth-of-binary-tree",
+      "target": "facet:prerequisites:tree-recursion-basics",
+      "type": "requires"
+    },
+    {
+      "source": "post:maximum-depth-of-binary-tree",
+      "target": "facet:learning_stages:foundation",
+      "type": "targets_stage"
+    },
+    {
+      "source": "post:binary-tree-level-order-traversal",
+      "target": "category:binary-tree",
+      "type": "classified_as"
+    },
+    {
+      "source": "post:binary-tree-level-order-traversal",
+      "target": "topic:binary-tree/level-order",
+      "type": "instantiates"
+    },
+    {
+      "source": "post:binary-tree-level-order-traversal",
+      "target": "facet:structures:binary-tree",
+      "type": "uses_structure"
+    },
+    {
+      "source": "post:binary-tree-level-order-traversal",
+      "target": "facet:structures:tree-node",
+      "type": "uses_structure"
+    },
+    {
+      "source": "post:binary-tree-level-order-traversal",
+      "target": "facet:structures:queue",
+      "type": "uses_structure"
+    },
+    {
+      "source": "post:binary-tree-level-order-traversal",
+      "target": "facet:techniques:breadth-first-search",
+      "type": "uses_technique"
+    },
+    {
+      "source": "post:binary-tree-level-order-traversal",
+      "target": "facet:problem_shapes:level-order-groups",
+      "type": "models"
+    },
+    {
+      "source": "post:binary-tree-level-order-traversal",
+      "target": "facet:reasoning:level-boundary-snapshot",
+      "type": "proved_by"
+    },
+    {
+      "source": "post:binary-tree-level-order-traversal",
+      "target": "facet:prerequisites:queue-basics",
+      "type": "requires"
+    },
+    {
+      "source": "post:binary-tree-level-order-traversal",
+      "target": "facet:prerequisites:tree-recursion-basics",
+      "type": "requires"
+    },
+    {
+      "source": "post:binary-tree-level-order-traversal",
+      "target": "facet:learning_stages:core",
+      "type": "targets_stage"
+    },
+    {
+      "source": "post:diameter-of-binary-tree",
+      "target": "category:binary-tree",
+      "type": "classified_as"
+    },
+    {
+      "source": "post:diameter-of-binary-tree",
+      "target": "topic:binary-tree/postorder-aggregation",
+      "type": "instantiates"
+    },
+    {
+      "source": "post:diameter-of-binary-tree",
+      "target": "facet:structures:binary-tree",
+      "type": "uses_structure"
+    },
+    {
+      "source": "post:diameter-of-binary-tree",
+      "target": "facet:structures:tree-node",
+      "type": "uses_structure"
+    },
+    {
+      "source": "post:diameter-of-binary-tree",
+      "target": "facet:techniques:recursive-dfs",
+      "type": "uses_technique"
+    },
+    {
+      "source": "post:diameter-of-binary-tree",
+      "target": "facet:techniques:postorder-traversal",
+      "type": "uses_technique"
+    },
+    {
+      "source": "post:diameter-of-binary-tree",
+      "target": "facet:problem_shapes:tree-diameter",
+      "type": "models"
+    },
+    {
+      "source": "post:diameter-of-binary-tree",
+      "target": "facet:reasoning:postorder-dependency",
+      "type": "proved_by"
+    },
+    {
+      "source": "post:diameter-of-binary-tree",
+      "target": "facet:reasoning:diameter-through-lca",
+      "type": "proved_by"
+    },
+    {
+      "source": "post:diameter-of-binary-tree",
+      "target": "facet:prerequisites:tree-recursion-basics",
+      "type": "requires"
+    },
+    {
+      "source": "post:diameter-of-binary-tree",
+      "target": "facet:learning_stages:advanced",
+      "type": "targets_stage"
+    },
+    {
+      "source": "post:coin-change",
+      "target": "category:dynamic-programming",
+      "type": "classified_as"
+    },
+    {
+      "source": "post:coin-change",
+      "target": "topic:dynamic-programming/unbounded-knapsack",
+      "type": "instantiates"
+    },
+    {
+      "source": "post:coin-change",
+      "target": "facet:structures:array",
+      "type": "uses_structure"
+    },
+    {
+      "source": "post:coin-change",
+      "target": "facet:techniques:dynamic-programming",
+      "type": "uses_technique"
+    },
+    {
+      "source": "post:coin-change",
+      "target": "facet:problem_shapes:minimum-coin-count",
+      "type": "models"
+    },
+    {
+      "source": "post:coin-change",
+      "target": "facet:reasoning:optimal-substructure",
+      "type": "proved_by"
+    },
+    {
+      "source": "post:coin-change",
+      "target": "facet:prerequisites:array-indexing",
+      "type": "requires"
+    },
+    {
+      "source": "post:coin-change",
+      "target": "facet:learning_stages:core",
+      "type": "targets_stage"
+    },
+    {
+      "source": "post:daily-temperatures",
+      "target": "category:monotonic-stack",
+      "type": "classified_as"
+    },
+    {
+      "source": "post:daily-temperatures",
+      "target": "topic:monotonic-stack/next-warmer-day",
+      "type": "instantiates"
+    },
+    {
+      "source": "post:daily-temperatures",
+      "target": "facet:structures:array",
+      "type": "uses_structure"
+    },
+    {
+      "source": "post:daily-temperatures",
+      "target": "facet:techniques:monotonic-stack",
+      "type": "uses_technique"
+    },
+    {
+      "source": "post:daily-temperatures",
+      "target": "facet:problem_shapes:next-warmer-element",
+      "type": "models"
+    },
+    {
+      "source": "post:daily-temperatures",
+      "target": "facet:reasoning:monotonic-stack-invariant",
+      "type": "proved_by"
+    },
+    {
+      "source": "post:daily-temperatures",
+      "target": "facet:prerequisites:array-traversal-basics",
+      "type": "requires"
+    },
+    {
+      "source": "post:daily-temperatures",
+      "target": "facet:learning_stages:core",
+      "type": "targets_stage"
+    },
+    {
+      "source": "post:lru-cache",
+      "target": "category:data-structures",
+      "type": "classified_as"
+    },
+    {
+      "source": "post:lru-cache",
+      "target": "topic:data-structures/lru-cache",
+      "type": "instantiates"
+    },
+    {
+      "source": "post:lru-cache",
+      "target": "facet:structures:hash-map",
+      "type": "uses_structure"
+    },
+    {
+      "source": "post:lru-cache",
+      "target": "facet:structures:doubly-linked-list",
+      "type": "uses_structure"
+    },
+    {
+      "source": "post:lru-cache",
+      "target": "facet:techniques:hash-lookup",
+      "type": "uses_technique"
+    },
+    {
+      "source": "post:lru-cache",
+      "target": "facet:techniques:recency-update",
+      "type": "uses_technique"
+    },
+    {
+      "source": "post:lru-cache",
+      "target": "facet:problem_shapes:cache-eviction",
+      "type": "models"
+    },
+    {
+      "source": "post:lru-cache",
+      "target": "facet:reasoning:map-list-bijection",
+      "type": "proved_by"
+    },
+    {
+      "source": "post:lru-cache",
+      "target": "facet:reasoning:constant-time-eviction",
+      "type": "proved_by"
+    },
+    {
+      "source": "post:lru-cache",
+      "target": "facet:prerequisites:hash-map-basics",
+      "type": "requires"
+    },
+    {
+      "source": "post:lru-cache",
+      "target": "facet:prerequisites:linked-list-basics",
+      "type": "requires"
+    },
+    {
+      "source": "post:lru-cache",
+      "target": "facet:learning_stages:advanced",
+      "type": "targets_stage"
+    },
+    {
+      "source": "path:two-pointer-journey",
+      "target": "post:container-with-most-water",
+      "type": "includes",
+      "position": 1
+    },
+    {
+      "source": "path:two-pointer-journey",
+      "target": "post:three-sum",
+      "type": "includes",
+      "position": 2
+    },
+    {
+      "source": "post:container-with-most-water",
+      "target": "post:three-sum",
+      "type": "precedes_in_path",
+      "path": "two-pointer-journey",
+      "position": 2
+    },
+    {
+      "source": "path:state-and-search",
+      "target": "post:longest-substring-without-repeating-characters",
+      "type": "includes",
+      "position": 1
+    },
+    {
+      "source": "path:state-and-search",
+      "target": "post:permutations",
+      "type": "includes",
+      "position": 2
+    },
+    {
+      "source": "post:longest-substring-without-repeating-characters",
+      "target": "post:permutations",
+      "type": "precedes_in_path",
+      "path": "state-and-search",
+      "position": 2
+    },
+    {
+      "source": "path:state-and-search",
+      "target": "post:number-of-islands",
+      "type": "includes",
+      "position": 3
+    },
+    {
+      "source": "post:permutations",
+      "target": "post:number-of-islands",
+      "type": "precedes_in_path",
+      "path": "state-and-search",
+      "position": 3
+    },
+    {
+      "source": "path:algorithm-toolbox",
+      "target": "post:longest-substring-without-repeating-characters",
+      "type": "includes",
+      "position": 1
+    },
+    {
+      "source": "path:algorithm-toolbox",
+      "target": "post:container-with-most-water",
+      "type": "includes",
+      "position": 2
+    },
+    {
+      "source": "post:longest-substring-without-repeating-characters",
+      "target": "post:container-with-most-water",
+      "type": "precedes_in_path",
+      "path": "algorithm-toolbox",
+      "position": 2
+    },
+    {
+      "source": "path:algorithm-toolbox",
+      "target": "post:three-sum",
+      "type": "includes",
+      "position": 3
+    },
+    {
+      "source": "post:container-with-most-water",
+      "target": "post:three-sum",
+      "type": "precedes_in_path",
+      "path": "algorithm-toolbox",
+      "position": 3
+    },
+    {
+      "source": "path:algorithm-toolbox",
+      "target": "post:permutations",
+      "type": "includes",
+      "position": 4
+    },
+    {
+      "source": "post:three-sum",
+      "target": "post:permutations",
+      "type": "precedes_in_path",
+      "path": "algorithm-toolbox",
+      "position": 4
+    },
+    {
+      "source": "path:algorithm-toolbox",
+      "target": "post:number-of-islands",
+      "type": "includes",
+      "position": 5
+    },
+    {
+      "source": "post:permutations",
+      "target": "post:number-of-islands",
+      "type": "precedes_in_path",
+      "path": "algorithm-toolbox",
+      "position": 5
+    },
+    {
+      "source": "path:arrays-hashing-foundations",
+      "target": "post:contains-duplicate",
+      "type": "includes",
+      "position": 1
+    },
+    {
+      "source": "path:arrays-hashing-foundations",
+      "target": "post:two-sum",
+      "type": "includes",
+      "position": 2
+    },
+    {
+      "source": "post:contains-duplicate",
+      "target": "post:two-sum",
+      "type": "precedes_in_path",
+      "path": "arrays-hashing-foundations",
+      "position": 2
+    },
+    {
+      "source": "path:arrays-hashing-foundations",
+      "target": "post:product-of-array-except-self",
+      "type": "includes",
+      "position": 3
+    },
+    {
+      "source": "post:two-sum",
+      "target": "post:product-of-array-except-self",
+      "type": "precedes_in_path",
+      "path": "arrays-hashing-foundations",
+      "position": 3
+    },
+    {
+      "source": "path:binary-search-foundations",
+      "target": "post:binary-search",
+      "type": "includes",
+      "position": 1
+    },
+    {
+      "source": "path:binary-search-foundations",
+      "target": "post:find-first-and-last-position",
+      "type": "includes",
+      "position": 2
+    },
+    {
+      "source": "post:binary-search",
+      "target": "post:find-first-and-last-position",
+      "type": "precedes_in_path",
+      "path": "binary-search-foundations",
+      "position": 2
+    },
+    {
+      "source": "path:binary-search-foundations",
+      "target": "post:search-in-rotated-sorted-array",
+      "type": "includes",
+      "position": 3
+    },
+    {
+      "source": "post:find-first-and-last-position",
+      "target": "post:search-in-rotated-sorted-array",
+      "type": "precedes_in_path",
+      "path": "binary-search-foundations",
+      "position": 3
+    },
+    {
+      "source": "path:binary-tree-foundations",
+      "target": "post:maximum-depth-of-binary-tree",
+      "type": "includes",
+      "position": 1
+    },
+    {
+      "source": "path:binary-tree-foundations",
+      "target": "post:binary-tree-level-order-traversal",
+      "type": "includes",
+      "position": 2
+    },
+    {
+      "source": "post:maximum-depth-of-binary-tree",
+      "target": "post:binary-tree-level-order-traversal",
+      "type": "precedes_in_path",
+      "path": "binary-tree-foundations",
+      "position": 2
+    },
+    {
+      "source": "path:binary-tree-foundations",
+      "target": "post:diameter-of-binary-tree",
+      "type": "includes",
+      "position": 3
+    },
+    {
+      "source": "post:binary-tree-level-order-traversal",
+      "target": "post:diameter-of-binary-tree",
+      "type": "precedes_in_path",
+      "path": "binary-tree-foundations",
+      "position": 3
+    },
+    {
+      "source": "path:ordered-search-patterns",
+      "target": "post:three-sum",
+      "type": "includes",
+      "position": 1
+    },
+    {
+      "source": "path:ordered-search-patterns",
+      "target": "post:search-in-rotated-sorted-array",
+      "type": "includes",
+      "position": 2
+    },
+    {
+      "source": "post:three-sum",
+      "target": "post:search-in-rotated-sorted-array",
+      "type": "precedes_in_path",
+      "path": "ordered-search-patterns",
+      "position": 2
+    },
+    {
+      "source": "path:state-space-optimization",
+      "target": "post:permutations",
+      "type": "includes",
+      "position": 1
+    },
+    {
+      "source": "path:state-space-optimization",
+      "target": "post:coin-change",
+      "type": "includes",
+      "position": 2
+    },
+    {
+      "source": "post:permutations",
+      "target": "post:coin-change",
+      "type": "precedes_in_path",
+      "path": "state-space-optimization",
+      "position": 2
+    },
+    {
+      "source": "path:frontier-data-structures",
+      "target": "post:daily-temperatures",
+      "type": "includes",
+      "position": 1
+    },
+    {
+      "source": "path:frontier-data-structures",
+      "target": "post:binary-tree-level-order-traversal",
+      "type": "includes",
+      "position": 2
+    },
+    {
+      "source": "post:daily-temperatures",
+      "target": "post:binary-tree-level-order-traversal",
+      "type": "precedes_in_path",
+      "path": "frontier-data-structures",
+      "position": 2
+    },
+    {
+      "source": "path:graph-and-tree-traversal",
+      "target": "post:number-of-islands",
+      "type": "includes",
+      "position": 1
+    },
+    {
+      "source": "path:graph-and-tree-traversal",
+      "target": "post:binary-tree-level-order-traversal",
+      "type": "includes",
+      "position": 2
+    },
+    {
+      "source": "post:number-of-islands",
+      "target": "post:binary-tree-level-order-traversal",
+      "type": "precedes_in_path",
+      "path": "graph-and-tree-traversal",
+      "position": 2
+    },
+    {
+      "source": "path:maintaining-live-state",
+      "target": "post:daily-temperatures",
+      "type": "includes",
+      "position": 1
+    },
+    {
+      "source": "path:maintaining-live-state",
+      "target": "post:lru-cache",
+      "type": "includes",
+      "position": 2
+    },
+    {
+      "source": "post:daily-temperatures",
+      "target": "post:lru-cache",
+      "type": "precedes_in_path",
+      "path": "maintaining-live-state",
+      "position": 2
+    },
+    {
+      "source": "post:contains-duplicate",
+      "target": "post:two-sum",
+      "type": "extends",
+      "reason": "从集合成员查询扩展到值到索引的映射"
+    },
+    {
+      "source": "post:binary-search",
+      "target": "post:find-first-and-last-position",
+      "type": "extends",
+      "reason": "从精确命中扩展到单调边界定位"
+    },
+    {
+      "source": "post:maximum-depth-of-binary-tree",
+      "target": "post:diameter-of-binary-tree",
+      "type": "extends",
+      "reason": "从返回子树高度扩展到后序汇总全局路径"
+    },
+    {
+      "source": "post:permutations",
+      "target": "post:coin-change",
+      "type": "contrasts",
+      "reason": "对比显式枚举与合并重叠子问题的动态规划"
+    }
+  ]
+}
