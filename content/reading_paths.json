@@ -5,7 +5,8 @@
     "posts": [
       "container-with-most-water",
       "three-sum"
-    ]
+    ],
+    "description": "按顺序阅读，先建立核心状态，再观察同一机制在不同输入下如何变化。"
   },
   {
     "id": "state-and-search",
@@ -14,18 +15,20 @@
       "longest-substring-without-repeating-characters",
       "permutations",
       "number-of-islands"
-    ]
+    ],
+    "description": "按顺序阅读，先建立核心状态，再观察同一机制在不同输入下如何变化。"
   },
   {
     "id": "algorithm-toolbox",
-    "title": "五题掌握常见算法模式",
+    "title": "跨专题综合练习：从窗口到图搜索",
     "posts": [
       "longest-substring-without-repeating-characters",
       "container-with-most-water",
       "three-sum",
       "permutations",
       "number-of-islands"
-    ]
+    ],
+    "description": "把滑动窗口、双指针、回溯和图遍历放在同一条综合路线中，练习识别不同问题机制。"
   },
   {
     "id": "arrays-hashing-foundations",

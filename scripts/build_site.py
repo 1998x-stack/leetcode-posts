@@ -314,7 +314,7 @@ def build_home(categories,posts,base,root):
       <a href="#discover"><span class="entry-index">03 / INDEX</span><strong>直接查找一篇文章</strong><span>按关键词与主题筛选 ↗</span></a>
     </div></nav>
     <section class="container spotlight-section" aria-labelledby="spotlight-title">
-      <div class="section-header"><div><div class="eyebrow muted">SELECTED STARTING POINTS</div><h2 id="spotlight-title">三个基础专题的入门题</h2></div><p>先建立滑动窗口、双指针和网格遍历直觉，再挑战相似题。</p></div>
+      <div class="section-header"><div><div class="eyebrow muted">SELECTED STARTING POINTS</div><h2 id="spotlight-title">三个基础专题的入门题</h2></div><p>先建立哈希查找、二分边界与树递归直觉，再迁移到更复杂的算法模式。</p></div>
       <div class="spotlight-grid">{''.join(spotlight)}</div>
     </section>
     <section id="categories" class="category-band" aria-labelledby="subjects-title"><div class="container">
@@ -342,7 +342,7 @@ def build_home(categories,posts,base,root):
       <p>每篇题解连接官方原题、算法不变量、正确性推理与 Python 验证。按专题阅读可前往知识地图。</p>
       <div class="closing-actions"><a href="topics/">探索知识地图 ↗</a><a href="https://github.com/1998x-stack/leetcode-posts">查看算法解析仓库 ↗</a></div>
     </div></section>'''
-    return html_page(title='leetcode-posts · LeetCode 算法可视化题解',description='LeetCode 中等难度可视化题解，覆盖双指针、滑动窗口、回溯与图遍历，包含正确性证明、Python 解法与交互示例。',canonical=base,body=body)
+    return html_page(title='leetcode-posts · LeetCode 算法可视化题解',description='LeetCode 算法可视化题解，覆盖数组与哈希表、二分查找、二叉树、双指针、滑动窗口、回溯与图遍历，包含正确性证明、Python 解法与交互示例。',canonical=base,body=body)
 
 def topic_labels(categories):
     return {(c['slug'],t['slug']):t['title'] for c in categories for t in c['topics']}
