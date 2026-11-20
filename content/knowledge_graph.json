@@ -1128,18 +1128,6 @@
       "slug": "frequency-to-top-k"
     },
     {
-      "id": "path:stack-matching-foundation",
-      "type": "learning_path",
-      "label": "栈的基础：括号匹配与嵌套顺序",
-      "slug": "stack-matching-foundation"
-    },
-    {
-      "id": "path:linked-list-pointer-reversal",
-      "type": "learning_path",
-      "label": "链表基础：逐个重连 next 指针",
-      "slug": "linked-list-pointer-reversal"
-    },
-    {
       "id": "topic:two-pointer/boundary-maxima",
       "type": "topic",
       "label": "左右边界最大值与逐列贡献"
@@ -2885,18 +2873,6 @@
       "type": "precedes_in_path",
       "path": "frequency-to-top-k",
       "position": 2
-    },
-    {
-      "source": "path:stack-matching-foundation",
-      "target": "post:valid-parentheses",
-      "type": "includes",
-      "position": 1
-    },
-    {
-      "source": "path:linked-list-pointer-reversal",
-      "target": "post:reverse-linked-list",
-      "type": "includes",
-      "position": 1
     },
     {
       "source": "post:valid-anagram",
