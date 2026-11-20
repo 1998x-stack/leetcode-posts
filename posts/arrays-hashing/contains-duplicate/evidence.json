@@ -1,0 +1,31 @@
+{
+  "problem": {
+    "number": 217,
+    "title": "Contains Duplicate",
+    "difficulty": "Easy",
+    "url": "https://leetcode.com/problems/contains-duplicate/",
+    "source": "Official LeetCode problem page; Chinese explanation independently paraphrased",
+    "facts": [
+      "Return true if any integer occurs at least twice; otherwise return false.",
+      "1 <= nums.length <= 10^5.",
+      "-10^9 <= nums[i] <= 10^9."
+    ]
+  },
+  "claims": [
+    {
+      "type": "derived",
+      "claim": "处理下标 i 前，seen 等于 nums[0:i] 中所有不同值构成的集合。",
+      "validation": "Loop invariant in article and solution."
+    },
+    {
+      "type": "derived",
+      "claim": "若存在重复值，取其第二次出现的位置 j；此前第一次出现的值已经在 seen 中，因此扫描到 j 时必然命中。",
+      "validation": "Correctness proof and exhaustive small-array tests."
+    },
+    {
+      "type": "derived",
+      "claim": "哈希集合方案期望 O(n) 时间、O(n) 额外空间；排序比较方案为 O(n log n)，并需考虑输入是否被修改。",
+      "validation": "Algorithm analysis; Python set membership expected constant time."
+    }
+  ]
+}

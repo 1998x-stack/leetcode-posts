@@ -1,0 +1,33 @@
+{
+  "problem": {
+    "number": 33,
+    "title": "Search in Rotated Sorted Array",
+    "difficulty": "Medium",
+    "url": "https://leetcode.com/problems/search-in-rotated-sorted-array/",
+    "source": "Official LeetCode problem page; Chinese explanation independently paraphrased",
+    "facts": [
+      "Input is an ascending array possibly rotated at an unknown pivot.",
+      "All values are unique.",
+      "Return target index or -1.",
+      "The required runtime is O(log n).",
+      "1 <= nums.length <= 5000."
+    ]
+  },
+  "claims": [
+    {
+      "type": "derived",
+      "claim": "With distinct values and one rotation pivot, at least one half split by mid remains sorted.",
+      "validation": "Single-descent structure of a rotated ascending array."
+    },
+    {
+      "type": "derived",
+      "claim": "If the target is not within the value interval of the sorted half, that entire half can be discarded.",
+      "validation": "Monotonicity within the identified sorted half."
+    },
+    {
+      "type": "derived",
+      "claim": "The closed candidate interval shrinks by at least half per iteration, yielding O(log n) time and O(1) space.",
+      "validation": "Binary-search loop and constant scalar state."
+    }
+  ]
+}

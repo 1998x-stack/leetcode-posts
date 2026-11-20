@@ -1,0 +1,32 @@
+{
+  "problem": {
+    "number": 34,
+    "title": "Find First and Last Position of Element in Sorted Array",
+    "difficulty": "Medium",
+    "url": "https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/",
+    "source": "Official LeetCode problem page; Chinese explanation independently paraphrased",
+    "facts": [
+      "Input is sorted in non-decreasing order.",
+      "Return the first and last index of target, or [-1,-1] if absent.",
+      "The required runtime is O(log n).",
+      "0 <= nums.length <= 10^5."
+    ]
+  },
+  "claims": [
+    {
+      "type": "derived",
+      "claim": "lower_bound returns the first index i with nums[i] >= target; upper_bound returns the first index i with nums[i] > target.",
+      "validation": "Half-open interval partition invariants in article."
+    },
+    {
+      "type": "derived",
+      "claim": "If lower_bound is within the array and equals target, the complete target range is [lower_bound, upper_bound - 1].",
+      "validation": "Boundary definitions and monotonicity."
+    },
+    {
+      "type": "derived",
+      "claim": "Two binary searches remain O(log n) time and use O(1) auxiliary space.",
+      "validation": "Two logarithmic searches with scalar state."
+    }
+  ]
+}

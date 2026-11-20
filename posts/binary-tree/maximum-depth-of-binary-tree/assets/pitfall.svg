@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 340" role="img" aria-labelledby="depth-pitfall-title depth-pitfall-desc"><title id="depth-pitfall-title">树高按节点数还是边数？</title><desc id="depth-pitfall-desc">单节点树的最大深度按节点数定义为 1；按边数计算高度则是 0，必须与题意保持一致。</desc>
+<rect x="28" y="24" width="904" height="292" rx="18" fill="#fff" stroke="#d5e3da"/>
+<circle cx="260" cy="140" r="34" fill="#d5ede4" stroke="#2f8681" stroke-width="2"/><text x="260" y="148" text-anchor="middle" font-size="23" font-weight="700" fill="#19393d">A</text>
+<text x="260" y="208" text-anchor="middle" font-size="18" font-weight="700" fill="#176c6d">节点数深度 = 1</text><text x="260" y="238" text-anchor="middle" font-size="15" fill="#58716f">LeetCode 104 的定义</text>
+<path d="M 480 140 H 540" stroke="#bc7149" stroke-width="3"/><path d="M 532 132 L 544 140 L 532 148" stroke="#bc7149" stroke-width="3" fill="none"/>
+<circle cx="700" cy="140" r="34" fill="#f8efe6" stroke="#d99a72" stroke-width="2"/><text x="700" y="148" text-anchor="middle" font-size="23" font-weight="700" fill="#19393d">A</text>
+<text x="700" y="208" text-anchor="middle" font-size="18" font-weight="700" fill="#8c432a">边数高度 = 0</text><text x="700" y="238" text-anchor="middle" font-size="15" fill="#58716f">不同定义，不要混用</text></svg>

@@ -25,6 +25,12 @@
 - 每篇已发布文章必须填写 `facets.structures`、`techniques`、`problem_shapes`、`reasoning`、`prerequisites` 和 `learning_stage`，所有值必须来自 `content/facets.json`。
 - `content/domains.json` 中的规划方向不等于已启用分类；不要为规划方向创建空文章或伪造发布数量。
 
+## 基础专题建设
+- 数组与哈希表、二分查找、二叉树的教学路线和掌握标准见 `docs/foundations.md`；新增题目应填补明确的 L3 模式，不为单题扩分类。
+- 数组与哈希表文章要解释扫描前缀、哈希映射的键值语义、先查后存、期望复杂度和是否修改输入。
+- 二分查找文章必须声明区间是闭区间还是半开区间，写出不变量、循环条件、mid 更新和边界反例；不可混用两套模板。
+- 二叉树文章必须定义递归函数的返回语义与空树基例；BFS 固定当前层队列长度；分析 O(h) 递归栈，并区分节点高度和边数直径。
+
 ## 新增题解
 ```bash
 python scripts/new_post.py sliding-window example-problem --topic variable-window --title '题目标题' --subtitle '一句话目标' --problem-url https://leetcode.com/problems/example-problem/

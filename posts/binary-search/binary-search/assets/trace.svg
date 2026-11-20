@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 320" role="img" aria-labelledby="binary-trace-title binary-trace-desc"><title id="binary-trace-title">二分查找的区间收缩</title><desc id="binary-trace-desc">第一轮中点 3 小于目标，左边界移动到 3；第二轮中点 9 命中。</desc>
+<rect x="28" y="24" width="904" height="272" rx="18" fill="#fff" stroke="#d5e3da"/>
+<text x="58" y="62" font-size="21" font-weight="700" fill="#19393d">每次比较后，候选区间至少缩小一半</text>
+<rect x="62" y="96" width="390" height="76" rx="10" fill="#f8efe6" stroke="#d99a72"/><text x="86" y="128" font-size="18" fill="#8c432a">第 1 轮：left=0, right=5</text><text x="86" y="154" font-size="16" fill="#8c432a">mid=2，值 3 小于 9 → left=3</text>
+<rect x="510" y="96" width="390" height="76" rx="10" fill="#d5ede4" stroke="#2f8681"/><text x="534" y="128" font-size="18" fill="#124d4b">第 2 轮：left=3, right=5</text><text x="534" y="154" font-size="16" fill="#124d4b">mid=4，值 9 命中 → return 4</text>
+<path d="M 455 134 H 500" stroke="#bc7149" stroke-width="3"/><path d="M 492 126 L 504 134 L 492 142" stroke="#bc7149" stroke-width="3" fill="none"/>
+<text x="480" y="236" text-anchor="middle" font-size="18" fill="#176c6d">闭区间 [left, right]：两端都可能是答案，所以循环条件是 left &lt;= right</text></svg>

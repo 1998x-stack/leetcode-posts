@@ -1,0 +1,30 @@
+{
+  "problem": {
+    "number": 104,
+    "title": "Maximum Depth of Binary Tree",
+    "difficulty": "Easy",
+    "url": "https://leetcode.com/problems/maximum-depth-of-binary-tree/",
+    "source": "Official LeetCode problem page; Chinese explanation independently paraphrased",
+    "facts": [
+      "Maximum depth is the number of nodes along the longest root-to-leaf path.",
+      "The number of nodes is in [0,10^4]."
+    ]
+  },
+  "claims": [
+    {
+      "type": "derived",
+      "claim": "depth(None)=0; for a nonempty node, depth(node)=1+max(depth(left),depth(right)).",
+      "validation": "Structural recurrence and induction proof."
+    },
+    {
+      "type": "derived",
+      "claim": "Each node is visited once, giving O(n) time; DFS auxiliary stack is O(h), where h is tree height.",
+      "validation": "Explicit-stack traversal analysis."
+    },
+    {
+      "type": "editorial",
+      "claim": "An iterative DFS implementation avoids relying on Python's recursion limit for a highly skewed tree.",
+      "validation": "Implementation uses an explicit stack of (node,depth) pairs."
+    }
+  ]
+}

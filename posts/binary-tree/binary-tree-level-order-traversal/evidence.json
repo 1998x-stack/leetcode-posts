@@ -1,0 +1,31 @@
+{
+  "problem": {
+    "number": 102,
+    "title": "Binary Tree Level Order Traversal",
+    "difficulty": "Medium",
+    "url": "https://leetcode.com/problems/binary-tree-level-order-traversal/",
+    "source": "Official LeetCode problem page; Chinese explanation independently paraphrased",
+    "facts": [
+      "Return node values level by level, left to right within each level.",
+      "The number of nodes is in [0,2000].",
+      "Node values are between -1000 and 1000."
+    ]
+  },
+  "claims": [
+    {
+      "type": "derived",
+      "claim": "At the beginning of each outer iteration, the queue contains exactly the unprocessed nodes at one depth.",
+      "validation": "BFS queue invariant and fixed level_size."
+    },
+    {
+      "type": "derived",
+      "claim": "Processing exactly the initial queue length prevents newly enqueued children from being consumed in the same level.",
+      "validation": "Layer-boundary proof and step trace."
+    },
+    {
+      "type": "derived",
+      "claim": "Every node enters and leaves the queue once, so time is O(n); the queue holds at most O(w) nodes where w is maximum tree width.",
+      "validation": "Queue operation count and frontier bound."
+    }
+  ]
+}
