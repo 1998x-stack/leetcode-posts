@@ -394,7 +394,7 @@ def build_topics(categories,posts,base,domains):
             f'<h2 id="domain-heading-{H(domain["slug"])}">{H(domain["title"])} <span class="faded-en">/ {H(domain["english"])}</span></h2></div>'
             f'<span>{len(domain_posts)} 篇 · {len(domain_categories)} 个已启用专题 · {len(planned)} 个规划专题</span></div>'
             f'<p class="taxonomy-domain-description">{H(domain["description"])}</p>'
-            f'<div class="taxonomy-active-families">{"".join(families)}</div>{planned_markup}</section>'
+            f'<div class="taxonomy-active-families">{active_markup}</div>{planned_markup}</section>'
         )
     active_family_count=len(categories)
     active_topic_count=sum(len(c['topics']) for c in categories)
@@ -432,7 +432,7 @@ def build_category(c,posts,categories,base):
         )
     body=f'''<div class="container category-page"><div class="breadcrumb"><a href="{rel}">首页</a> <span>/</span> <a href="{rel}topics/">知识地图</a> <span>/</span> {H(c['title'])}</div>
 <div class="eyebrow muted">TOPIC COLLECTION · {H(c['english']).upper()}</div><h1>{H(c['title'])}<span class="faded-en"> / {H(c['english'])}</span></h1><p class="category-description">{H(c['description'])}</p>
-<p class="taxonomy-hint">{len(listing)} 篇文章 · {len(c['topics'])} 个二级主题 · <a href="{rel}topics/#category-{H(c['slug'])}">查看完整知识地图 ↗</a></p>
+<p class="taxonomy-hint">{len(listing)} 篇文章 · {len(c['topics'])} 个二级主题 · <a href="{rel}topics/#domain-{H(c['domain'])}">查看完整知识地图 ↗</a></p>
 <nav class="topic-jumps" aria-label="本分类二级主题导航">{jumps}</nav>
 {''.join(sections)}
 <div class="category-nav"><div class="eyebrow muted">MORE TOPICS</div>{pills}</div></div>'''
