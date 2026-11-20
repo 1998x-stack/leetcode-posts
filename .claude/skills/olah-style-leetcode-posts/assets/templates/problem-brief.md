@@ -1,0 +1,25 @@
+# Problem brief
+
+- Official problem number/title/difficulty:
+- Canonical URL and verification date:
+- Required Python signature:
+- Input/output contract:
+- Constraints that affect the algorithm:
+- Original-language summary:
+- Small worked example:
+- Adversarial counterexample:
+- Brute-force baseline and bound:
+- Chosen pattern and its preconditions:
+- State definition / invariant / recurrence:
+- Initialization / transition / termination:
+- Correctness proof outline:
+- Time complexity:
+- Auxiliary space:
+- Output space:
+- Input mutation:
+- Tests that could falsify the reasoning:
+- Three SVG storyboards:
+  - cover:
+  - trace:
+  - pitfall:
+- Related published articles:

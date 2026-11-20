@@ -59,5 +59,45 @@
       "binary-tree-level-order-traversal",
       "diameter-of-binary-tree"
     ]
+  },
+  {
+    "id": "ordered-search-patterns",
+    "title": "有序数组：从双指针到旋转二分",
+    "posts": [
+      "three-sum",
+      "search-in-rotated-sorted-array"
+    ]
+  },
+  {
+    "id": "state-space-optimization",
+    "title": "状态空间：从回溯枚举到动态规划",
+    "posts": [
+      "permutations",
+      "coin-change"
+    ]
+  },
+  {
+    "id": "frontier-data-structures",
+    "title": "前沿管理：单调栈与树的层序队列",
+    "posts": [
+      "daily-temperatures",
+      "binary-tree-level-order-traversal"
+    ]
+  },
+  {
+    "id": "graph-and-tree-traversal",
+    "title": "树与图：遍历顺序如何定义",
+    "posts": [
+      "number-of-islands",
+      "binary-tree-level-order-traversal"
+    ]
+  },
+  {
+    "id": "maintaining-live-state",
+    "title": "持续维护状态：从单调栈到 LRU 缓存",
+    "posts": [
+      "daily-temperatures",
+      "lru-cache"
+    ]
   }
 ]

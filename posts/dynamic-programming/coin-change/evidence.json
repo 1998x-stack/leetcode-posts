@@ -1,0 +1,37 @@
+{
+  "problem": {
+    "number": 322,
+    "title": "Coin Change",
+    "difficulty": "Medium",
+    "url": "https://leetcode.com/problems/coin-change/",
+    "verified_on": "2026-11-20"
+  },
+  "claims": [
+    {
+      "kind": "derived",
+      "claim": "dp[x] 表示凑出金额 x 所需的最少硬币数。dp[0]=0；其他金额初始化为不可达哨兵 amount+1。计算 x 时只依赖更小金额 x-coin。",
+      "validated_by": [
+        "solution.py",
+        "tests/test_solutions.py"
+      ]
+    },
+    {
+      "kind": "derived",
+      "claim": "任意非零金额的合法组合都包含某一枚最后加入的硬币 c。去掉它，剩余金额为 x-c；若剩余组合不是最优，就能替换成更少硬币的组合，改进原方案，矛盾。枚举每个 c 因而覆盖某个最优方案；dp[0]=0 是归纳起点。若最终仍为哨兵，则金额不可达。",
+      "validated_by": [
+        "Correctness review and differential tests"
+      ]
+    }
+  ],
+  "complexity": "设 A 为 amount、C 为硬币种类数。时间 O(A×C)，额外空间 O(A)。返回值是整数，不另有随输入增长的输出结构。",
+  "implementation": {
+    "language": "Python 3",
+    "input_mutation": "none",
+    "reference_method": "BFS over reachable amounts"
+  },
+  "visuals": {
+    "cover.svg": "每个金额状态都从更小金额转移而来，dp[11] 由 5、5、1 三枚硬币组成",
+    "trace.svg": "假设最后放入的硬币面额为 c，则前面先凑出 x-c 元，再加一枚硬币：dp[x]=min(dp[x-c]+1)。枚举所有 c<=x，按金额递增计算，因此依赖已就绪，硬币也可重复使用。",
+    "pitfall.svg": "不可达状态不能初始化为 0，否则不存在的组合会被当成零枚硬币。用 amount+1 作哨兵；每枚硬币至少为 1，任何可达方案最多用 amount 枚。注意本题是无限次使用硬币。"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "problem": {
+    "number": 739,
+    "title": "Daily Temperatures",
+    "difficulty": "Medium",
+    "url": "https://leetcode.com/problems/daily-temperatures/",
+    "verified_on": "2026-11-20"
+  },
+  "claims": [
+    {
+      "kind": "derived",
+      "claim": "栈保存尚未找到更暖日期的下标，从底到顶对应温度单调不增。当前温度严格高于栈顶温度时，当前下标就是栈顶等待的第一个更暖日；相等温度不能弹出。",
+      "validated_by": [
+        "solution.py",
+        "tests/test_solutions.py"
+      ]
+    },
+    {
+      "kind": "derived",
+      "claim": "当下标 j 被 i 弹出时，T[i]>T[j]。j 与 i 之间的日期都已处理，若其中有更暖温度，j 早已被弹出；所以 i 是 j 之后第一个严格更暖的日期。每个下标只入栈、出栈一次，总操作 O(n)。",
+      "validated_by": [
+        "Correctness review and differential tests"
+      ]
+    }
+  ],
+  "complexity": "时间 O(n)：每个下标最多入栈、出栈各一次。额外栈空间 O(n)，返回数组另占 O(n)。",
+  "implementation": {
+    "language": "Python 3",
+    "input_mutation": "none",
+    "reference_method": "nested scan for next warmer day"
+  },
+  "visuals": {
+    "cover.svg": "每个日期先进入等待栈，遇到第一个严格更高的温度时才被弹出结算",
+    "trace.svg": "从左到右扫描。若当前温度高于栈顶温度，就弹出这些较冷日期并写入等待天数 i-j；再把当前下标压栈。扫描结束仍留在栈中的日期，答案保持为 0。",
+    "pitfall.svg": "题目要求严格更高，相同温度不能弹栈。若用 >=，序列 [70,70,71] 会把第二个 70 错当作第一个 70 的答案。必须保存下标才能计算 i-j。"
+  }
+}

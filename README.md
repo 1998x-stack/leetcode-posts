@@ -8,7 +8,7 @@
 
 > GitHub Pages 需要在仓库 Settings → Pages 设置为 **GitHub Actions** 来源。合并到 main 后自动构建；在 Actions 完成前不要宣称网站已部署。
 
-## 已发布的 14 道题解
+## 已发布的 17 道题解
 
 | 题目 | 专题 | 核心模式 |
 |---|---|---|
@@ -26,6 +26,10 @@
 | [#104 二叉树最大深度](posts/binary-tree/maximum-depth-of-binary-tree/index.html) | 二叉树 | 递归定义与树高 |
 | [#102 二叉树层序遍历](posts/binary-tree/binary-tree-level-order-traversal/index.html) | 二叉树 | BFS 与队列分层 |
 | [#543 二叉树直径](posts/binary-tree/diameter-of-binary-tree/index.html) | 二叉树 | 后序汇总与树上路径 |
+
+| [#322 零钱兑换](posts/dynamic-programming/coin-change/index.html) | 动态规划 | 最优子结构与一维状态转移 |
+| [#739 每日温度](posts/monotonic-stack/daily-temperatures/index.html) | 单调栈 | 等待中的下一个更高元素 |
+| [#146 LRU 缓存](posts/data-structures/lru-cache/index.html) | 数据结构设计 | 哈希表与双向链表协同维护 |
 
 每篇文章独立提供 3 幅机制相关 SVG、可键盘操作的状态演示、Python 解法和测试；题面采用原创摘要并链接官方来源。
 
