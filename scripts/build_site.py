@@ -31,12 +31,31 @@ VALID_SLUG=re.compile(r'^[a-z0-9]+(?:-[a-z0-9]+)*$')
 def data(root:Path):
     categories=json.loads((root/'content/categories.json').read_text(encoding='utf-8'))
     posts=json.loads((root/'content/posts.json').read_text(encoding='utf-8'))
-    assert isinstance(categories,list) and isinstance(posts,list)
+    domains=json.loads((root/'content/domains.json').read_text(encoding='utf-8'))
+    facets=json.loads((root/'content/facets.json').read_text(encoding='utf-8'))
+    assert isinstance(categories,list) and isinstance(posts,list) and isinstance(domains,list)
+    domain_ids=[d['slug'] for d in domains]
+    assert len(set(domain_ids))==len(domain_ids) and all(VALID_SLUG.fullmatch(x) for x in domain_ids), 'Bad domain slug'
+    for d in domains:
+        assert all(isinstance(d.get(k),str) and d[k].strip() for k in ('title','english','description')),d
+        assert isinstance(d.get('order'),int),d
+        assert isinstance(d.get('planned_categories'),list),d
     ids=[c['slug'] for c in categories]
     assert len(set(ids))==len(ids) and all(VALID_SLUG.fullmatch(x) for x in ids), 'Bad category slug'
+    planned_ids=[]
+    for d in domains:
+        for planned in d['planned_categories']:
+            assert VALID_SLUG.fullmatch(planned.get('slug','')),planned
+            assert isinstance(planned.get('title'),str) and planned['title'].strip(),planned
+            assert isinstance(planned.get('scope'),str) and planned['scope'].strip(),planned
+            assert isinstance(planned.get('topics'),list) and planned['topics'],planned
+            planned_ids.append(planned['slug'])
+    assert len(planned_ids)==len(set(planned_ids)), 'Duplicate planned category slug'
+    assert not (set(ids) & set(planned_ids)), 'A category cannot be active and planned at the same time'
     category_topics={}
     for c in categories:
         assert all(isinstance(c.get(k),str) and c[k].strip() for k in ('title','english','description')),c
+        assert c.get('domain') in domain_ids,f'Unknown domain for {c["slug"]}: {c.get("domain")}'
         assert isinstance(c.get('topics'),list) and c['topics'],f'Missing topics: {c["slug"]}'
         topic_ids=[]
         for t in c['topics']:
@@ -46,6 +65,16 @@ def data(root:Path):
         assert len(topic_ids)==len(set(topic_ids)),f'Duplicate topic ID in {c["slug"]}'
         category_topics[c['slug']]=set(topic_ids)
         assert (root/'posts'/c['slug']/'README.md').is_file(),f'Category README missing: {c["slug"]}'
+    facet_fields=('structures','techniques','problem_shapes','reasoning','prerequisites')
+    facet_registry={}
+    for field in facet_fields:
+        entries=facets.get(field)
+        assert isinstance(entries,list) and entries,f'Missing facet registry: {field}'
+        slugs=[entry.get('slug') for entry in entries]
+        assert len(slugs)==len(set(slugs)) and all(VALID_SLUG.fullmatch(x or '') for x in slugs),field
+        facet_registry[field]=set(slugs)
+    learning_stages={entry['slug'] for entry in facets.get('learning_stages',[])}
+    assert learning_stages, 'Missing learning-stage registry'
     assert len({p['slug'] for p in posts})==len(posts), 'Duplicate post slug'
     for p in posts:
         assert VALID_SLUG.fullmatch(p['slug']), p
@@ -63,9 +92,16 @@ def data(root:Path):
             assert p['updated']>=p['published'],f'Updated before published: {p["slug"]}'
             assert p['reading_minutes']>0,p
             assert isinstance(p.get('problem_url'),str) and urlparse(p['problem_url']).scheme=='https',p
+            post_facets=p.get('facets')
+            assert isinstance(post_facets,dict),f'Missing facets: {p["slug"]}'
+            assert set(post_facets)==set(facet_fields)|{'learning_stage'},f'Invalid facet fields: {p["slug"]}'
+            for field in facet_fields:
+                values=post_facets[field]
+                assert isinstance(values,list) and len(values)==len(set(values)),f'Invalid {field}: {p["slug"]}'
+                assert set(values)<=facet_registry[field],f'Unregistered {field} in {p["slug"]}: {set(values)-facet_registry[field]}'
+            assert post_facets['learning_stage'] in learning_stages,f'Unknown learning stage: {p["slug"]}'
             path=root/'posts'/p['category']/p['slug']/'index.html'
             assert path.is_file(),f'Article missing: {path}'
-            # Covers are editorial decisions, never a generic visual fallback.
             cover=p.get('cover')
             assert isinstance(cover,dict),f'Missing curated cover for {p["slug"]}'
             assert re.fullmatch(r'assets/[a-zA-Z0-9][a-zA-Z0-9_.-]*\.svg',cover.get('src','')),f'Invalid SVG cover path: {p["slug"]}'
@@ -74,7 +110,7 @@ def data(root:Path):
             assert (path.parent/cover['src']).is_file(),f'Cover SVG missing: {p["slug"]}: {cover["src"]}'
     cover_captions=[p['cover']['caption'] for p in posts if p['status']=='published']
     assert len(cover_captions)==len(set(cover_captions)),'Published cover explanations must be unique'
-    return categories,posts
+    return categories,posts,domains,facets
 
 
 def url_join(base:str, path:str)->str:
@@ -125,10 +161,17 @@ def cover_art(p,rel,*,compact=False):
     )
 
 
+def facet_terms(post):
+    facets=post.get('facets',{})
+    return ' '.join(value for values in facets.values()
+                    for value in (values if isinstance(values,list) else [values])
+                    if isinstance(value,str))
+
+
 def post_card(p,rel,ordinal=0,topic_title=None):
     path=rel+article_url(p)
     topic_link=(f'<a class="card-topic" href="{rel}categories/{H(p["category"])}/#topic-{H(p["topic"])}">{H(topic_title)}</a>' if topic_title else '')
-    return f'''<article class="post-card" data-post-card data-search="{H((p['title']+' '+p['summary']+' '+' '.join(p['tags'])+' '+p['category']+' '+p['topic']+' '+(topic_title or '')).lower(),quote=True)}" data-category="{H(p['category'])}">
+    return f'''<article class="post-card" data-post-card data-search="{H((p['title']+' '+p['summary']+' '+' '.join(p['tags'])+' '+facet_terms(p)+' '+p['category']+' '+p['topic']+' '+(topic_title or '')).lower(),quote=True)}" data-category="{H(p['category'])}">
 <a class="card-hit" href="{path}" aria-label="阅读 {H(p['title'],quote=True)}">{cover_art(p,rel)}</a>
 <div class="card-body"><div class="card-topline"><span>MODEL STUDY / {H(p['category']).upper()}</span><span>{H(p['published'])}</span></div>
 {topic_link}<h3><a href="{path}">{H(p['title'])}</a></h3><p class="card-subtitle">{H(p['subtitle'])}</p>
@@ -246,7 +289,7 @@ def build_home(categories,posts,base):
         topic=labels[(p['category'],p['topic'])]
         category=next(c['title'] for c in categories if c['slug']==p['category'])
         tokens=' '.join([p['title'],p['subtitle'],p['summary'],p['category'],category,topic,
-                         p['topic'],*p['tags']]).lower()
+                         p['topic'],*p['tags'],facet_terms(p)]).lower()
         search_cards.append(
             f'''<article class="index-card post-card" data-post-card data-category="{H(p['category'],quote=True)}" data-search="{H(tokens,quote=True)}">
             <span class="index-order">{i+1:02d}</span><a class="index-image-link" href="{article_url(p)}" aria-label="阅读 {H(p['title'],quote=True)}">{cover_art(p,'./',compact=True)}</a>
@@ -309,42 +352,68 @@ def topic_labels(categories):
     return {(c['slug'],t['slug']):t['title'] for c in categories for t in c['topics']}
 
 
-def build_topics(categories,posts,base):
+def build_topics(categories,posts,base,domains):
     published=[p for p in posts if p['status']=='published']
+    category_labels=topic_labels(categories)
+    ordered_domains=sorted(domains,key=lambda d:d['order'])
     summary=''.join(
-        f'<a href="#category-{H(c["slug"])}">{H(c["title"])} <small>{sum(p["category"]==c["slug"] for p in published):02d}</small></a>'
-        for c in categories
+        f'<a href="#domain-{H(d["slug"])}">{H(d["title"])} <small>{sum(p["category"] in {c["slug"] for c in categories if c["domain"]==d["slug"]} for p in published):02d} 篇</small></a>'
+        for d in ordered_domains
     )
     groups=[]
-    for c in categories:
-        related=[p for p in published if p['category']==c['slug']]
-        links=''.join(
-            f'<li><a href="../categories/{H(c["slug"])}/#topic-{H(t["slug"])}"><span>{H(t["title"])}</span>'
-            f'<small>{"%02d 篇" % sum(p["topic"]==t["slug"] for p in related) if any(p["topic"]==t["slug"] for p in related) else "规划中"}</small></a></li>'
-            for t in c['topics']
-        )
+    planned_total=sum(len(d['planned_categories']) for d in ordered_domains)
+    for domain in ordered_domains:
+        domain_categories=[c for c in categories if c['domain']==domain['slug']]
+        domain_posts=[p for p in published if any(p['category']==c['slug'] for c in domain_categories)]
+        families=[]
+        for c in domain_categories:
+            related=[p for p in published if p['category']==c['slug']]
+            topic_links=''.join(
+                f'<li><a href="../categories/{H(c["slug"])}/#topic-{H(t["slug"])}"><span>{H(t["title"])}</span>'
+                f'<small>{"%02d 篇" % sum(p["topic"]==t["slug"] for p in related) if any(p["topic"]==t["slug"] for p in related) else "规划中"}</small></a></li>'
+                for t in c['topics']
+            )
+            families.append(
+                f'<section class="taxonomy-family" aria-labelledby="family-{H(c["slug"])}">'
+                f'<div class="taxonomy-family-heading"><h3 id="family-{H(c["slug"])}"><a href="../categories/{H(c["slug"])}/">{H(c["title"])}</a></h3>'
+                f'<span>{len(related)} 篇 · {len(c["topics"])} 个模式</span></div>'
+                f'<p>{H(c["description"])}</p><ul class="taxonomy-links">{topic_links}</ul></section>'
+            )
+        planned=[]
+        for family in domain['planned_categories']:
+            topic_chips=''.join(f'<span>{H(topic)}</span>' for topic in family['topics'])
+            planned.append(
+                f'<details class="taxonomy-planned-family"><summary><span>{H(family["title"])}</span><small>规划中</small></summary>'
+                f'<p>{H(family["scope"])}</p><div class="taxonomy-pattern-chips">{topic_chips}</div></details>'
+            )
+        active_markup=''.join(families) if families else '<p class="taxonomy-roadmap-note">该领域尚无正式发布的专题，相关方向列于下方建设路线图。</p>'
+        planned_markup=(f'<div class="taxonomy-roadmap"><div class="eyebrow muted">NEXT FAMILIES · 建设路线</div>{"".join(planned)}</div>' if planned else '')
         groups.append(
-            f'<section class="taxonomy-group" id="category-{H(c["slug"])}" aria-labelledby="taxonomy-{H(c["slug"])}">'
-            f'<div class="taxonomy-group-title"><h2 id="taxonomy-{H(c["slug"])}"><a href="../categories/{H(c["slug"])}/">{H(c["title"])}'
-            f' <span class="faded-en">/ {H(c["english"])}</span></a></h2><span>{len(related)} 篇 · {len(c["topics"])} 个二级主题</span></div>'
-            f'<p>{H(c["description"])}</p><ul class="taxonomy-links">{links}</ul></section>'
+            f'<section class="taxonomy-domain" id="domain-{H(domain["slug"])}" aria-labelledby="domain-heading-{H(domain["slug"])}">'
+            f'<div class="taxonomy-domain-heading"><div><span class="eyebrow muted">DOMAIN {domain["order"]//10:02d} / KNOWLEDGE AREA</span>'
+            f'<h2 id="domain-heading-{H(domain["slug"])}">{H(domain["title"])} <span class="faded-en">/ {H(domain["english"])}</span></h2></div>'
+            f'<span>{len(domain_posts)} 篇 · {len(domain_categories)} 个已启用专题 · {len(planned)} 个规划专题</span></div>'
+            f'<p class="taxonomy-domain-description">{H(domain["description"])}</p>'
+            f'<div class="taxonomy-active-families">{"".join(families)}</div>{planned_markup}</section>'
         )
+    active_family_count=len(categories)
+    active_topic_count=sum(len(c['topics']) for c in categories)
     body=(
         '<div class="container taxonomy-page"><div class="breadcrumb"><a href="../">首页</a> <span>/</span> 知识地图</div>'
         '<div class="eyebrow muted">RESEARCH TAXONOMY · KNOWLEDGE MAP</div><h1>知识地图</h1>'
-        f'<p class="category-description">覆盖 {len(categories)} 个一级算法专题、{sum(len(c["topics"]) for c in categories)} 个二级主题、'
-        f'{len(published)} 篇正式发布文章。每篇文章归属一个主主题；交叉学科通过标签和学习路径相互连接。'
-        '“规划中”代表尚无文章，不代表已有解读。</p>'
-        f'<nav class="taxonomy-overview" aria-label="跳转至一级分类">{summary}</nav>'
+        f'<p class="category-description">由 {len(ordered_domains)} 个一级知识领域、{active_family_count} 个已启用算法专题、'
+        f'{active_topic_count} 个问题模式和 {len(published)} 篇正式发布文章构成。另有 {planned_total} 个专题列入建设路线图。'
+        '每篇文章只有一个主归属；数据结构、算法技巧、问题形态和证明方法通过横向 facets 交叉连接。</p>'
+        f'<nav class="taxonomy-overview" aria-label="跳转至一级知识领域">{summary}</nav>'
         +''.join(groups)+'</div>'
     )
-    return html_page(title='知识地图 · leetcode-posts',description='leetcode-posts 全部一级分类与二级主题、已发布文章数量及规划中研究方向。',canonical=url_join(base,'topics/'),body=body,depth=1,active='topics')
+    return html_page(title='知识地图 · leetcode-posts',description='leetcode-posts 的一级知识领域、算法专题、问题模式与后续建设路线图。',canonical=url_join(base,'topics/'),body=body,depth=1,active='topics')
 
 
 def build_category(c,posts,categories,base):
     listing=sorted([p for p in posts if p['status']=='published' and p['category']==c['slug']],key=lambda p:(p['published'],p['slug']),reverse=True)
     rel='../../'
-    pills=''.join(category_pill(x,rel,sum(p['status']=='published' and p['category']==x['slug'] for p in posts),x['slug']==c['slug']) for x in categories)
+    pills=''.join(category_pill(x,rel,sum(p['status']=='published' and p['category']==x['slug'] for p in posts),x['slug']==c['slug']) for x in categories if x['domain']==c['domain'])
     jumps=''.join(
         f'<a href="#topic-{H(t["slug"])}"><span>{H(t["title"])}</span><small>{sum(p["topic"]==t["slug"] for p in listing):02d} 篇</small></a>'
         for t in c['topics']
@@ -478,11 +547,11 @@ def build(root:Path,out:Path,base:str):
     assert base.startswith('https://') or base.startswith('http://localhost:'), 'Provide valid HTTPS base URL'
     if out.exists():shutil.rmtree(out)
     out.mkdir(parents=True)
-    categories,posts=data(root)
+    categories,posts,domains,facets=data(root)
     write(out,'index.html',build_home(categories,posts,base))
     for archive_page in range(1,archive_page_count(posts)+1):
         write(out,archive_page_url(archive_page)+'index.html',build_archive(posts,categories,base,archive_page))
-    write(out,'topics/index.html',build_topics(categories,posts,base))
+    write(out,'topics/index.html',build_topics(categories,posts,base,domains))
     for c in categories:write(out,f'categories/{c["slug"]}/index.html',build_category(c,posts,categories,base))
     published=[p for p in posts if p['status']=='published']
     reading_paths=load_reading_paths(root,published)
@@ -499,7 +568,7 @@ def build(root:Path,out:Path,base:str):
     labels=topic_labels(categories)
     category_names={c['slug']:c['title'] for c in categories}
     ordered=sorted(published,key=lambda p:(p['published'],p['slug']),reverse=True)
-    search=[{k:p[k] for k in ['title','slug','subtitle','summary','category','topic','tags','published','reading_minutes']}|{'url':article_url(p),'problem_url':p.get('problem_url',''),'cover_src':article_url(p)+p['cover']['src'],'category_title':category_names[p['category']],'topic_title':labels[(p['category'],p['topic'])]} for p in ordered]
+    search=[{k:p[k] for k in ['title','slug','subtitle','summary','category','topic','tags','facets','published','reading_minutes']}|{'url':article_url(p),'problem_url':p.get('problem_url',''),'cover_src':article_url(p)+p['cover']['src'],'category_title':category_names[p['category']],'topic_title':labels[(p['category'],p['topic'])]} for p in ordered]
     write(out,'posts.json',json.dumps(search,ensure_ascii=False,indent=2)+'\n')
     urls=[base]+[url_join(base,archive_page_url(i)) for i in range(1,archive_page_count(posts)+1)]+[url_join(base,'topics/')]+[url_join(base,f'categories/{c["slug"]}/') for c in categories]+[url_join(base,article_url(p)) for p in published]
     sitemap=''.join(f'<url><loc>{X(u)}</loc></url>' for u in urls)
