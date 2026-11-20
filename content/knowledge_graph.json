@@ -1138,6 +1138,194 @@
       "type": "learning_path",
       "label": "链表基础：逐个重连 next 指针",
       "slug": "linked-list-pointer-reversal"
+    },
+    {
+      "id": "topic:two-pointer/boundary-maxima",
+      "type": "topic",
+      "label": "左右边界最大值与逐列贡献"
+    },
+    {
+      "id": "topic:sliding-window/replacement-budget-window",
+      "type": "topic",
+      "label": "替换预算约束窗口"
+    },
+    {
+      "id": "topic:sliding-window/minimum-cover-window",
+      "type": "topic",
+      "label": "最小覆盖窗口"
+    },
+    {
+      "id": "topic:data-structures/fast-slow-pointers",
+      "type": "topic",
+      "label": "快慢指针与链表环检测"
+    },
+    {
+      "id": "post:linked-list-cycle",
+      "type": "problem",
+      "label": "LeetCode 141 · 环形链表",
+      "slug": "linked-list-cycle",
+      "category": "data-structures",
+      "topic": "fast-slow-pointers",
+      "problem_url": "https://leetcode.com/problems/linked-list-cycle/"
+    },
+    {
+      "id": "facet:techniques:fast-slow-pointers",
+      "type": "concept",
+      "facet_type": "techniques",
+      "slug": "fast-slow-pointers",
+      "label": "快慢指针与相对速度"
+    },
+    {
+      "id": "facet:problem_shapes:cycle-detection",
+      "type": "concept",
+      "facet_type": "problem_shapes",
+      "slug": "cycle-detection",
+      "label": "链表环检测"
+    },
+    {
+      "id": "facet:reasoning:tortoise-hare-relative-speed",
+      "type": "concept",
+      "facet_type": "reasoning",
+      "slug": "tortoise-hare-relative-speed",
+      "label": "快慢指针的模环长相对运动"
+    },
+    {
+      "id": "post:valid-palindrome",
+      "type": "problem",
+      "label": "LeetCode 125 · 验证回文串",
+      "slug": "valid-palindrome",
+      "category": "two-pointer",
+      "topic": "opposite-direction",
+      "problem_url": "https://leetcode.com/problems/valid-palindrome/"
+    },
+    {
+      "id": "facet:techniques:character-normalization",
+      "type": "concept",
+      "facet_type": "techniques",
+      "slug": "character-normalization",
+      "label": "字符过滤与大小写归一化"
+    },
+    {
+      "id": "facet:problem_shapes:normalized-palindrome",
+      "type": "concept",
+      "facet_type": "problem_shapes",
+      "slug": "normalized-palindrome",
+      "label": "过滤归一化后的回文判定"
+    },
+    {
+      "id": "facet:reasoning:symmetric-comparison-after-filtering",
+      "type": "concept",
+      "facet_type": "reasoning",
+      "slug": "symmetric-comparison-after-filtering",
+      "label": "过滤后序列的对称比较"
+    },
+    {
+      "id": "post:trapping-rain-water",
+      "type": "problem",
+      "label": "LeetCode 42 · 接雨水",
+      "slug": "trapping-rain-water",
+      "category": "two-pointer",
+      "topic": "boundary-maxima",
+      "problem_url": "https://leetcode.com/problems/trapping-rain-water/"
+    },
+    {
+      "id": "facet:techniques:boundary-maxima",
+      "type": "concept",
+      "facet_type": "techniques",
+      "slug": "boundary-maxima",
+      "label": "左右边界最大值维护"
+    },
+    {
+      "id": "facet:problem_shapes:water-volume-between-boundaries",
+      "type": "concept",
+      "facet_type": "problem_shapes",
+      "slug": "water-volume-between-boundaries",
+      "label": "左右边界约束下的逐列蓄水"
+    },
+    {
+      "id": "facet:reasoning:smaller-boundary-determines-water",
+      "type": "concept",
+      "facet_type": "reasoning",
+      "slug": "smaller-boundary-determines-water",
+      "label": "较低边界决定可确定的水量"
+    },
+    {
+      "id": "post:longest-repeating-character-replacement",
+      "type": "problem",
+      "label": "LeetCode 424 · 替换后的最长重复字符",
+      "slug": "longest-repeating-character-replacement",
+      "category": "sliding-window",
+      "topic": "replacement-budget-window",
+      "problem_url": "https://leetcode.com/problems/longest-repeating-character-replacement/"
+    },
+    {
+      "id": "facet:problem_shapes:longest-window-with-replacement-budget",
+      "type": "concept",
+      "facet_type": "problem_shapes",
+      "slug": "longest-window-with-replacement-budget",
+      "label": "替换预算约束下的最长窗口"
+    },
+    {
+      "id": "facet:reasoning:window-repair-budget",
+      "type": "concept",
+      "facet_type": "reasoning",
+      "slug": "window-repair-budget",
+      "label": "窗口长度与最高频数的预算不变量"
+    },
+    {
+      "id": "facet:prerequisites:sliding-window-basics",
+      "type": "prerequisite",
+      "facet_type": "prerequisites",
+      "slug": "sliding-window-basics",
+      "label": "滑动窗口基础"
+    },
+    {
+      "id": "post:minimum-window-substring",
+      "type": "problem",
+      "label": "LeetCode 76 · 最小覆盖子串",
+      "slug": "minimum-window-substring",
+      "category": "sliding-window",
+      "topic": "minimum-cover-window",
+      "problem_url": "https://leetcode.com/problems/minimum-window-substring/"
+    },
+    {
+      "id": "facet:techniques:deficit-counting",
+      "type": "concept",
+      "facet_type": "techniques",
+      "slug": "deficit-counting",
+      "label": "频次缺口计数"
+    },
+    {
+      "id": "facet:problem_shapes:minimum-covering-window",
+      "type": "concept",
+      "facet_type": "problem_shapes",
+      "slug": "minimum-covering-window",
+      "label": "最小覆盖子串"
+    },
+    {
+      "id": "facet:reasoning:coverage-deficit-invariant",
+      "type": "concept",
+      "facet_type": "reasoning",
+      "slug": "coverage-deficit-invariant",
+      "label": "目标字符缺口与覆盖状态等价"
+    },
+    {
+      "id": "path:linked-list-cycle-foundation",
+      "type": "learning_path",
+      "label": "链表环检测：从指针移动到相遇证明",
+      "slug": "linked-list-cycle-foundation"
+    },
+    {
+      "id": "path:two-pointer-symmetry-to-boundary",
+      "type": "learning_path",
+      "label": "对向双指针：从对称比较到边界贡献",
+      "slug": "two-pointer-symmetry-to-boundary"
+    },
+    {
+      "id": "path:sliding-window-budget-to-cover",
+      "type": "learning_path",
+      "label": "滑动窗口：从预算约束到最小覆盖",
+      "slug": "sliding-window-budget-to-cover"
     }
   ],
   "edges": [
@@ -2727,6 +2915,331 @@
       "target": "post:lru-cache",
       "type": "extends",
       "reason": "先掌握单链表 next 指针的安全重连，再理解 LRU 中双向链表的节点摘除与移动。"
+    },
+    {
+      "source": "post:linked-list-cycle",
+      "target": "category:data-structures",
+      "type": "classified_as"
+    },
+    {
+      "source": "post:linked-list-cycle",
+      "target": "topic:data-structures/fast-slow-pointers",
+      "type": "instantiates"
+    },
+    {
+      "source": "post:linked-list-cycle",
+      "target": "facet:structures:linked-list",
+      "type": "uses_structure"
+    },
+    {
+      "source": "post:linked-list-cycle",
+      "target": "facet:techniques:fast-slow-pointers",
+      "type": "uses_technique"
+    },
+    {
+      "source": "post:linked-list-cycle",
+      "target": "facet:problem_shapes:cycle-detection",
+      "type": "models"
+    },
+    {
+      "source": "post:linked-list-cycle",
+      "target": "facet:reasoning:tortoise-hare-relative-speed",
+      "type": "proved_by"
+    },
+    {
+      "source": "post:linked-list-cycle",
+      "target": "facet:prerequisites:linked-list-basics",
+      "type": "requires"
+    },
+    {
+      "source": "post:linked-list-cycle",
+      "target": "facet:learning_stages:foundation",
+      "type": "targets_stage"
+    },
+    {
+      "source": "post:valid-palindrome",
+      "target": "category:two-pointer",
+      "type": "classified_as"
+    },
+    {
+      "source": "post:valid-palindrome",
+      "target": "topic:two-pointer/opposite-direction",
+      "type": "instantiates"
+    },
+    {
+      "source": "post:valid-palindrome",
+      "target": "facet:structures:string",
+      "type": "uses_structure"
+    },
+    {
+      "source": "post:valid-palindrome",
+      "target": "facet:techniques:two-pointers",
+      "type": "uses_technique"
+    },
+    {
+      "source": "post:valid-palindrome",
+      "target": "facet:techniques:character-normalization",
+      "type": "uses_technique"
+    },
+    {
+      "source": "post:valid-palindrome",
+      "target": "facet:problem_shapes:normalized-palindrome",
+      "type": "models"
+    },
+    {
+      "source": "post:valid-palindrome",
+      "target": "facet:reasoning:symmetric-comparison-after-filtering",
+      "type": "proved_by"
+    },
+    {
+      "source": "post:valid-palindrome",
+      "target": "facet:prerequisites:two-pointer-basics",
+      "type": "requires"
+    },
+    {
+      "source": "post:valid-palindrome",
+      "target": "facet:learning_stages:foundation",
+      "type": "targets_stage"
+    },
+    {
+      "source": "post:trapping-rain-water",
+      "target": "category:two-pointer",
+      "type": "classified_as"
+    },
+    {
+      "source": "post:trapping-rain-water",
+      "target": "topic:two-pointer/boundary-maxima",
+      "type": "instantiates"
+    },
+    {
+      "source": "post:trapping-rain-water",
+      "target": "facet:structures:array",
+      "type": "uses_structure"
+    },
+    {
+      "source": "post:trapping-rain-water",
+      "target": "facet:techniques:two-pointers",
+      "type": "uses_technique"
+    },
+    {
+      "source": "post:trapping-rain-water",
+      "target": "facet:techniques:boundary-maxima",
+      "type": "uses_technique"
+    },
+    {
+      "source": "post:trapping-rain-water",
+      "target": "facet:problem_shapes:water-volume-between-boundaries",
+      "type": "models"
+    },
+    {
+      "source": "post:trapping-rain-water",
+      "target": "facet:reasoning:smaller-boundary-determines-water",
+      "type": "proved_by"
+    },
+    {
+      "source": "post:trapping-rain-water",
+      "target": "facet:prerequisites:array-traversal-basics",
+      "type": "requires"
+    },
+    {
+      "source": "post:trapping-rain-water",
+      "target": "facet:prerequisites:two-pointer-basics",
+      "type": "requires"
+    },
+    {
+      "source": "post:trapping-rain-water",
+      "target": "facet:learning_stages:advanced",
+      "type": "targets_stage"
+    },
+    {
+      "source": "post:longest-repeating-character-replacement",
+      "target": "category:sliding-window",
+      "type": "classified_as"
+    },
+    {
+      "source": "post:longest-repeating-character-replacement",
+      "target": "topic:sliding-window/replacement-budget-window",
+      "type": "instantiates"
+    },
+    {
+      "source": "post:longest-repeating-character-replacement",
+      "target": "facet:structures:string",
+      "type": "uses_structure"
+    },
+    {
+      "source": "post:longest-repeating-character-replacement",
+      "target": "facet:structures:array",
+      "type": "uses_structure"
+    },
+    {
+      "source": "post:longest-repeating-character-replacement",
+      "target": "facet:techniques:sliding-window",
+      "type": "uses_technique"
+    },
+    {
+      "source": "post:longest-repeating-character-replacement",
+      "target": "facet:techniques:frequency-counting",
+      "type": "uses_technique"
+    },
+    {
+      "source": "post:longest-repeating-character-replacement",
+      "target": "facet:problem_shapes:longest-window-with-replacement-budget",
+      "type": "models"
+    },
+    {
+      "source": "post:longest-repeating-character-replacement",
+      "target": "facet:reasoning:window-repair-budget",
+      "type": "proved_by"
+    },
+    {
+      "source": "post:longest-repeating-character-replacement",
+      "target": "facet:prerequisites:array-traversal-basics",
+      "type": "requires"
+    },
+    {
+      "source": "post:longest-repeating-character-replacement",
+      "target": "facet:prerequisites:sliding-window-basics",
+      "type": "requires"
+    },
+    {
+      "source": "post:longest-repeating-character-replacement",
+      "target": "facet:learning_stages:core",
+      "type": "targets_stage"
+    },
+    {
+      "source": "post:minimum-window-substring",
+      "target": "category:sliding-window",
+      "type": "classified_as"
+    },
+    {
+      "source": "post:minimum-window-substring",
+      "target": "topic:sliding-window/minimum-cover-window",
+      "type": "instantiates"
+    },
+    {
+      "source": "post:minimum-window-substring",
+      "target": "facet:structures:string",
+      "type": "uses_structure"
+    },
+    {
+      "source": "post:minimum-window-substring",
+      "target": "facet:structures:hash-map",
+      "type": "uses_structure"
+    },
+    {
+      "source": "post:minimum-window-substring",
+      "target": "facet:techniques:sliding-window",
+      "type": "uses_technique"
+    },
+    {
+      "source": "post:minimum-window-substring",
+      "target": "facet:techniques:frequency-counting",
+      "type": "uses_technique"
+    },
+    {
+      "source": "post:minimum-window-substring",
+      "target": "facet:techniques:deficit-counting",
+      "type": "uses_technique"
+    },
+    {
+      "source": "post:minimum-window-substring",
+      "target": "facet:problem_shapes:minimum-covering-window",
+      "type": "models"
+    },
+    {
+      "source": "post:minimum-window-substring",
+      "target": "facet:reasoning:coverage-deficit-invariant",
+      "type": "proved_by"
+    },
+    {
+      "source": "post:minimum-window-substring",
+      "target": "facet:prerequisites:hash-map-basics",
+      "type": "requires"
+    },
+    {
+      "source": "post:minimum-window-substring",
+      "target": "facet:prerequisites:sliding-window-basics",
+      "type": "requires"
+    },
+    {
+      "source": "post:minimum-window-substring",
+      "target": "facet:learning_stages:advanced",
+      "type": "targets_stage"
+    },
+    {
+      "source": "path:linked-list-cycle-foundation",
+      "target": "post:reverse-linked-list",
+      "type": "includes",
+      "position": 1
+    },
+    {
+      "source": "path:linked-list-cycle-foundation",
+      "target": "post:linked-list-cycle",
+      "type": "includes",
+      "position": 2
+    },
+    {
+      "source": "post:reverse-linked-list",
+      "target": "post:linked-list-cycle",
+      "type": "precedes_in_path",
+      "path": "linked-list-cycle-foundation",
+      "position": 2
+    },
+    {
+      "source": "path:two-pointer-symmetry-to-boundary",
+      "target": "post:valid-palindrome",
+      "type": "includes",
+      "position": 1
+    },
+    {
+      "source": "path:two-pointer-symmetry-to-boundary",
+      "target": "post:trapping-rain-water",
+      "type": "includes",
+      "position": 2
+    },
+    {
+      "source": "post:valid-palindrome",
+      "target": "post:trapping-rain-water",
+      "type": "precedes_in_path",
+      "path": "two-pointer-symmetry-to-boundary",
+      "position": 2
+    },
+    {
+      "source": "path:sliding-window-budget-to-cover",
+      "target": "post:longest-repeating-character-replacement",
+      "type": "includes",
+      "position": 1
+    },
+    {
+      "source": "path:sliding-window-budget-to-cover",
+      "target": "post:minimum-window-substring",
+      "type": "includes",
+      "position": 2
+    },
+    {
+      "source": "post:longest-repeating-character-replacement",
+      "target": "post:minimum-window-substring",
+      "type": "precedes_in_path",
+      "path": "sliding-window-budget-to-cover",
+      "position": 2
+    },
+    {
+      "source": "post:reverse-linked-list",
+      "target": "post:linked-list-cycle",
+      "type": "extends",
+      "reason": "从单链表 next 指针的逐步重连，迁移到对 next 引用轨迹的环结构识别。"
+    },
+    {
+      "source": "post:longest-substring-without-repeating-characters",
+      "target": "post:longest-repeating-character-replacement",
+      "type": "extends",
+      "reason": "从无重复约束窗口，迁移到允许 k 次修改的频次预算窗口。"
+    },
+    {
+      "source": "post:longest-repeating-character-replacement",
+      "target": "post:minimum-window-substring",
+      "type": "extends",
+      "reason": "从最长合法窗口的预算约束，迁移到满足目标多重集合后持续收缩的最短覆盖窗口。"
     }
   ]
 }
