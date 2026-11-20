@@ -1,0 +1,25 @@
+{
+  "problem": {
+    "number": 46,
+    "url": "https://leetcode.com/problems/permutations/",
+    "difficulty": "Medium",
+    "source": "Official LeetCode problem page; descriptions in this article independently paraphrased"
+  },
+  "claims": [
+    {
+      "type": "derived",
+      "claim": "进入深度为 k 的递归时，path 恰好含 k 个互异输入元素；used[i] 为真当且仅当 nums[i] 已出现在当前 path。返回上一层后，状态必须恢复成调用前。",
+      "validation": "Loop/recursion invariant and solution.py implementation"
+    },
+    {
+      "type": "derived",
+      "claim": "共有 n! 个叶子；复制每个完整排列需要 O(n)，总时间 O(n·n!)。回溯路径、used 和递归栈额外 O(n)，不含输出；保存全部结果需 O(n·n!)。",
+      "validation": "Asymptotic analysis from pointer/recursion bounds"
+    },
+    {
+      "type": "derived",
+      "claim": "任一合法排列都拥有唯一的第一位、第二位直到第 n 位，因此对应搜索树上的唯一根到叶路径；每一层遍历所有未使用值，故所有合法路径都会被访问。used 禁止重复使用，且输入元素互异，因此不会产生相同的排列。撤销保证兄弟分支从相同的父状态出发。",
+      "validation": "Correctness reasoning crosschecked with deterministic unit tests"
+    }
+  ]
+}

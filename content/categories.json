@@ -1,0 +1,66 @@
+[
+  {
+    "slug": "two-pointer",
+    "title": "双指针",
+    "english": "Two Pointers",
+    "description": "从首尾收缩、排序扫描到去重策略，理解指针为什么能够跳过不可能的候选。",
+    "topics": [
+      {
+        "slug": "opposite-direction",
+        "title": "对向双指针"
+      },
+      {
+        "slug": "sorted-enumeration",
+        "title": "排序与去重"
+      }
+    ]
+  },
+  {
+    "slug": "sliding-window",
+    "title": "滑动窗口",
+    "english": "Sliding Window",
+    "description": "维护连续区间的不变量，在增量更新中避免重复扫描。",
+    "topics": [
+      {
+        "slug": "variable-window",
+        "title": "可变长窗口"
+      },
+      {
+        "slug": "window-counting",
+        "title": "窗口计数"
+      }
+    ]
+  },
+  {
+    "slug": "backtracking",
+    "title": "回溯与搜索",
+    "english": "Backtracking & Search",
+    "description": "把决策树拆成选择、递归、撤销，观察搜索空间和剪枝条件。",
+    "topics": [
+      {
+        "slug": "permutations",
+        "title": "排列与组合"
+      },
+      {
+        "slug": "pruning",
+        "title": "剪枝与约束"
+      }
+    ]
+  },
+  {
+    "slug": "graphs",
+    "title": "图与网格",
+    "english": "Graphs & Grids",
+    "description": "把二维网格视为图，使用 DFS/BFS 组织连通性与访问状态。",
+    "topics": [
+      {
+        "slug": "grid-traversal",
+        "title": "网格遍历与连通分量"
+      },
+      {
+        "slug": "shortest-path",
+        "title": "最短路径"
+      }
+    ]
+  }
+]

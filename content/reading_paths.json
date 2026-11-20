@@ -1,0 +1,30 @@
+[
+  {
+    "id": "two-pointer-journey",
+    "title": "从基础双指针到去重",
+    "posts": [
+      "container-with-most-water",
+      "three-sum"
+    ]
+  },
+  {
+    "id": "state-and-search",
+    "title": "从连续窗口到状态空间搜索",
+    "posts": [
+      "longest-substring-without-repeating-characters",
+      "permutations",
+      "number-of-islands"
+    ]
+  },
+  {
+    "id": "algorithm-toolbox",
+    "title": "五题掌握常见算法模式",
+    "posts": [
+      "longest-substring-without-repeating-characters",
+      "container-with-most-water",
+      "three-sum",
+      "permutations",
+      "number-of-islands"
+    ]
+  }
+]
