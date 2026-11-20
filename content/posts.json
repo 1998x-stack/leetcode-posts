@@ -191,7 +191,7 @@
     "title": "LeetCode 200 · 岛屿数量",
     "subtitle": "二维网格也是图：一次 DFS 如何恰好数出一个连通块？",
     "category": "graphs",
-    "topic": "grid-traversal",
+    "topic": "connected-components",
     "status": "published",
     "published": "2026-11-20",
     "updated": "2026-11-20",
