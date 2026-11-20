@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 350" role="img" aria-labelledby="diameter-trace-title diameter-trace-desc"><title id="diameter-trace-title">后序先计算子树高度，再更新直径</title><desc id="diameter-trace-desc">节点 2 收到左右高度 1 和 1，候选直径 2；根节点收到 2 和 1，候选直径 3。</desc>
+<rect x="28" y="24" width="904" height="302" rx="18" fill="#fff" stroke="#d5e3da"/>
+<rect x="62" y="82" width="240" height="82" rx="10" fill="#edf4ed" stroke="#9ebdb0"/><text x="182" y="115" text-anchor="middle" font-size="18" font-weight="700" fill="#19393d">节点 2</text><text x="182" y="145" text-anchor="middle" font-size="17" fill="#176c6d">left=1, right=1</text>
+<path d="M 310 123 H 370" stroke="#bc7149" stroke-width="3"/><path d="M 362 115 L 374 123 L 362 131" stroke="#bc7149" stroke-width="3" fill="none"/>
+<rect x="390" y="82" width="190" height="82" rx="10" fill="#f8efe6" stroke="#d99a72"/><text x="485" y="115" text-anchor="middle" font-size="18" fill="#8c432a">candidate=2</text><text x="485" y="145" text-anchor="middle" font-size="16" fill="#8c432a">height=2</text>
+<path d="M 590 123 H 650" stroke="#bc7149" stroke-width="3"/><path d="M 642 115 L 654 123 L 642 131" stroke="#bc7149" stroke-width="3" fill="none"/>
+<rect x="670" y="82" width="230" height="82" rx="10" fill="#d5ede4" stroke="#2f8681"/><text x="785" y="115" text-anchor="middle" font-size="18" fill="#124d4b">根节点 1</text><text x="785" y="145" text-anchor="middle" font-size="17" fill="#124d4b">left=2, right=1</text>
+<text x="480" y="236" text-anchor="middle" font-size="18" fill="#19393d">全局直径 = max(2, 2 + 1) = 3 条边</text><text x="480" y="270" text-anchor="middle" font-size="15" fill="#58716f">递归向父节点返回高度；全局变量记录所有节点的最大候选值</text></svg>

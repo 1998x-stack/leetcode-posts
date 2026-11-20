@@ -1,0 +1,31 @@
+{
+  "problem": {
+    "number": 543,
+    "title": "Diameter of Binary Tree",
+    "difficulty": "Easy",
+    "url": "https://leetcode.com/problems/diameter-of-binary-tree/",
+    "source": "Official LeetCode problem page; Chinese explanation independently paraphrased",
+    "facts": [
+      "The diameter is the number of edges on the longest path between any two nodes.",
+      "The longest path may or may not pass through the root.",
+      "The number of nodes is in [1,10^4]."
+    ]
+  },
+  "claims": [
+    {
+      "type": "derived",
+      "claim": "For a node with left and right subtree heights L and R measured in nodes, the longest path whose highest point is that node has L+R edges.",
+      "validation": "Unique-path / lowest-common-ancestor decomposition."
+    },
+    {
+      "type": "derived",
+      "claim": "The value returned to the parent is 1+max(L,R), while the global diameter is updated with L+R at every node.",
+      "validation": "Separate recursive return semantics and global optimum."
+    },
+    {
+      "type": "derived",
+      "claim": "Every tree path has a unique highest node relative to the root; evaluating L+R at every node covers all possible diameters.",
+      "validation": "Correctness proof in article."
+    }
+  ]
+}
