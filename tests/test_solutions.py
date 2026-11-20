@@ -241,7 +241,7 @@ def test_registry_and_original_svg_covers():
     domain_ids = {domain["slug"] for domain in domains}
     registered = {c["slug"]: {t["slug"] for t in c["topics"]} for c in cats}
     assert len(posts) == 17
-    assert sorted(p["status"] for p in posts) == ["published"] * 14
+    assert sorted(p["status"] for p in posts) == ["published"] * 17
     assert len({p["cover"]["caption"] for p in posts}) == 14
     allowed = {field: {item["slug"] for item in facets[field]}
                for field in ("structures", "techniques", "problem_shapes", "reasoning", "prerequisites")}
