@@ -24,7 +24,7 @@ def check_article(page_file: Path, output: Path, browser, click: str = 'button')
     page_file = Path(page_file).resolve()
     output = Path(output)
     output.mkdir(parents=True, exist_ok=True)
-    html = page_file.read_text(encoding='utf-8')
+    html = page_file.read_text(encoding='utf-8')  # Keep source inspection available; file:// resolves local SVG assets.
     report = {'file': str(page_file), 'pass': True, 'viewports': {}, 'errors': [], 'interaction': {}}
     for label,w,h in SIZES:
         page=browser.new_page(viewport={'width':w,'height':h},device_scale_factor=1)
@@ -32,7 +32,7 @@ def check_article(page_file: Path, output: Path, browser, click: str = 'button')
         page.on('pageerror',lambda e,log=errors:log.append(str(e)))
         page.on('console',lambda m,log=errors:log.append('console: '+m.text) if m.type=='error' else None)
         page.route('https?://**',lambda route,log=network:(log.append(route.request.url),route.abort()))
-        page.set_content(html, wait_until='load')
+        page.goto(page_file.as_uri(), wait_until='load')
         page.screenshot(path=str(output/f'{label}.png'),full_page=False)
         measure=page.evaluate('''() => {
           const math = [...document.querySelectorAll('math')];

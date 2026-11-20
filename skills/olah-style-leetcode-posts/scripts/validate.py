@@ -37,7 +37,7 @@ def validate(path: Path) -> dict:
         if not caption or not caption.get_text(strip=True):
             failures.append(f'Figure {index} has no nonempty figcaption')
     svgs = soup.find_all('svg')
-    if not svgs: failures.append('No SVG illustrations')
+    if not svgs and not any((img.get('src') or '').lower().endswith('.svg') for img in soup.find_all('img')): failures.append('No SVG illustrations')
     for index, svg in enumerate(svgs, 1):
         if not svg.has_attr('viewbox'): failures.append(f'SVG {index} missing viewBox')
         if not (svg.get('aria-label') or svg.get('aria-labelledby') or svg.find('title')):
