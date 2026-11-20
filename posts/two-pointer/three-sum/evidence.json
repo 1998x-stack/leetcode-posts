@@ -1,0 +1,25 @@
+{
+  "problem": {
+    "number": 15,
+    "url": "https://leetcode.com/problems/3sum/",
+    "difficulty": "Medium",
+    "source": "Official LeetCode problem page; descriptions in this article independently paraphrased"
+  },
+  "claims": [
+    {
+      "type": "derived",
+      "claim": "固定排序数组中的位置 i。left=i+1，right=n-1。未扫描的候选位于 [left,right]；当和偏小时，left 向右会使和不减；偏大时，right 向左会使和不增。",
+      "validation": "Loop/recursion invariant and solution.py implementation"
+    },
+    {
+      "type": "derived",
+      "claim": "排序 O(n log n)，n 次以内的固定位置，每次左右指针总共 O(n)，整体 O(n²)；这里使用 sorted(nums) 不修改输入，额外 O(n) 用于排序副本（不含输出），结果空间最多 O(n²) 级别。",
+      "validation": "Asymptotic analysis from pointer/recursion bounds"
+    },
+    {
+      "type": "derived",
+      "claim": "对固定 i：和太小时，当前 left 与任意更小/等于 right 的右数搭配都不可能达到目标，故可丢弃 left；和太大时对 right 对称。命中时仅跳过重复值，因为重复值会产生相同三元组，不会提供新的数值组合。外层固定值重复同理；所有不同的合法三元组都有其最左首次出现的 i，可被完整扫描发现。",
+      "validation": "Correctness reasoning crosschecked with deterministic unit tests"
+    }
+  ]
+}

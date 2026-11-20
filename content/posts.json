@@ -1,1 +1,127 @@
-[]
+[
+  {
+    "slug": "longest-substring-without-repeating-characters",
+    "title": "LeetCode 3 · 无重复字符的最长子串",
+    "subtitle": "一个窗口、两个边界：为什么只需要线性扫描？",
+    "category": "sliding-window",
+    "topic": "variable-window",
+    "status": "published",
+    "published": "2026-11-20",
+    "updated": "2026-11-20",
+    "reading_minutes": 14,
+    "tags": [
+      "Medium",
+      "Sliding Window",
+      "Hash Map",
+      "String",
+      "Invariant"
+    ],
+    "summary": "用 abcabcbb 逐步演示可变长滑动窗口，解释最后出现位置、不变量、左边界为何不能后退，并以 Python 测试验证 O(n) 解法。",
+    "problem_url": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
+    "illustration": "longest-substring-without-repeating-characters",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "重复 a 出现后，窗口左界跳过旧位置"
+    }
+  },
+  {
+    "slug": "container-with-most-water",
+    "title": "LeetCode 11 · 盛最多水的容器",
+    "subtitle": "移动较短边，为什么一定不会错过更大面积？",
+    "category": "two-pointer",
+    "topic": "opposite-direction",
+    "status": "published",
+    "published": "2026-11-20",
+    "updated": "2026-11-20",
+    "reading_minutes": 13,
+    "tags": [
+      "Medium",
+      "Two Pointers",
+      "Greedy",
+      "Array",
+      "Proof"
+    ],
+    "summary": "用左右边界和面积上界解释盛水容器的双指针贪心，演示移动决策与正确性证明，附 O(n) Python 实现。",
+    "problem_url": "https://leetcode.com/problems/container-with-most-water/",
+    "illustration": "container-with-most-water",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "两根柱的短边与宽度共同决定盛水面积"
+    }
+  },
+  {
+    "slug": "three-sum",
+    "title": "LeetCode 15 · 三数之和",
+    "subtitle": "先排序，再固定一个数：如何在线性扫描中去重？",
+    "category": "two-pointer",
+    "topic": "sorted-enumeration",
+    "status": "published",
+    "published": "2026-11-20",
+    "updated": "2026-11-20",
+    "reading_minutes": 16,
+    "tags": [
+      "Medium",
+      "Sorting",
+      "Two Pointers",
+      "Deduplication",
+      "Array"
+    ],
+    "summary": "把三数之和拆为固定值与双指针 two-sum，逐帧展示去重与指针收缩，解释 O(n²) 复杂度和输入不变性。",
+    "problem_url": "https://leetcode.com/problems/3sum/",
+    "illustration": "three-sum",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "排序后固定一个数，再收缩左右指针找到零和"
+    }
+  },
+  {
+    "slug": "permutations",
+    "title": "LeetCode 46 · 全排列",
+    "subtitle": "从选择到撤销：理解回溯为什么不会漏解或重复",
+    "category": "backtracking",
+    "topic": "permutations",
+    "status": "published",
+    "published": "2026-11-20",
+    "updated": "2026-11-20",
+    "reading_minutes": 15,
+    "tags": [
+      "Medium",
+      "Backtracking",
+      "DFS",
+      "Recursion",
+      "State Restoration"
+    ],
+    "summary": "把 1、2、3 的全排列画成决策树，逐步展示 path 与 used 的状态、递归与撤销，以及 O(n·n!) 的复杂度来源。",
+    "problem_url": "https://leetcode.com/problems/permutations/",
+    "illustration": "permutations",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "回溯树按选择、递归、撤销展开不同排列"
+    }
+  },
+  {
+    "slug": "number-of-islands",
+    "title": "LeetCode 200 · 岛屿数量",
+    "subtitle": "二维网格也是图：一次 DFS 如何恰好数出一个连通块？",
+    "category": "graphs",
+    "topic": "grid-traversal",
+    "status": "published",
+    "published": "2026-11-20",
+    "updated": "2026-11-20",
+    "reading_minutes": 14,
+    "tags": [
+      "Medium",
+      "Graph",
+      "DFS",
+      "Grid",
+      "Connected Components"
+    ],
+    "summary": "把 0/1 网格转化为四邻接图，演示洪水填充和已访问标记，解释连通分量计数、原地修改和 O(mn) 复杂度。",
+    "problem_url": "https://leetcode.com/problems/number-of-islands/",
+    "illustration": "number-of-islands",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "四邻接网格中颜色区分三座独立岛屿"
+    }
+  }
+]

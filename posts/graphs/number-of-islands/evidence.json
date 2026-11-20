@@ -1,0 +1,25 @@
+{
+  "problem": {
+    "number": 200,
+    "url": "https://leetcode.com/problems/number-of-islands/",
+    "difficulty": "Medium",
+    "source": "Official LeetCode problem page; descriptions in this article independently paraphrased"
+  },
+  "claims": [
+    {
+      "type": "derived",
+      "claim": "从某个尚未访问的陆地格启动搜索时，栈里的每个坐标都已标记为已访问；一次搜索会覆盖它所在连通块的全部格子。只有主循环遇到新的 '1' 才将计数加一。",
+      "validation": "Loop/recursion invariant and solution.py implementation"
+    },
+    {
+      "type": "derived",
+      "claim": "时间 O(mn)：每个格子检查常数次；最坏额外栈空间 O(mn)。本实现为了节省 visited 集合而原地把访问过的 '1' 改成 '0'，会修改输入网格；如需保留输入，先复制网格或使用额外 visited。",
+      "validation": "Asymptotic analysis from pointer/recursion bounds"
+    },
+    {
+      "type": "derived",
+      "claim": "每个岛屿最先遇到的格子一定触发一次 DFS，因此不会漏数。由于 DFS 沿四邻接边遍历并标记该岛全部可达陆地，同一岛的其他格子之后不会再次触发计数。不同岛之间不存在陆地路径，所以一次 DFS 绝不会错误合并两座岛。",
+      "validation": "Correctness reasoning crosschecked with deterministic unit tests"
+    }
+  ]
+}

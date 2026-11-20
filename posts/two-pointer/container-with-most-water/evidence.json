@@ -1,0 +1,25 @@
+{
+  "problem": {
+    "number": 11,
+    "url": "https://leetcode.com/problems/container-with-most-water/",
+    "difficulty": "Medium",
+    "source": "Official LeetCode problem page; descriptions in this article independently paraphrased"
+  },
+  "claims": [
+    {
+      "type": "derived",
+      "claim": "当前区间 [left,right] 内尚有未排除的候选边界；best 保存已检查最大面积。每次丢弃较短边，保证被丢弃的边界不可能与更近的任何柱构成更大面积。",
+      "validation": "Loop/recursion invariant and solution.py implementation"
+    },
+    {
+      "type": "derived",
+      "claim": "时间 O(n)，每步至少使区间长度减少 1；额外空间 O(1)。",
+      "validation": "Asymptotic analysis from pointer/recursion bounds"
+    },
+    {
+      "type": "derived",
+      "claim": "假设 h[left]≤h[right]。任何使用 left 且另一端 k<right 的容器，面积 (k-left)×min(h[left],h[k]) ≤ (k-left)×h[left] < (right-left)×h[left]。所以在比较当前面积后，可以安全永久删除 left。对称地，右侧较短时删除 right。重复直到相遇即可穷尽所有可能超过 best 的候选。",
+      "validation": "Correctness reasoning crosschecked with deterministic unit tests"
+    }
+  ]
+}

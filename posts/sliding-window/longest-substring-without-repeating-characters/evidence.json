@@ -1,0 +1,25 @@
+{
+  "problem": {
+    "number": 3,
+    "url": "https://leetcode.com/problems/longest-substring-without-repeating-characters/",
+    "difficulty": "Medium",
+    "source": "Official LeetCode problem page; descriptions in this article independently paraphrased"
+  },
+  "claims": [
+    {
+      "type": "derived",
+      "claim": "每轮处理完下标 right 后，闭区间 [left, right] 中所有字符互不重复；left 只会向右移动，且窗口是以 right 为结尾的最长合法窗口。",
+      "validation": "Loop/recursion invariant and solution.py implementation"
+    },
+    {
+      "type": "derived",
+      "claim": "时间 O(n)：right 遍历一次，哈希表操作期望 O(1)；额外空间 O(min(n, |Σ|)) 保存最后位置，|Σ| 是可用字符种类。",
+      "validation": "Asymptotic analysis from pointer/recursion bounds"
+    },
+    {
+      "type": "derived",
+      "claim": "归纳看：加入一个新字符时，窗口中至多只有这个字符可能和旧元素冲突，因为旧窗口原本无重复。若冲突，所有不晚于旧位置的起点均无法构成以 right 结尾的合法子串，所以跳过它们不会漏掉更长答案。left 不回退，故始终合法且候选完整。",
+      "validation": "Correctness reasoning crosschecked with deterministic unit tests"
+    }
+  ]
+}
