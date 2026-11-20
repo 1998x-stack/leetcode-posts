@@ -1,0 +1,37 @@
+{
+  "problem": {
+    "number": 146,
+    "title": "LRU Cache",
+    "difficulty": "Medium",
+    "url": "https://leetcode.com/problems/lru-cache/",
+    "verified_on": "2026-11-20"
+  },
+  "claims": [
+    {
+      "kind": "derived",
+      "claim": "字典 nodes 将 key 映射到唯一链表节点；链表从 head.next 到 tail.prev 按最近使用程度从新到旧排列。head.next 是 MRU，tail.prev 是 LRU。每个真实节点在字典和链表中恰好出现一次。",
+      "validated_by": [
+        "solution.py",
+        "tests/test_solutions.py"
+      ]
+    },
+    {
+      "kind": "derived",
+      "claim": "字典按 key 找节点平均 O(1)；双向链表摘除已知节点、插入头部和删除尾部只需常数次指针更新。访问/写入将节点移到头部，维持最近使用顺序；超容量时 tail.prev 正是 LRU。字典与链表同步增删，保持一一对应。",
+      "validated_by": [
+        "Correctness review and differential tests"
+      ]
+    }
+  ],
+  "complexity": "设容量 k。get 和 put 平均 O(1)，因为哈希表平均 O(1)、链表操作严格 O(1)。空间 O(k)，字典和链表各保存至多 k 个条目。",
+  "implementation": {
+    "language": "Python 3",
+    "input_mutation": "get/put mutate internal cache recency only",
+    "reference_method": "OrderedDict operation model"
+  },
+  "visuals": {
+    "cover.svg": "哈希表直达节点，双向链表从 MRU 到 LRU 维护淘汰顺序",
+    "trace.svg": "get 命中时通过字典找到节点，将它摘下并插到 head 后；未命中返回 -1。put 已存在 key 时更新并移动到头部；新 key 插到头部，超容量时删除 tail.prev 并同步删除字典映射。",
+    "pitfall.svg": "更新已有 key 也算一次使用，必须移动到 MRU 端。淘汰要从 tail.prev 执行，不是 head.next。删除节点时必须同时修复前后指针并删除字典映射。"
+  }
+}

@@ -1,32 +1,36 @@
-# SVG pipeline: storyboard → design → extract → render → verify
+# SVG production: storyboard, draw, export, verify
 
-## Construct
+## Three different teaching assets
 
-1. Make a state/edge list (e.g. input → projection Q/K/V → score → softmax → values) **before** drawing.
-2. Draw shapes in model execution order; separate arrows for data flow from labels for tensors. Use `stroke-dasharray` only for an explicitly described secondary/gradient path.
-3. For stacked architecture, distinguish repeated blocks and stage count; for masked attention show which entries are blocked, not just a colored matrix.
-4. Each SVG must have `xmlns`, `viewBox`, `<title>`, `<desc>` and unique IDs; use `role="img" aria-labelledby` when inline.
-5. Minimum label ~13px at nominal width; use native sans fonts with Chinese fallbacks. Treat color as redundant with labels/dashes.
-6. Use color semantics consistently **within** a paper; do not claim identical colors across very different scientific domains.
-7. Captions should describe a verifiable statement about the path, not simply 'architecture overview'.
+1. Cover: the algorithm's central structure at a glance. It must remain legible as a small archive thumbnail.
+2. Trace: a real state snapshot or transition from the worked example, using the same values and indices as the article and tests.
+3. Pitfall: a tempting incorrect rule, boundary failure or counterexample paired with the correct rule.
 
-## Extraction
+Never create three nearly identical SVGs by changing only their title or accent color. Each should answer a different learning question.
 
-Run `extract_svg.py` against **rendered HTML** with Playwright. It clones each SVG, snapshots visible CSS computed style fields (fill, stroke, font, opacity, etc.) onto the SVG elements, ensures `xmlns/viewBox`, cleans unsafe script/event attributes, and writes independent XML files. This retains labels that were previously styled only via article CSS. It does not download external assets; CSS background images and remote font dependencies must be eliminated upstream. Names prefer `<svg data-export="filename">`, otherwise stable section/figure ID.
+## Storyboard before markup
 
-```bash
-python skills/olah-style-leetcode-posts/scripts/extract_svg.py posts/architectures/resnet/index.html --out /tmp/resnet-svg
-```
+For each figure write: question answered, entities, relationships, direction, state colors, labels, source/example values and expected caption. Cross-check the storyboard against the code and trace fixtures.
 
-## Verify
+Examples:
+- rotated binary search: one pivot break, sorted half, retained interval;
+- coin change: amount states, base value, candidate transitions and minimum;
+- monotonic stack: unresolved indices, decreasing order and pop-on-warmer event;
+- tree BFS: parent/child edges, queue frontier and level boundary;
+- LRU: hash lookup, doubly linked recency order, head/tail sentinels and eviction end.
 
-- Parse as XML, confirm width/height from viewBox, no missing assets, and unique IDs.
-- Open standalone SVG in a browser and capture screenshot; compare to the inline figure (cropping might differ because CSS dimensions differ).
-- Inspect all lines and arrows visually: joins, topology, direction, equation symbols and labels; no visible overprint/clipping.
-- Maintain a manifest mapping filename → figure number → concept → source verification.
-- Do not blindly scrape or publish third-party paper SVGs: check license and permission first.
+## SVG technical contract
 
-## Two anti-patterns
+- Standalone XML with xmlns and viewBox; include title and desc.
+- IDs are unique within the SVG; avoid reusing page IDs.
+- Prefer explicit fill/stroke/font attributes so the exported asset renders independently.
+- Use a consistent color grammar within the article, with labels, shapes or line styles as redundant cues.
+- Minimum label size is approximately 14px at nominal desktop width; split a dense figure into stages rather than shrinking labels.
+- Ensure all text remains inside viewBox; test long Chinese labels and small screens.
+- No external images, CSS URLs, scripts, event attributes or remote fonts.
+- Figure captions state the algorithmic fact shown, not "algorithm overview".
+- Keep alt text concise and complementary to the caption.
 
-- Arrows that merely decorate a box: no scientific connection to described operation.
-- “Perfect-looking” shapes with wrong semantics (e.g. residual skip starting after the transform, or cross-attention K/V originating in Decoder).
+## Visual correctness review
+
+Check arrow direction, edge endpoints, index labels, comparison operators, stack order, queue order, DP values and cache recency. A beautiful incorrect diagram is a correctness defect. Confirm that the trace image and HTML stepper do not disagree.

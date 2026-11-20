@@ -49,6 +49,10 @@
     {
       "slug": "queue",
       "title": "队列"
+    },
+    {
+      "slug": "doubly-linked-list",
+      "title": "双向链表"
     }
   ],
   "techniques": [
@@ -123,6 +127,18 @@
     {
       "slug": "postorder-traversal",
       "title": "后序遍历"
+    },
+    {
+      "slug": "dynamic-programming",
+      "title": "动态规划"
+    },
+    {
+      "slug": "monotonic-stack",
+      "title": "单调栈"
+    },
+    {
+      "slug": "recency-update",
+      "title": "最近使用顺序更新"
     }
   ],
   "problem_shapes": [
@@ -181,6 +197,18 @@
     {
       "slug": "tree-diameter",
       "title": "二叉树直径"
+    },
+    {
+      "slug": "minimum-coin-count",
+      "title": "最少硬币数量"
+    },
+    {
+      "slug": "next-warmer-element",
+      "title": "下一个更高温度"
+    },
+    {
+      "slug": "cache-eviction",
+      "title": "缓存淘汰与访问顺序"
     }
   ],
   "reasoning": [
@@ -271,6 +299,22 @@
     {
       "slug": "diameter-through-lca",
       "title": "路径最高点分解"
+    },
+    {
+      "slug": "optimal-substructure",
+      "title": "最优子结构"
+    },
+    {
+      "slug": "monotonic-stack-invariant",
+      "title": "单调栈顺序不变量"
+    },
+    {
+      "slug": "map-list-bijection",
+      "title": "哈希表与链表一一对应"
+    },
+    {
+      "slug": "constant-time-eviction",
+      "title": "常数时间定位与淘汰"
     }
   ],
   "prerequisites": [
@@ -329,6 +373,10 @@
     {
       "slug": "queue-basics",
       "title": "队列基础"
+    },
+    {
+      "slug": "linked-list-basics",
+      "title": "链表基础"
     }
   ],
   "learning_stages": [

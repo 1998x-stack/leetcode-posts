@@ -1,1 +1,28 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{{TITLE}}</title><style>/* inline article.css here */</style></head><body><a href="#content" class="skip-link">跳转正文</a><nav aria-label="文章目录"><a href="#problem">题意</a><a href="#invariant">不变量</a><a href="#trace">轨迹</a><a href="#proof">证明</a><a href="#code">代码</a></nav><main id="content"><article><h1>{{TITLE}}</h1><p>{{SUBTITLE}}</p><section id="problem"><h2>题意与例子</h2><p>{{EXAMPLE}}</p></section><section id="invariant"><h2>核心不变量</h2><figure><img src="assets/cover.svg" alt="{{ALT}}"><figcaption>{{CAPTION}}</figcaption></figure></section><section id="trace"><h2>逐步演示</h2></section><section id="proof"><h2>为什么正确</h2></section><section id="code"><h2>参考实现与复杂度</h2></section></article></main></body></html>
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>{{TITLE}} · leetcode-posts</title>
+<meta name="description" content="{{SUMMARY}}">
+<style>/* Inline the canonical article.css for a standalone article. */</style>
+</head>
+<body>
+<a class="skip" href="#content">跳转正文</a>
+<header class="mast"><div class="wrap mast-inner"><a class="brand" href="../../../">leetcode<span>.</span>posts</a><nav aria-label="网站导航"><a href="../../../">首页</a><a href="../../../topics/">知识地图</a><a href="../../../archive/">题目归档</a></nav></div></header>
+<div class="layout">
+<nav class="toc" aria-label="文章目录"><strong>ON THIS PAGE / 文章目录</strong><a href="#problem">题意与约束</a><a href="#baseline">朴素思路</a><a href="#invariant">核心状态</a><a href="#trace">逐步演示</a><a href="#proof">正确性证明</a><a href="#implementation">代码与复杂度</a><a href="#pitfalls">边界与易错点</a></nav>
+<main id="content"><article>
+<header class="article-header"><div class="eyebrow">LEETCODE {{NUMBER}} / MEDIUM / {{CATEGORY}}</div><h1>{{TITLE}}</h1><p class="dek">{{SUBTITLE}}</p><p><a href="{{PROBLEM_URL}}" rel="noopener noreferrer">LeetCode 官方原题 ↗</a></p></header>
+<section id="problem"><h2>01 · 题意与约束</h2>{{PROBLEM_SUMMARY}}</section>
+<section id="baseline"><h2>02 · 朴素思路</h2>{{BASELINE}}</section>
+<section id="invariant"><h2>03 · 核心状态与不变量</h2>{{INVARIANT}}<figure><img src="assets/cover.svg" alt="{{COVER_ALT}}"><figcaption>{{COVER_CAPTION}}</figcaption></figure></section>
+<section id="trace"><h2>04 · 逐步推演</h2><figure><img src="assets/trace.svg" alt="{{TRACE_ALT}}"><figcaption>{{TRACE_CAPTION}}</figcaption></figure>{{STEPPER}}</section>
+<section id="proof"><h2>05 · 为什么正确</h2>{{PROOF}}</section>
+<section id="implementation"><h2>06 · Python 实现与复杂度</h2>{{SOLUTION}} {{COMPLEXITY}}</section>
+<section id="pitfalls"><h2>07 · 边界与易错点</h2>{{PITFALLS}}<figure><img src="assets/pitfall.svg" alt="{{PITFALL_ALT}}"><figcaption>{{PITFALL_CAPTION}}</figcaption></figure></section>
+</article></main></div>
+<footer class="site-tail"><div class="wrap">leetcode-posts · 文字、推导与图解独立编写。</div></footer>
+<script src="assets/js/interactions.js" defer></script>
+</body></html>

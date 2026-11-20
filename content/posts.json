@@ -631,5 +631,135 @@
       ],
       "learning_stage": "advanced"
     }
+  },
+  {
+    "slug": "coin-change",
+    "title": "LeetCode 322 · 零钱兑换",
+    "subtitle": "把 11 元拆成更小的问题：每个金额的最优解从哪里来？",
+    "category": "dynamic-programming",
+    "topic": "unbounded-knapsack",
+    "status": "published",
+    "published": "2026-11-20",
+    "updated": "2026-11-20",
+    "reading_minutes": 16,
+    "tags": [
+      "Medium",
+      "Dynamic Programming",
+      "Unbounded Knapsack",
+      "Array"
+    ],
+    "summary": "用一维动态规划求凑成目标金额所需的最少硬币数，定义 dp[x]、解释无限次使用硬币的转移，并处理无法凑成的金额。",
+    "problem_url": "https://leetcode.com/problems/coin-change/",
+    "illustration": "coin-change",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "每个金额状态都从更小金额转移而来，dp[11] 由 5、5、1 三枚硬币组成"
+    },
+    "facets": {
+      "structures": [
+        "array"
+      ],
+      "techniques": [
+        "dynamic-programming"
+      ],
+      "problem_shapes": [
+        "minimum-coin-count"
+      ],
+      "reasoning": [
+        "optimal-substructure"
+      ],
+      "prerequisites": [
+        "array-indexing"
+      ],
+      "learning_stage": "core"
+    }
+  },
+  {
+    "slug": "daily-temperatures",
+    "title": "LeetCode 739 · 每日温度",
+    "subtitle": "让还没等到暖天的日期排队：单调栈如何一次解决多个位置？",
+    "category": "monotonic-stack",
+    "topic": "next-warmer-day",
+    "status": "published",
+    "published": "2026-11-20",
+    "updated": "2026-11-20",
+    "reading_minutes": 15,
+    "tags": [
+      "Medium",
+      "Monotonic Stack",
+      "Next Greater Element",
+      "Array"
+    ],
+    "summary": "把每一天看成一个等待更高温度的查询，用保存下标的单调递减栈在线性时间内找到下一个更暖的日期。",
+    "problem_url": "https://leetcode.com/problems/daily-temperatures/",
+    "illustration": "daily-temperatures",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "每个日期先进入等待栈，遇到第一个严格更高的温度时才被弹出结算"
+    },
+    "facets": {
+      "structures": [
+        "array"
+      ],
+      "techniques": [
+        "monotonic-stack"
+      ],
+      "problem_shapes": [
+        "next-warmer-element"
+      ],
+      "reasoning": [
+        "monotonic-stack-invariant"
+      ],
+      "prerequisites": [
+        "array-traversal-basics"
+      ],
+      "learning_stage": "core"
+    }
+  },
+  {
+    "slug": "lru-cache",
+    "title": "LeetCode 146 · LRU 缓存",
+    "subtitle": "哈希表负责找到，双向链表负责排序：如何让 get 和 put 都是 O(1)？",
+    "category": "data-structures",
+    "topic": "lru-cache",
+    "status": "published",
+    "published": "2026-11-20",
+    "updated": "2026-11-20",
+    "reading_minutes": 17,
+    "tags": [
+      "Medium",
+      "Design",
+      "Hash Table",
+      "Doubly Linked List"
+    ],
+    "summary": "用哈希表加双向链表实现最近最少使用缓存，通过哨兵节点和明确的 MRU/LRU 方向，证明查询、更新和淘汰都只需常数次操作。",
+    "problem_url": "https://leetcode.com/problems/lru-cache/",
+    "illustration": "lru-cache",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "哈希表直达节点，双向链表从 MRU 到 LRU 维护淘汰顺序"
+    },
+    "facets": {
+      "structures": [
+        "hash-map",
+        "doubly-linked-list"
+      ],
+      "techniques": [
+        "hash-lookup",
+        "recency-update"
+      ],
+      "problem_shapes": [
+        "cache-eviction"
+      ],
+      "reasoning": [
+        "map-list-bijection",
+        "constant-time-eviction"
+      ],
+      "prerequisites": [
+        "hash-map-basics",
+        "linked-list-basics"
+      ],
+      "learning_stage": "advanced"
+    }
   }
 ]

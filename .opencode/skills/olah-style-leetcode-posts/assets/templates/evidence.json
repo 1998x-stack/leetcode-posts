@@ -1,0 +1,34 @@
+{
+  "problem": {
+    "number": 0,
+    "title": "Official English title",
+    "difficulty": "Medium",
+    "url": "https://leetcode.com/problems/example/",
+    "verified_on": "YYYY-MM-DD",
+    "constraints_used": []
+  },
+  "claims": [
+    {
+      "kind": "derived",
+      "claim": "State the invariant or recurrence",
+      "assumptions": [],
+      "validated_by": ["solution.py", "tests/test_solutions.py"]
+    }
+  ],
+  "complexity": {
+    "time": "O(...)",
+    "auxiliary_space": "O(...)",
+    "output_space": "O(...)",
+    "assumptions": []
+  },
+  "implementation": {
+    "language": "Python",
+    "input_mutation": "none or describe mutation",
+    "reference_method": "Describe the independent test oracle"
+  },
+  "visuals": {
+    "cover.svg": "Core mechanism",
+    "trace.svg": "Worked state transition",
+    "pitfall.svg": "Counterexample and correction"
+  }
+}
