@@ -12,8 +12,13 @@
       {
         "slug": "sorted-enumeration",
         "title": "排序与去重"
+      },
+      {
+        "slug": "same-direction",
+        "title": "同向双指针"
       }
-    ]
+    ],
+    "domain": "linear-patterns"
   },
   {
     "slug": "sliding-window",
@@ -28,8 +33,13 @@
       {
         "slug": "window-counting",
         "title": "窗口计数"
+      },
+      {
+        "slug": "fixed-window",
+        "title": "定长窗口"
       }
-    ]
+    ],
+    "domain": "linear-patterns"
   },
   {
     "slug": "backtracking",
@@ -44,8 +54,17 @@
       {
         "slug": "pruning",
         "title": "剪枝与约束"
+      },
+      {
+        "slug": "combinations",
+        "title": "组合枚举"
+      },
+      {
+        "slug": "subsets",
+        "title": "子集枚举"
       }
-    ]
+    ],
+    "domain": "search-enumeration"
   },
   {
     "slug": "graphs",
@@ -60,7 +79,16 @@
       {
         "slug": "shortest-path",
         "title": "最短路径"
+      },
+      {
+        "slug": "graph-traversal",
+        "title": "图遍历与访问状态"
+      },
+      {
+        "slug": "connected-components",
+        "title": "连通分量"
       }
-    ]
+    ],
+    "domain": "graphs-grids"
   }
 ]
