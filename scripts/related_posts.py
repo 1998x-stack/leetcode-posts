@@ -74,6 +74,28 @@ def choose_related(current: dict, published: list[dict], routes: list[dict],
                 offer(steps[other], 20 - distance * 4 + (1 if direction > 0 else 0),
                       kind, route['title'])
 
+    # Cross-category knowledge links use typed facets. Broad structure overlap alone
+    # is deliberately weak; problem shape, technique and proof mechanism matter more.
+    for other in published:
+        if other['slug'] == slug or other['slug'] in candidates:
+            continue
+        left, right = current.get('facets', {}), other.get('facets', {})
+        shared_shape = set(left.get('problem_shapes', [])) & set(right.get('problem_shapes', []))
+        shared_techniques = set(left.get('techniques', [])) & set(right.get('techniques', []))
+        shared_reasoning = set(left.get('reasoning', [])) & set(right.get('reasoning', []))
+        shared_prerequisites = set(left.get('prerequisites', [])) & set(right.get('prerequisites', []))
+        score = (4.0 * len(shared_shape) + 2.5 * len(shared_techniques)
+                 + 1.7 * len(shared_reasoning) + 0.8 * len(shared_prerequisites))
+        if score < 2.5:
+            continue
+        if shared_shape:
+            kind, explanation = '相似问题模型', '共享问题形态：' + '、'.join(sorted(shared_shape))
+        elif shared_techniques:
+            kind, explanation = '同一算法技巧', '共享算法技巧：' + '、'.join(sorted(shared_techniques))
+        else:
+            kind, explanation = '证明方法迁移', '共享推理机制：' + '、'.join(sorted(shared_reasoning))
+        offer(other['slug'], score, kind, explanation)
+
     # Fallback needs a shared registered topic or a *specific* tag overlap.
     # Never recommend merely because two articles share a broad top-level category.
     tag_frequency = Counter(tag.casefold().strip()
