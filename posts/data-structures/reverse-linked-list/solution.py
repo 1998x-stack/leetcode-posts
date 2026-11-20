@@ -1,3 +1,5 @@
+from __future__ import annotations
+
 # LeetCode provides ListNode and Optional.
 class Solution:
     def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
