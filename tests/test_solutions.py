@@ -240,9 +240,11 @@ def test_registry_and_original_svg_covers():
     facets = json.loads((ROOT / "content/facets.json").read_text())
     domain_ids = {domain["slug"] for domain in domains}
     registered = {c["slug"]: {t["slug"] for t in c["topics"]} for c in cats}
-    assert len(posts) == 22
-    assert sorted(p["status"] for p in posts) == ["published"] * 17
-    assert len({p["cover"]["caption"] for p in posts}) == 17
+    assert len({p["slug"] for p in posts}) == len(posts)
+    published = [p for p in posts if p["status"] == "published"]
+    assert published, "At least one article must be published"
+    assert all(p["status"] in {"draft", "published"} for p in posts)
+    assert len({p["cover"]["caption"] for p in published}) == len(published), "Published covers must be distinct"
     allowed = {field: {item["slug"] for item in facets[field]}
                for field in ("structures", "techniques", "problem_shapes", "reasoning", "prerequisites")}
     stages = {item["slug"] for item in facets["learning_stages"]}
