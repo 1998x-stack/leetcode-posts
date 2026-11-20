@@ -232,5 +232,404 @@
       ],
       "learning_stage": "core"
     }
+  },
+  {
+    "slug": "two-sum",
+    "title": "LeetCode 1 · 两数之和",
+    "subtitle": "把“找另一个数”改写成一次哈希查询",
+    "category": "arrays-hashing",
+    "topic": "hash-lookup",
+    "status": "published",
+    "published": "2026-11-20",
+    "updated": "2026-11-20",
+    "reading_minutes": 12,
+    "tags": [
+      "Easy",
+      "Array",
+      "Hash Table",
+      "Complement Lookup"
+    ],
+    "summary": "从 O(n²) 枚举过渡到一趟哈希查找，解释补数、先查后存和重复值为什么不会复用同一索引。",
+    "problem_url": "https://leetcode.com/problems/two-sum/",
+    "illustration": "two-sum",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "当前元素的补数命中先前索引，配对立即完成"
+    },
+    "facets": {
+      "structures": [
+        "array",
+        "hash-map"
+      ],
+      "techniques": [
+        "hash-lookup"
+      ],
+      "problem_shapes": [
+        "pair-sum"
+      ],
+      "reasoning": [
+        "complement-invariant",
+        "check-before-insert"
+      ],
+      "prerequisites": [
+        "array-traversal-basics"
+      ],
+      "learning_stage": "foundation"
+    }
+  },
+  {
+    "slug": "contains-duplicate",
+    "title": "LeetCode 217 · 存在重复元素",
+    "subtitle": "一个集合就够了：扫描前缀如何发现第一次碰撞？",
+    "category": "arrays-hashing",
+    "topic": "set-membership",
+    "status": "published",
+    "published": "2026-11-20",
+    "updated": "2026-11-20",
+    "reading_minutes": 10,
+    "tags": [
+      "Easy",
+      "Array",
+      "Hash Set",
+      "Membership"
+    ],
+    "summary": "用集合保存已经见过的值，推导 O(n) 期望时间的判重方法，并比较排序与哈希集合的空间取舍。",
+    "problem_url": "https://leetcode.com/problems/contains-duplicate/",
+    "illustration": "contains-duplicate",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "扫描到第二个 1 时，集合成员查询立即发现重复"
+    },
+    "facets": {
+      "structures": [
+        "array",
+        "set"
+      ],
+      "techniques": [
+        "set-membership"
+      ],
+      "problem_shapes": [
+        "duplicate-detection"
+      ],
+      "reasoning": [
+        "set-prefix-invariant"
+      ],
+      "prerequisites": [
+        "array-traversal-basics",
+        "hash-set-basics"
+      ],
+      "learning_stage": "foundation"
+    }
+  },
+  {
+    "slug": "product-of-array-except-self",
+    "title": "LeetCode 238 · 除自身以外数组的乘积",
+    "subtitle": "左右两侧各走一遍，不需要除法，也不需要两张辅助表",
+    "category": "arrays-hashing",
+    "topic": "prefix-suffix",
+    "status": "published",
+    "published": "2026-11-20",
+    "updated": "2026-11-20",
+    "reading_minutes": 16,
+    "tags": [
+      "Medium",
+      "Array",
+      "Prefix Product",
+      "Space Optimization"
+    ],
+    "summary": "将每个位置的答案拆成左侧前缀积与右侧后缀积，进一步把辅助空间压到 O(1)（不计输出数组）。",
+    "problem_url": "https://leetcode.com/problems/product-of-array-except-self/",
+    "illustration": "product-of-array-except-self",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "前缀积与后缀积在每个位置相遇，排除当前位置"
+    },
+    "facets": {
+      "structures": [
+        "array",
+        "prefix-products"
+      ],
+      "techniques": [
+        "prefix-suffix"
+      ],
+      "problem_shapes": [
+        "product-except-self"
+      ],
+      "reasoning": [
+        "prefix-suffix-exclusion"
+      ],
+      "prerequisites": [
+        "array-traversal-basics",
+        "prefix-product-basics"
+      ],
+      "learning_stage": "core"
+    }
+  },
+  {
+    "slug": "binary-search",
+    "title": "LeetCode 704 · 二分查找",
+    "subtitle": "先选定闭区间，再让每次比较都安全地排除一半",
+    "category": "binary-search",
+    "topic": "exact-search",
+    "status": "published",
+    "published": "2026-11-20",
+    "updated": "2026-11-20",
+    "reading_minutes": 13,
+    "tags": [
+      "Easy",
+      "Array",
+      "Binary Search",
+      "Loop Invariant"
+    ],
+    "summary": "从升序数组的单调性出发，定义闭区间 [left, right]，用循环不变量解释 mid、边界更新和终止条件。",
+    "problem_url": "https://leetcode.com/problems/binary-search/",
+    "illustration": "binary-search",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "比较中点后，目标只可能留在一个闭区间半边"
+    },
+    "facets": {
+      "structures": [
+        "sorted-array"
+      ],
+      "techniques": [
+        "binary-search"
+      ],
+      "problem_shapes": [
+        "exact-target-search"
+      ],
+      "reasoning": [
+        "closed-interval-invariant",
+        "sorted-half-elimination"
+      ],
+      "prerequisites": [
+        "sorted-array-basics"
+      ],
+      "learning_stage": "foundation"
+    }
+  },
+  {
+    "slug": "find-first-and-last-position",
+    "title": "LeetCode 34 · 在排序数组中查找元素的第一个和最后一个位置",
+    "subtitle": "两个边界问题：第一个 ≥ target 与第一个 > target",
+    "category": "binary-search",
+    "topic": "boundary-search",
+    "status": "published",
+    "published": "2026-11-20",
+    "updated": "2026-11-20",
+    "reading_minutes": 17,
+    "tags": [
+      "Medium",
+      "Array",
+      "Lower Bound",
+      "Upper Bound"
+    ],
+    "summary": "用半开区间 [lo, hi) 分别求 lower_bound 和 upper_bound，避免命中后线性扩展导致 O(n) 最坏时间。",
+    "problem_url": "https://leetcode.com/problems/find-first-and-last-position-of-element-in-sorted-array/",
+    "illustration": "find-first-and-last-position",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "下界落在首个 8，上界落在首个大于 8 的位置"
+    },
+    "facets": {
+      "structures": [
+        "sorted-array"
+      ],
+      "techniques": [
+        "lower-bound",
+        "upper-bound"
+      ],
+      "problem_shapes": [
+        "first-last-position"
+      ],
+      "reasoning": [
+        "half-open-boundary-invariant"
+      ],
+      "prerequisites": [
+        "sorted-array-basics",
+        "binary-search-basics"
+      ],
+      "learning_stage": "core"
+    }
+  },
+  {
+    "slug": "search-in-rotated-sorted-array",
+    "title": "LeetCode 33 · 搜索旋转排序数组",
+    "subtitle": "每一步先识别哪一半仍然有序",
+    "category": "binary-search",
+    "topic": "rotated-array",
+    "status": "published",
+    "published": "2026-11-20",
+    "updated": "2026-11-20",
+    "reading_minutes": 18,
+    "tags": [
+      "Medium",
+      "Array",
+      "Binary Search",
+      "Rotated Array"
+    ],
+    "summary": "利用旋转数组中至少一半保持有序的性质，在 O(log n) 内判断目标是否落入有序半区并排除另一半。",
+    "problem_url": "https://leetcode.com/problems/search-in-rotated-sorted-array/",
+    "illustration": "search-in-rotated-sorted-array",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "旋转数组的中点切开后，总有一半保持升序"
+    },
+    "facets": {
+      "structures": [
+        "sorted-array"
+      ],
+      "techniques": [
+        "binary-search"
+      ],
+      "problem_shapes": [
+        "rotated-array-search"
+      ],
+      "reasoning": [
+        "sorted-half-elimination",
+        "unique-half-invariant"
+      ],
+      "prerequisites": [
+        "sorted-array-basics",
+        "binary-search-basics"
+      ],
+      "learning_stage": "advanced"
+    }
+  },
+  {
+    "slug": "maximum-depth-of-binary-tree",
+    "title": "LeetCode 104 · 二叉树的最大深度",
+    "subtitle": "递归函数只回答一个问题：这棵子树有多高？",
+    "category": "binary-tree",
+    "topic": "recursive-depth",
+    "status": "published",
+    "published": "2026-11-20",
+    "updated": "2026-11-20",
+    "reading_minutes": 12,
+    "tags": [
+      "Easy",
+      "Tree",
+      "DFS",
+      "Recursion"
+    ],
+    "summary": "从空树深度为 0 的基例出发，建立 1 + max(left, right) 的递归定义，区分节点数深度与边数高度。",
+    "problem_url": "https://leetcode.com/problems/maximum-depth-of-binary-tree/",
+    "illustration": "maximum-depth-of-binary-tree",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "叶节点向上返回高度，父节点取左右较大值再加一"
+    },
+    "facets": {
+      "structures": [
+        "binary-tree",
+        "tree-node"
+      ],
+      "techniques": [
+        "recursive-dfs"
+      ],
+      "problem_shapes": [
+        "tree-height"
+      ],
+      "reasoning": [
+        "empty-tree-base-case",
+        "postorder-dependency"
+      ],
+      "prerequisites": [
+        "recursion-basics",
+        "tree-recursion-basics"
+      ],
+      "learning_stage": "foundation"
+    }
+  },
+  {
+    "slug": "binary-tree-level-order-traversal",
+    "title": "LeetCode 102 · 二叉树的层序遍历",
+    "subtitle": "队列保存待访问节点，队列长度划定当前层的边界",
+    "category": "binary-tree",
+    "topic": "level-order",
+    "status": "published",
+    "published": "2026-11-20",
+    "updated": "2026-11-20",
+    "reading_minutes": 15,
+    "tags": [
+      "Medium",
+      "Tree",
+      "BFS",
+      "Queue"
+    ],
+    "summary": "用 deque 实现 BFS，固定每层开始时的队列长度，解释为什么新加入的孩子必须留到下一层处理。",
+    "problem_url": "https://leetcode.com/problems/binary-tree-level-order-traversal/",
+    "illustration": "binary-tree-level-order-traversal",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "队列按层推进，当前层节点出队后才处理下一层"
+    },
+    "facets": {
+      "structures": [
+        "binary-tree",
+        "tree-node",
+        "queue"
+      ],
+      "techniques": [
+        "breadth-first-search"
+      ],
+      "problem_shapes": [
+        "level-order-groups"
+      ],
+      "reasoning": [
+        "level-boundary-snapshot"
+      ],
+      "prerequisites": [
+        "queue-basics",
+        "tree-recursion-basics"
+      ],
+      "learning_stage": "core"
+    }
+  },
+  {
+    "slug": "diameter-of-binary-tree",
+    "title": "LeetCode 543 · 二叉树的直径",
+    "subtitle": "递归向上返回高度，同时在每个节点更新最长路径",
+    "category": "binary-tree",
+    "topic": "postorder-aggregation",
+    "status": "published",
+    "published": "2026-11-20",
+    "updated": "2026-11-20",
+    "reading_minutes": 16,
+    "tags": [
+      "Easy",
+      "Tree",
+      "DFS",
+      "Postorder",
+      "Tree DP"
+    ],
+    "summary": "用后序遍历先取得左右子树高度，再计算经过当前节点的路径长度；区分递归返回值与全局最优答案。",
+    "problem_url": "https://leetcode.com/problems/diameter-of-binary-tree/",
+    "illustration": "diameter-of-binary-tree",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "左右子树高度在当前节点汇合，形成候选直径"
+    },
+    "facets": {
+      "structures": [
+        "binary-tree",
+        "tree-node"
+      ],
+      "techniques": [
+        "recursive-dfs",
+        "postorder-traversal"
+      ],
+      "problem_shapes": [
+        "tree-diameter"
+      ],
+      "reasoning": [
+        "postorder-dependency",
+        "diameter-through-lca"
+      ],
+      "prerequisites": [
+        "tree-recursion-basics"
+      ],
+      "learning_stage": "advanced"
+    }
   }
 ]

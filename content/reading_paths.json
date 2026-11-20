@@ -26,5 +26,35 @@
       "permutations",
       "number-of-islands"
     ]
+  },
+  {
+    "id": "arrays-hashing-foundations",
+    "title": "数组与哈希表：从查找到累计",
+    "description": "先用集合判重建立成员查询直觉，再用补数映射解决配对，最后把左右前后缀合并为线性累计。",
+    "posts": [
+      "contains-duplicate",
+      "two-sum",
+      "product-of-array-except-self"
+    ]
+  },
+  {
+    "id": "binary-search-foundations",
+    "title": "二分查找：从精确命中到边界定位",
+    "description": "先稳定掌握闭区间精确查找，再用半开区间求边界，最后迁移到旋转有序数组。",
+    "posts": [
+      "binary-search",
+      "find-first-and-last-position",
+      "search-in-rotated-sorted-array"
+    ]
+  },
+  {
+    "id": "binary-tree-foundations",
+    "title": "二叉树：从递归到层序与后序汇总",
+    "description": "先定义递归返回值，再用队列处理层级，最后在后序遍历中汇总左右子树信息。",
+    "posts": [
+      "maximum-depth-of-binary-tree",
+      "binary-tree-level-order-traversal",
+      "diameter-of-binary-tree"
+    ]
   }
 ]
