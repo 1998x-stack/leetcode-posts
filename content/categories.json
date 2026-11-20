@@ -16,6 +16,10 @@
       {
         "slug": "same-direction",
         "title": "同向双指针"
+      },
+      {
+        "slug": "boundary-maxima",
+        "title": "左右边界最大值与逐列贡献"
       }
     ],
     "domain": "linear-patterns"
@@ -37,6 +41,14 @@
       {
         "slug": "fixed-window",
         "title": "定长窗口"
+      },
+      {
+        "slug": "replacement-budget-window",
+        "title": "替换预算约束窗口"
+      },
+      {
+        "slug": "minimum-cover-window",
+        "title": "最小覆盖窗口"
       }
     ],
     "domain": "linear-patterns"
@@ -197,6 +209,10 @@
       {
         "slug": "heap-top-k",
         "title": "堆与 Top-K 优先队列"
+      },
+      {
+        "slug": "fast-slow-pointers",
+        "title": "快慢指针与链表环检测"
       }
     ],
     "domain": "linear-data-structures"
