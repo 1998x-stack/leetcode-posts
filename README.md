@@ -1,3 +1,56 @@
 # leetcode-posts
 
-可视化、可验证的 LeetCode 算法学习笔记。
+**让每一道算法题，都成为可以看见、可以证明、可以运行的推理。**
+
+借鉴 [xm-posts](https://github.com/1998x-stack/xm-posts) 的静态出版架构和原生 SVG 可视化风格，面向大学生、研究生和算法面试学习者，用 **问题直觉 → 过程图解 → 不变量 → 复杂度 → Python 测试** 的方式理解 LeetCode 中等难度题。
+
+[阅读网站](https://1998x-stack.github.io/leetcode-posts/) · [算法知识地图](https://1998x-stack.github.io/leetcode-posts/topics/) · [题解归档](https://1998x-stack.github.io/leetcode-posts/archive/) · [RSS](https://1998x-stack.github.io/leetcode-posts/feed.xml) · [贡献指南](CONTRIBUTING.md)
+
+> GitHub Pages 需要在仓库 Settings → Pages 设置为 **GitHub Actions** 来源。合并到 main 后自动构建；在 Actions 完成前不要宣称网站已部署。
+
+## 首批五道 Medium
+
+| 题目 | 专题 | 核心模式 |
+|---|---|---|
+| [#3 无重复字符的最长子串](posts/sliding-window/longest-substring-without-repeating-characters/index.html) | 滑动窗口 | 左边界只前进；按最后出现位置更新 |
+| [#11 盛最多水的容器](posts/two-pointer/container-with-most-water/index.html) | 双指针 | 舍弃较短边的正确性证明 |
+| [#15 三数之和](posts/two-pointer/three-sum/index.html) | 双指针 + 排序 | 外层去重、内层去重与固定目标 |
+| [#46 全排列](posts/backtracking/permutations/index.html) | 回溯 | 选择、递归、撤销与状态恢复 |
+| [#200 岛屿数量](posts/graphs/number-of-islands/index.html) | 网格图 | 连通分量、DFS、访问去重 |
+
+所有文章都独立提供 3 幅原创 SVG、可交互的步骤演示、Python 解法和测试，题面采用原创摘要并链接官方来源。
+
+## 架构
+
+```text
+content/categories.json              # 分类与二级算法模式
+content/posts.json                   # 发布清单，draft 不输出
+content/reading_paths.json           # 专题学习路径
+posts/<category>/<slug>/index.html   # 图解文章
+posts/<category>/<slug>/assets/*.svg # 自绘机制图
+posts/<category>/<slug>/solution.py  # 可运行 Python 解法
+posts/<category>/<slug>/evidence.json# 题源、正确性与复杂度证据
+skills/olah-style-leetcode-posts/    # 权威 Skill
+scripts/build_site.py                # 首页、分类、归档、搜索、RSS、站点地图
+scripts/render_pdfs.py               # 增量预渲染 PDF
+.github/workflows/publish.yml       # 验证及 GitHub Pages 部署
+```
+
+## 本地构建和验证
+
+```bash
+python -m pip install -r requirements-dev.txt
+python -m playwright install chromium
+python scripts/sync_skills.py --check
+python scripts/build_site.py
+python scripts/validate_site.py
+python -m pytest -q
+# 可选：生成五篇离线 PDF
+python scripts/render_pdfs.py
+```
+
+本地预览：`cd _site && python -m http.server 8000`。生成的 `_site/` 和 `.pdf-cache/` 不要提交。生产默认路径为 `/leetcode-posts/`。
+
+## 更新规范
+
+阅读 [AGENTS.md](AGENTS.md)、[Skill](skills/olah-style-leetcode-posts/SKILL.md) 和 [分类规则](docs/taxonomy.md)。发布前必须核对官方题目难度和约束；编写不变量证明、反例和复杂度；构建、校验与浏览器检查完成后再将条目标记为 published。发布后的每篇文章有独特封面、相关推荐与稳定链接。
