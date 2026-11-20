@@ -171,6 +171,22 @@
     {
       "slug": "pointer-reversal",
       "title": "链表指针反转"
+    },
+    {
+      "slug": "fast-slow-pointers",
+      "title": "快慢指针与相对速度"
+    },
+    {
+      "slug": "character-normalization",
+      "title": "字符过滤与大小写归一化"
+    },
+    {
+      "slug": "boundary-maxima",
+      "title": "左右边界最大值维护"
+    },
+    {
+      "slug": "deficit-counting",
+      "title": "频次缺口计数"
     }
   ],
   "problem_shapes": [
@@ -261,6 +277,26 @@
     {
       "slug": "linked-list-reversal",
       "title": "单链表反转"
+    },
+    {
+      "slug": "cycle-detection",
+      "title": "链表环检测"
+    },
+    {
+      "slug": "normalized-palindrome",
+      "title": "过滤归一化后的回文判定"
+    },
+    {
+      "slug": "water-volume-between-boundaries",
+      "title": "左右边界约束下的逐列蓄水"
+    },
+    {
+      "slug": "longest-window-with-replacement-budget",
+      "title": "替换预算约束下的最长窗口"
+    },
+    {
+      "slug": "minimum-covering-window",
+      "title": "最小覆盖子串"
     }
   ],
   "reasoning": [
@@ -387,6 +423,26 @@
     {
       "slug": "pointer-separation-invariant",
       "title": "已反转与未处理链表分离不变量"
+    },
+    {
+      "slug": "tortoise-hare-relative-speed",
+      "title": "快慢指针的模环长相对运动"
+    },
+    {
+      "slug": "symmetric-comparison-after-filtering",
+      "title": "过滤后序列的对称比较"
+    },
+    {
+      "slug": "smaller-boundary-determines-water",
+      "title": "较低边界决定可确定的水量"
+    },
+    {
+      "slug": "window-repair-budget",
+      "title": "窗口长度与最高频数的预算不变量"
+    },
+    {
+      "slug": "coverage-deficit-invariant",
+      "title": "目标字符缺口与覆盖状态等价"
     }
   ],
   "prerequisites": [
@@ -457,6 +513,10 @@
     {
       "slug": "stack-basics",
       "title": "栈与后进先出基础"
+    },
+    {
+      "slug": "sliding-window-basics",
+      "title": "滑动窗口基础"
     }
   ],
   "learning_stages": [
