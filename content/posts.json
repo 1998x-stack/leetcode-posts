@@ -780,7 +780,8 @@
     "problem_url": "https://leetcode.com/problems/valid-anagram/",
     "illustration": "valid-anagram",
     "cover": {
-      "src": "assets/cover.svg"
+      "src": "assets/cover.svg",
+      "caption": "两组字符频次逐项抵消，所有计数归零时才是异位词。"
     },
     "facets": {
       "structures": [
@@ -823,7 +824,8 @@
     "problem_url": "https://leetcode.com/problems/group-anagrams/",
     "illustration": "group-anagrams",
     "cover": {
-      "src": "assets/cover.svg"
+      "src": "assets/cover.svg",
+      "caption": "相同字符频次签名把不同排列映射到同一个分组桶。"
     },
     "facets": {
       "structures": [
@@ -869,7 +871,8 @@
     "problem_url": "https://leetcode.com/problems/top-k-frequent-elements/",
     "illustration": "top-k-frequent-elements",
     "cover": {
-      "src": "assets/cover.svg"
+      "src": "assets/cover.svg",
+      "caption": "频次表提供候选权重，容量 k 的最小堆保留最高频元素。"
     },
     "facets": {
       "structures": [
@@ -915,7 +918,8 @@
     "problem_url": "https://leetcode.com/problems/valid-parentheses/",
     "illustration": "valid-parentheses",
     "cover": {
-      "src": "assets/cover.svg"
+      "src": "assets/cover.svg",
+      "caption": "栈顶保存最近打开的括号，只有同类型右括号才能将其闭合。"
     },
     "facets": {
       "structures": [
@@ -958,7 +962,8 @@
     "problem_url": "https://leetcode.com/problems/reverse-linked-list/",
     "illustration": "reverse-linked-list",
     "cover": {
-      "src": "assets/cover.svg"
+      "src": "assets/cover.svg",
+      "caption": "先保存后继节点，再逐条反转 next 链接并扩展已反转前缀。"
     },
     "facets": {
       "structures": [
