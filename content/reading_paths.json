@@ -119,22 +119,6 @@
     ]
   },
   {
-    "id": "stack-matching-foundation",
-    "title": "栈的基础：括号匹配与嵌套顺序",
-    "description": "用最近打开、最先关闭的规则理解栈的后进先出语义。",
-    "posts": [
-      "valid-parentheses"
-    ]
-  },
-  {
-    "id": "linked-list-pointer-reversal",
-    "title": "链表基础：逐个重连 next 指针",
-    "description": "从单链表反转理解节点引用、后继保存和原地指针更新。",
-    "posts": [
-      "reverse-linked-list"
-    ]
-  },
-  {
     "id": "linked-list-cycle-foundation",
     "title": "链表环检测：从指针移动到相遇证明",
     "description": "先掌握单链表 next 指针，再用快慢指针的相对速度证明有环时必然相遇。",
