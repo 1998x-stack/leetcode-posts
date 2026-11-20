@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 320" role="img" aria-labelledby="two-sum-trace-title two-sum-trace-desc"><title id="two-sum-trace-title">哈希表逐步状态</title><desc id="two-sum-trace-desc">第一轮保存 2 到索引 0；第二轮计算补数 2 并命中。</desc>
+<rect x="28" y="24" width="904" height="272" rx="18" fill="#fff" stroke="#d5e3da"/>
+<text x="60" y="65" font-size="20" font-weight="700" fill="#19393d">每次循环：先查补数，再记录当前值</text>
+<rect x="58" y="94" width="390" height="72" rx="10" fill="#edf4ed" stroke="#9ebdb0"/><text x="80" y="124" font-size="18" fill="#19393d">i = 0，x = 2，need = 7</text><text x="80" y="150" font-size="15" fill="#58716f">seen 中没有 7 → 保存 seen[2] = 0</text>
+<rect x="510" y="94" width="390" height="72" rx="10" fill="#d5ede4" stroke="#2f8681"/><text x="532" y="124" font-size="18" fill="#124d4b">i = 1，x = 7，need = 2</text><text x="532" y="150" font-size="15" fill="#124d4b">seen 中命中 2 → 返回 [0, 1]</text>
+<path d="M 252 180 V 218 H 694 V 180" stroke="#bc7149" stroke-width="3" fill="none"/><text x="470" y="248" text-anchor="middle" font-size="17" fill="#8c432a">状态从“已扫描前缀”增长，当前元素不提前写入</text></svg>

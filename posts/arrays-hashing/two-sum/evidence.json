@@ -1,0 +1,32 @@
+{
+  "problem": {
+    "number": 1,
+    "title": "Two Sum",
+    "difficulty": "Easy",
+    "url": "https://leetcode.com/problems/two-sum/",
+    "source": "Official LeetCode problem page; Chinese explanation independently paraphrased",
+    "facts": [
+      "Exactly one valid pair exists.",
+      "The same array element cannot be used twice.",
+      "Return the two indices in any order.",
+      "2 <= nums.length <= 10^4; values and target are within [-10^9, 10^9]."
+    ]
+  },
+  "claims": [
+    {
+      "type": "derived",
+      "claim": "开始处理下标 i 前，seen 记录 nums[0:i] 中已扫描值到下标的映射。",
+      "validation": "Loop invariant in article; solution checks before inserting the current value."
+    },
+    {
+      "type": "derived",
+      "claim": "每个元素只处理一次，哈希查询和插入期望 O(1)，因此期望时间 O(n)，最坏额外空间 O(n)。",
+      "validation": "Asymptotic analysis of the single pass and seen dictionary."
+    },
+    {
+      "type": "derived",
+      "claim": "若答案下标为 a < b，则处理 b 时补数 nums[a] 已在 seen；任何返回项的 seen 下标都小于当前 i，因此不会复用同一元素。",
+      "validation": "Correctness proof and [3] / target 6 counterexample."
+    }
+  ]
+}
