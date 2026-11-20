@@ -1002,7 +1002,8 @@
     "problem_url": "https://leetcode.com/problems/linked-list-cycle/",
     "illustration": "linked-list-cycle",
     "cover": {
-      "src": "assets/cover.svg"
+      "src": "assets/cover.svg",
+      "caption": "快指针每轮走两步，慢指针每轮走一步；进入环后相对位置按模环长变化，最终相遇。"
     },
     "facets": {
       "structures": [
@@ -1043,7 +1044,8 @@
     "problem_url": "https://leetcode.com/problems/valid-palindrome/",
     "illustration": "valid-palindrome",
     "cover": {
-      "src": "assets/cover.svg"
+      "src": "assets/cover.svg",
+      "caption": "跳过标点与空格，比较两端归一化字符；每次相等后向中心收缩。"
     },
     "facets": {
       "structures": [
@@ -1085,7 +1087,8 @@
     "problem_url": "https://leetcode.com/problems/trapping-rain-water/",
     "illustration": "trapping-rain-water",
     "cover": {
-      "src": "assets/cover.svg"
+      "src": "assets/cover.svg",
+      "caption": "每列水量由左右最高边界的较小者决定；处理当前较低端点即可安全累计。"
     },
     "facets": {
       "structures": [
@@ -1128,7 +1131,8 @@
     "problem_url": "https://leetcode.com/problems/longest-repeating-character-replacement/",
     "illustration": "longest-repeating-character-replacement",
     "cover": {
-      "src": "assets/cover.svg"
+      "src": "assets/cover.svg",
+      "caption": "窗口内最少替换次数等于窗口长度减最高频字符数；超过 k 时收缩左边界。"
     },
     "facets": {
       "structures": [
@@ -1172,7 +1176,8 @@
     "problem_url": "https://leetcode.com/problems/minimum-window-substring/",
     "illustration": "minimum-window-substring",
     "cover": {
-      "src": "assets/cover.svg"
+      "src": "assets/cover.svg",
+      "caption": "need[c] 表示当前窗口还缺多少个字符 c；missing 为零当且仅当目标字符及重复次数全部覆盖。"
     },
     "facets": {
       "structures": [
