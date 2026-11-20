@@ -216,7 +216,7 @@ def archive_pagination(page:int,pages:int,rel:str)->str:
     return f'<nav class="pagination" aria-label="文章归档分页">{"".join(links)}</nav>'
 
 
-def build_home(categories,posts,base):
+def build_home(categories,posts,base,root):
     """Editorial home: fast routes into the corpus, full local search, no draft links."""
     published=[p for p in posts if p['status']=='published']
     published.sort(key=lambda p:(p['published'],p['slug']),reverse=True)
@@ -229,7 +229,7 @@ def build_home(categories,posts,base):
 
     # Editorial starting points are real, already-published essays; the manifest
     # remains the only source of URLs and metadata. No placeholders are linked.
-    feature=by_slug.get('longest-substring-without-repeating-characters') or by_slug.get('three-sum') or (published[0] if published else None)
+    feature=by_slug.get('two-sum') or by_slug.get('longest-substring-without-repeating-characters') or by_slug.get('three-sum') or (published[0] if published else None)
     if feature:
         feature_markup=f'''<aside class="hero-feature" aria-label="推荐阅读">
             <div class="feature-top"><span>EDITOR'S STARTING POINT</span><span>01 / GUIDE</span></div>
@@ -255,25 +255,21 @@ def build_home(categories,posts,base):
         for c in planned
     )
 
-    learning_paths=[
-        ('滑动窗口：从重复扫描到线性处理','理解移动左边界时如何维护无重复区间。',['longest-substring-without-repeating-characters']),
-        ('双指针：从容器装水到三数之和','用指针单调移动来缩小候选集，并证明不会漏解。',['container-with-most-water','three-sum']),
-        ('搜索：回溯与连通块遍历','从递归状态恢复到网格 DFS，认识两种不同的搜索树。',['permutations','number-of-islands'])
-    ]
+    learning_paths=load_reading_paths(root,published)
     route_cards=[]
-    for number,(name,description,slugs) in enumerate(learning_paths,1):
-        available=[by_slug[slug] for slug in slugs if slug in by_slug]
-        if not available:continue
-        steps=''.join(f'<li><a href="{article_url(p)}">{H(p["title"])}</a></li>' for p in available[:3])
-        extra=f'<span class="route-extra">另有 {len(available)-3} 篇已收录</span>' if len(available)>3 else ''
+    for number,route in enumerate(learning_paths,1):
+        available=[by_slug[slug] for slug in route['posts'] if slug in by_slug]
+        if not available:
+            continue
+        steps=''.join(f'<li><a href="{article_url(p)}">{H(p["title"])}</a></li>' for p in available)
         route_cards.append(
             f'<article class="route-card learning-card"><div class="route-top"><span>ROUTE {number:02d}</span><span>{len(available)} 篇已收录</span></div>'
-            f'<h3>{H(name)}</h3><p>{H(description)}</p><ol>{steps}</ol>{extra}'
+            f'<h3>{H(route["title"])}</h3><p>{H(route.get("description","按顺序理解核心机制，并将方法迁移到下一道题。"))}</p><ol>{steps}</ol>'
             f'<a class="route-start" href="{article_url(available[0])}">从第一篇开始 <span aria-hidden="true">↗</span></a></article>'
         )
 
     spotlight=[]
-    for slug,eyebrow in [('longest-substring-without-repeating-characters','滑动窗口'),('three-sum','双指针去重'),('number-of-islands','图遍历')]:
+    for slug,eyebrow in [('two-sum','哈希补数查找'),('binary-search','二分查找'),('maximum-depth-of-binary-tree','树递归入门')]:
         if slug not in by_slug:continue
         p=by_slug[slug]
         spotlight.append(
@@ -318,7 +314,7 @@ def build_home(categories,posts,base):
       <a href="#discover"><span class="entry-index">03 / INDEX</span><strong>直接查找一篇文章</strong><span>按关键词与主题筛选 ↗</span></a>
     </div></nav>
     <section class="container spotlight-section" aria-labelledby="spotlight-title">
-      <div class="section-header"><div><div class="eyebrow muted">SELECTED STARTING POINTS</div><h2 id="spotlight-title">三篇适合入门的中等难度题</h2></div><p>先建立滑动窗口、双指针和网格遍历直觉，再挑战相似题。</p></div>
+      <div class="section-header"><div><div class="eyebrow muted">SELECTED STARTING POINTS</div><h2 id="spotlight-title">三个基础专题的入门题</h2></div><p>先建立滑动窗口、双指针和网格遍历直觉，再挑战相似题。</p></div>
       <div class="spotlight-grid">{''.join(spotlight)}</div>
     </section>
     <section id="categories" class="category-band" aria-labelledby="subjects-title"><div class="container">
@@ -510,7 +506,7 @@ def build_feed(categories:list,posts:list,base:str)->str:
     channel=ET.SubElement(rss,'channel')
     ET.SubElement(channel,'title').text='leetcode-posts'
     ET.SubElement(channel,'link').text=base
-    ET.SubElement(channel,'description').text='以图解、数学推导与题目证据理解机器学习、LLM 和系统技术。'
+    ET.SubElement(channel,'description').text='以图解、算法不变量、正确性推理与可运行测试理解 LeetCode 算法题。'
     ET.SubElement(channel,'language').text='zh-cn'
     ET.SubElement(channel,f'{{{atom_ns}}}link',{
         'href':url_join(base,'feed.xml'),
@@ -548,7 +544,7 @@ def build(root:Path,out:Path,base:str):
     if out.exists():shutil.rmtree(out)
     out.mkdir(parents=True)
     categories,posts,domains,facets=data(root)
-    write(out,'index.html',build_home(categories,posts,base))
+    write(out,'index.html',build_home(categories,posts,base,root))
     for archive_page in range(1,archive_page_count(posts)+1):
         write(out,archive_page_url(archive_page)+'index.html',build_archive(posts,categories,base,archive_page))
     write(out,'topics/index.html',build_topics(categories,posts,base,domains))
