@@ -198,3 +198,14 @@ Do not publish when any of these remain:
 - Browser and print QA: references/browser-qa.md
 - Release score: references/scorecard.md
 - PR, PDF and Pages: references/publishing.md
+
+
+## Knowledge graph, interactions and curated coverage
+
+Follow [the integrated learning-system contract](../../docs/learning-system.md) and keep `content/knowledge_graph.json` and `content/coverage.json` synchronized with published content.
+
+- Graph edges are typed and directional. `requires` means a genuine prerequisite, never a shared facet. Curated `extends` and `contrasts` edges require a concrete reason. Never expose draft posts in the public graph.
+- Interaction is a state machine first. Snapshots own visual state, metrics and explanation. Label selected keyframes honestly; do not claim a static trace executes arbitrary code.
+- Default to I1 deterministic stepper. I2 requires bounded inputs and an oracle; I3 requires execution isolation and resource limits. Keyboard, focus, live announcements, reduced motion and a no-JS baseline are mandatory.
+- Blind 75 and NeetCode 150 are separate, overlapping source sets. Do not calculate coverage until a dated complete source snapshot is mapped. Planned and in-progress work never counts as published coverage.
+- Every batch must update article, facets, graph, reading path, interaction, tests, coverage registry and skill mirrors as one unit.
