@@ -1,0 +1,26 @@
+{
+  "problem": {
+    "number": 206,
+    "title": "Reverse Linked List",
+    "difficulty": "Easy",
+    "url": "https://leetcode.com/problems/reverse-linked-list/",
+    "source": "Official LeetCode problem page; original Chinese explanation and proof.",
+    "facts": [
+      "Reverse the next pointers of a singly linked list.",
+      "Return the new head node.",
+      "The empty and single-node lists are valid boundary cases."
+    ]
+  },
+  "claims": [
+    {
+      "type": "derived",
+      "claim": "At each iteration prev is the reversed prefix and curr is the untouched suffix head.",
+      "validation": "Loop invariant and prev/curr/next trace."
+    },
+    {
+      "type": "derived",
+      "claim": "Each node is visited once and only three references are maintained, giving O(n) time and O(1) auxiliary space.",
+      "validation": "Iterative pointer reversal implementation."
+    }
+  ]
+}
