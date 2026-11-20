@@ -1,0 +1,17 @@
+{
+  "problem": {
+    "number": 141,
+    "title": "Linked List Cycle",
+    "difficulty": "Easy",
+    "url": "https://leetcode.com/problems/linked-list-cycle/",
+    "facts": [
+      "Detect whether following next pointers revisits a node.",
+      "pos is descriptive and is not passed as an argument.",
+      "The linked list may be empty."
+    ]
+  },
+  "derived": [
+    "Floyd's two-pointer algorithm detects a cycle using relative speed modulo the cycle length.",
+    "Time O(n), auxiliary space O(1)."
+  ]
+}

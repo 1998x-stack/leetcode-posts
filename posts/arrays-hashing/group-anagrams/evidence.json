@@ -1,0 +1,26 @@
+{
+  "problem": {
+    "number": 49,
+    "title": "Group Anagrams",
+    "difficulty": "Medium",
+    "url": "https://leetcode.com/problems/group-anagrams/",
+    "source": "Official LeetCode problem page; original Chinese explanation and proof.",
+    "facts": [
+      "Group strings that are anagrams of one another.",
+      "The result may be returned in any order.",
+      "The character domain is lowercase English letters."
+    ]
+  },
+  "claims": [
+    {
+      "type": "derived",
+      "claim": "The 26-frequency tuple is a canonical key: equal keys iff strings are anagrams.",
+      "validation": "Per-character count construction and key-equivalence proof."
+    },
+    {
+      "type": "derived",
+      "claim": "Time O(L + 26k), where L is total input characters and k is number of strings.",
+      "validation": "Each character is counted once and each tuple contains 26 entries."
+    }
+  ]
+}

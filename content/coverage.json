@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated": "2026-11-20",
+  "updated": "2026-11-21",
   "policy": "Do not calculate a coverage percentage until the full dated source list has been imported and every item mapped, excluded or marked unresolved.",
   "target_sets": [
     {
@@ -156,99 +156,89 @@
       "category": "data-structures",
       "topic": "lru-cache",
       "learning_stage": "advanced"
+    },
+    {
+      "slug": "valid-anagram",
+      "problem_number": 242,
+      "title": "LeetCode 242 · 有效的字母异位词",
+      "category": "arrays-hashing",
+      "topic": "hash-lookup",
+      "learning_stage": "foundation"
+    },
+    {
+      "slug": "group-anagrams",
+      "problem_number": 49,
+      "title": "LeetCode 49 · 字母异位词分组",
+      "category": "arrays-hashing",
+      "topic": "hash-lookup",
+      "learning_stage": "core"
+    },
+    {
+      "slug": "top-k-frequent-elements",
+      "problem_number": 347,
+      "title": "LeetCode 347 · 前 K 个高频元素",
+      "category": "data-structures",
+      "topic": "heap-top-k",
+      "learning_stage": "core"
+    },
+    {
+      "slug": "valid-parentheses",
+      "problem_number": 20,
+      "title": "LeetCode 20 · 有效的括号",
+      "category": "data-structures",
+      "topic": "stack-matching",
+      "learning_stage": "foundation"
+    },
+    {
+      "slug": "reverse-linked-list",
+      "problem_number": 206,
+      "title": "LeetCode 206 · 反转链表",
+      "category": "data-structures",
+      "topic": "linked-list-reversal",
+      "learning_stage": "foundation"
+    },
+    {
+      "slug": "linked-list-cycle",
+      "problem_number": 141,
+      "title": "LeetCode 141 · 环形链表",
+      "category": "data-structures",
+      "topic": "fast-slow-pointers",
+      "learning_stage": "foundation"
+    },
+    {
+      "slug": "valid-palindrome",
+      "problem_number": 125,
+      "title": "LeetCode 125 · 验证回文串",
+      "category": "two-pointer",
+      "topic": "opposite-direction",
+      "learning_stage": "foundation"
+    },
+    {
+      "slug": "trapping-rain-water",
+      "problem_number": 42,
+      "title": "LeetCode 42 · 接雨水",
+      "category": "two-pointer",
+      "topic": "boundary-maxima",
+      "learning_stage": "advanced"
+    },
+    {
+      "slug": "longest-repeating-character-replacement",
+      "problem_number": 424,
+      "title": "LeetCode 424 · 替换后的最长重复字符",
+      "category": "sliding-window",
+      "topic": "replacement-budget-window",
+      "learning_stage": "core"
+    },
+    {
+      "slug": "minimum-window-substring",
+      "problem_number": 76,
+      "title": "LeetCode 76 · 最小覆盖子串",
+      "category": "sliding-window",
+      "topic": "minimum-cover-window",
+      "learning_stage": "advanced"
     }
   ],
   "priority_queue": [
-    {
-      "problem_number": 242,
-      "slug": "valid-anagram",
-      "title": "Valid Anagram",
-      "category": "arrays-hashing",
-      "topic": "hash-lookup",
-      "priority": "P0",
-      "reason": "补齐哈希频次与计数向量"
-    },
-    {
-      "problem_number": 49,
-      "slug": "group-anagrams",
-      "title": "Group Anagrams",
-      "category": "arrays-hashing",
-      "topic": "hash-lookup",
-      "priority": "P0",
-      "reason": "从单值查找扩展到规范化键分组"
-    },
-    {
-      "problem_number": 347,
-      "slug": "top-k-frequent-elements",
-      "title": "Top K Frequent Elements",
-      "category": "data-structures",
-      "topic": "heap-priority-queue",
-      "priority": "P0",
-      "reason": "频率统计与堆/桶排序选择"
-    },
-    {
-      "problem_number": 20,
-      "slug": "valid-parentheses",
-      "title": "Valid Parentheses",
-      "category": "data-structures",
-      "topic": "stack-matching",
-      "priority": "P0",
-      "reason": "建立栈的后进先出与匹配不变量"
-    },
-    {
-      "problem_number": 206,
-      "slug": "reverse-linked-list",
-      "title": "Reverse Linked List",
-      "category": "data-structures",
-      "topic": "pointer-rewiring",
-      "priority": "P0",
-      "reason": "建立节点引用重连与迭代不变量"
-    },
-    {
-      "problem_number": 141,
-      "slug": "linked-list-cycle",
-      "title": "Linked List Cycle",
-      "category": "data-structures",
-      "topic": "fast-slow-pointers",
-      "priority": "P1",
-      "reason": "快慢指针与环检测"
-    },
-    {
-      "problem_number": 125,
-      "slug": "valid-palindrome",
-      "title": "Valid Palindrome",
-      "category": "two-pointer",
-      "topic": "opposite-direction",
-      "priority": "P1",
-      "reason": "双指针基础阶梯"
-    },
-    {
-      "problem_number": 42,
-      "slug": "trapping-rain-water",
-      "title": "Trapping Rain Water",
-      "category": "two-pointer",
-      "topic": "same-direction",
-      "priority": "P1",
-      "reason": "边界信息与逐位置贡献"
-    },
-    {
-      "problem_number": 424,
-      "slug": "longest-repeating-character-replacement",
-      "title": "Longest Repeating Character Replacement",
-      "category": "sliding-window",
-      "topic": "variable-window",
-      "priority": "P1",
-      "reason": "频次约束与窗口合法性"
-    },
-    {
-      "problem_number": 76,
-      "slug": "minimum-window-substring",
-      "title": "Minimum Window Substring",
-      "category": "sliding-window",
-      "topic": "window-counting",
-      "priority": "P1",
-      "reason": "双向频次约束与最小覆盖"
-    },
     {
       "problem_number": 150,
       "slug": "evaluate-reverse-polish-notation",

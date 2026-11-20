@@ -16,6 +16,10 @@
       {
         "slug": "same-direction",
         "title": "同向双指针"
+      },
+      {
+        "slug": "boundary-maxima",
+        "title": "左右边界最大值与逐列贡献"
       }
     ],
     "domain": "linear-patterns"
@@ -37,6 +41,14 @@
       {
         "slug": "fixed-window",
         "title": "定长窗口"
+      },
+      {
+        "slug": "replacement-budget-window",
+        "title": "替换预算约束窗口"
+      },
+      {
+        "slug": "minimum-cover-window",
+        "title": "最小覆盖窗口"
       }
     ],
     "domain": "linear-patterns"
@@ -178,13 +190,29 @@
   },
   {
     "slug": "data-structures",
-    "title": "数据结构设计",
-    "english": "Data Structure Design",
-    "description": "组合多个基础结构，维护跨操作的一致性与复杂度约束。",
+    "title": "数据结构与设计",
+    "english": "Data Structures & Design",
+    "description": "从哈希表、栈、链表和堆等基础结构出发，理解访问顺序、指针更新、候选维护与多结构协作。",
     "topics": [
       {
         "slug": "lru-cache",
         "title": "LRU 缓存"
+      },
+      {
+        "slug": "stack-matching",
+        "title": "栈与括号匹配"
+      },
+      {
+        "slug": "linked-list-reversal",
+        "title": "链表反转与指针重连"
+      },
+      {
+        "slug": "heap-top-k",
+        "title": "堆与 Top-K 优先队列"
+      },
+      {
+        "slug": "fast-slow-pointers",
+        "title": "快慢指针与链表环检测"
       }
     ],
     "domain": "linear-data-structures"

@@ -1,0 +1,17 @@
+{
+  "problem": {
+    "number": 42,
+    "title": "Trapping Rain Water",
+    "difficulty": "Hard",
+    "url": "https://leetcode.com/problems/trapping-rain-water/",
+    "facts": [
+      "Each bar has width one and non-negative height.",
+      "Return the total trapped water.",
+      "n is between 1 and 2 * 10^4."
+    ]
+  },
+  "derived": [
+    "For each index, trapped water is max(0, min(left_max, right_max) - height[i]).",
+    "Two pointers process the side with the lower current boundary in O(n) time and O(1) auxiliary space."
+  ]
+}

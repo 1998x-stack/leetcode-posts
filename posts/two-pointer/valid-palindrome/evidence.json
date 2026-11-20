@@ -1,0 +1,17 @@
+{
+  "problem": {
+    "number": 125,
+    "title": "Valid Palindrome",
+    "difficulty": "Easy",
+    "url": "https://leetcode.com/problems/valid-palindrome/",
+    "facts": [
+      "Normalize by lowercasing and removing non-alphanumeric characters.",
+      "The input contains printable ASCII characters.",
+      "An empty normalized string is a palindrome."
+    ]
+  },
+  "derived": [
+    "Opposite-direction pointers compare each normalized symmetric pair once.",
+    "Time O(n), auxiliary space O(1)."
+  ]
+}

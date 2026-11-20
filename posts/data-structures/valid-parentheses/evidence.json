@@ -1,0 +1,26 @@
+{
+  "problem": {
+    "number": 20,
+    "title": "Valid Parentheses",
+    "difficulty": "Easy",
+    "url": "https://leetcode.com/problems/valid-parentheses/",
+    "source": "Official LeetCode problem page; original Chinese explanation and proof.",
+    "facts": [
+      "The input contains the three bracket pairs (), [], and {}.",
+      "Opening brackets must close with the same type.",
+      "Closing order must respect nesting; all brackets must be closed."
+    ]
+  },
+  "claims": [
+    {
+      "type": "derived",
+      "claim": "The stack contains exactly the unmatched opening brackets in opening order.",
+      "validation": "Prefix invariant and push/pop trace."
+    },
+    {
+      "type": "derived",
+      "claim": "Every character is pushed or popped at most once, giving O(n) time and O(n) worst-case auxiliary space.",
+      "validation": "Linear scan and stack size bound."
+    }
+  ]
+}

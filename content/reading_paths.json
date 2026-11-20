@@ -99,5 +99,50 @@
       "daily-temperatures",
       "lru-cache"
     ]
+  },
+  {
+    "id": "anagram-frequency-progression",
+    "title": "异位词：从频次判定到规范化分组",
+    "description": "先验证两个字符串的频次向量，再把同一思想变成哈希键，对多个单词进行聚合。",
+    "posts": [
+      "valid-anagram",
+      "group-anagrams"
+    ]
+  },
+  {
+    "id": "frequency-to-top-k",
+    "title": "频次统计：从字符计数到高频候选",
+    "description": "将频次表示迁移到整数数组，再通过容量受限的最小堆选择 Top-K。",
+    "posts": [
+      "valid-anagram",
+      "top-k-frequent-elements"
+    ]
+  },
+  {
+    "id": "linked-list-cycle-foundation",
+    "title": "链表环检测：从指针移动到相遇证明",
+    "description": "先掌握单链表 next 指针，再用快慢指针的相对速度证明有环时必然相遇。",
+    "posts": [
+      "reverse-linked-list",
+      "linked-list-cycle"
+    ]
+  },
+  {
+    "id": "two-pointer-symmetry-to-boundary",
+    "title": "对向双指针：从对称比较到边界贡献",
+    "description": "先用两端比较建立对向指针直觉，再理解左右边界如何决定逐列蓄水量。",
+    "posts": [
+      "valid-palindrome",
+      "trapping-rain-water"
+    ]
+  },
+  {
+    "id": "sliding-window-budget-to-cover",
+    "title": "滑动窗口：从预算约束到最小覆盖",
+    "description": "先用最高频字符与替换预算判断窗口可行，再用 deficit 计数解决带重复字符的最小覆盖。",
+    "posts": [
+      "longest-repeating-character-replacement",
+      "minimum-window-substring"
+    ]
   }
 ]

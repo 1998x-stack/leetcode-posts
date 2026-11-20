@@ -8,7 +8,7 @@
 
 > GitHub Pages 需要在仓库 Settings → Pages 设置为 **GitHub Actions** 来源。合并到 main 后自动构建；在 Actions 完成前不要宣称网站已部署。
 
-## 已发布的 17 道题解
+## 已发布的 27 道题解
 
 | 题目 | 专题 | 核心模式 |
 |---|---|---|
@@ -30,6 +30,16 @@
 | [#322 零钱兑换](posts/dynamic-programming/coin-change/index.html) | 动态规划 | 最优子结构与一维状态转移 |
 | [#739 每日温度](posts/monotonic-stack/daily-temperatures/index.html) | 单调栈 | 等待中的下一个更高元素 |
 | [#146 LRU 缓存](posts/data-structures/lru-cache/index.html) | 数据结构设计 | 哈希表与双向链表协同维护 |
+| [#242 有效的字母异位词](posts/arrays-hashing/valid-anagram/index.html) | 数组与哈希表 | 固定频次向量判定 |
+| [#49 字母异位词分组](posts/arrays-hashing/group-anagrams/index.html) | 数组与哈希表 | 规范化频次签名 |
+| [#347 前 K 个高频元素](posts/data-structures/top-k-frequent-elements/index.html) | 数据结构设计 | 频次表与最小堆 |
+| [#20 有效的括号](posts/data-structures/valid-parentheses/index.html) | 数据结构设计 | 栈与嵌套匹配 |
+| [#206 反转链表](posts/data-structures/reverse-linked-list/index.html) | 数据结构设计 | 原地指针重连 |
+| [#141 环形链表](posts/data-structures/linked-list-cycle/index.html) | 数据结构设计 | Floyd 快慢指针 |
+| [#125 验证回文串](posts/two-pointer/valid-palindrome/index.html) | 双指针 | 过滤后的对称比较 |
+| [#42 接雨水](posts/two-pointer/trapping-rain-water/index.html) | 双指针 | 左右最大边界与逐列蓄水 |
+| [#424 替换后的最长重复字符](posts/sliding-window/longest-repeating-character-replacement/index.html) | 滑动窗口 | 替换预算与频次约束 |
+| [#76 最小覆盖子串](posts/sliding-window/minimum-window-substring/index.html) | 滑动窗口 | deficit 缺口计数与最短覆盖 |
 
 每篇文章独立提供 3 幅机制相关 SVG、可键盘操作的状态演示、Python 解法和测试；题面采用原创摘要并链接官方来源。
 
