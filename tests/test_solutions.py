@@ -240,7 +240,7 @@ def test_registry_and_original_svg_covers():
     facets = json.loads((ROOT / "content/facets.json").read_text())
     domain_ids = {domain["slug"] for domain in domains}
     registered = {c["slug"]: {t["slug"] for t in c["topics"]} for c in cats}
-    assert len(posts) == 17
+    assert len(posts) == 22
     assert sorted(p["status"] for p in posts) == ["published"] * 17
     assert len({p["cover"]["caption"] for p in posts}) == 17
     allowed = {field: {item["slug"] for item in facets[field]}
