@@ -66,5 +66,16 @@ jobs:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     steps:
+      - name: Enable GitHub Pages for first deployment
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          if gh api "repos/${GITHUB_REPOSITORY}/pages" >/dev/null 2>&1; then
+            echo 'GitHub Pages already enabled.'
+          else
+            echo 'Attempting to enable Pages with GitHub Actions as source.'
+            gh api --method POST "repos/${GITHUB_REPOSITORY}/pages" -H "Accept: application/vnd.github+json" -f build_type=workflow
+          fi
+      - uses: actions/configure-pages@v5
       - uses: actions/deploy-pages@v4
         id: deployment

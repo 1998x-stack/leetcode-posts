@@ -103,7 +103,7 @@ def html_page(*,title,description,canonical,body,depth=0,active='home',lang='zh-
 <header class="site-header"><div class="container header-row"><a class="wordmark" href="{rel}" aria-label="xm.posts 首页">leetcode<span>.</span>posts</a>
 <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav" data-menu-toggle><span aria-hidden="true">☰</span><span class="menu-label">菜单</span></button><nav id="site-nav" class="top-nav" aria-label="主导航"><a {'aria-current="page"' if active=='home' else ''} href="{rel}">首页</a><a {'aria-current="page"' if active=='topics' else ''} href="{rel}topics/">知识地图</a><a href="{rel}#categories">算法专题</a><a href="{rel}#reading-paths">学习路径</a><a href="{rel}#discover">文章索引</a><a {'aria-current="page"' if active=='archive' else ''} href="{rel}archive/">归档</a><a href="https://github.com/1998x-stack/leetcode-posts" target="_blank" rel="noopener noreferrer">GitHub ↗</a></nav></div></header>
 <main id="main">{body}</main>
-<footer class="site-footer"><div class="container footer-main"><div><a class="wordmark" href="{rel}">leetcode<span>.</span>posts</a><p>从问题出发，经由图示、数学与实验，真正理解算法。</p></div><div><p class="footer-label">EXPLORE</p><a href="{rel}archive/">所有文章</a><a href="{rel}feed.xml">RSS 订阅</a><a href="https://github.com/1998x-stack/leetcode-posts">源代码</a></div></div><div class="container legal"><span>© leetcode-posts · Independent technical notes</span><span>Read deeply. Build carefully.</span></div></footer>
+<footer class="site-footer"><div class="container footer-main"><div><a class="wordmark" href="{rel}">leetcode<span>.</span>posts</a><p>从问题出发，经由图示、不变量与测试理解算法。</p></div><div><p class="footer-label">EXPLORE</p><a href="{rel}archive/">所有文章</a><a href="{rel}feed.xml">RSS 订阅</a><a href="https://github.com/1998x-stack/leetcode-posts">源代码</a></div></div><div class="container legal"><span>© leetcode-posts · Independent technical notes</span><span>Read deeply. Build carefully.</span></div></footer>
 </body></html>'''
 
 
@@ -300,7 +300,7 @@ def build_home(categories,posts,base):
     </section>
     <section class="closing"><div class="container"><div class="eyebrow">AN OPEN, TRACEABLE NOTEBOOK</div>
       <h2>理解算法，需要能解释为何正确。</h2>
-      <p>文章连接LeetCode 原题、数学推导与代码验证。想按知识体系检索？前往知识地图；想了解内容生产方式？阅读仓库规范。</p>
+      <p>每篇题解连接官方原题、算法不变量、正确性推理与 Python 验证。按专题阅读可前往知识地图。</p>
       <div class="closing-actions"><a href="topics/">探索知识地图 ↗</a><a href="https://github.com/1998x-stack/leetcode-posts">查看算法解析仓库 ↗</a></div>
     </div></section>'''
     return html_page(title='leetcode-posts · LeetCode 算法可视化题解',description='LeetCode 中等难度可视化题解，覆盖双指针、滑动窗口、回溯与图遍历，包含正确性证明、Python 解法与交互示例。',canonical=base,body=body)
@@ -393,7 +393,7 @@ def build_archive(posts,categories,base,page=1):
     last=first+len(current)-1 if current else 0
     pager=archive_pagination(page,pages,rel)
     body=f'''<div class="container archive-page"><div class="breadcrumb"><a href="{rel}">首页</a> <span>/</span> <a href="{rel}archive/">文章归档</a>{f' <span>/</span> 第 {page} 页' if page>1 else ''}</div><div class="eyebrow muted">ALL EXPLAINERS · CHRONOLOGICAL</div><h1>算法解析归档<span class="count">{len(published):02d}</span></h1><p class="category-description">按发布时间浏览全部正式发布的文章。每页仅显示 {ARCHIVE_PAGE_SIZE} 篇，保留各自的 SVG 机制缩略图。</p><p class="archive-range">第 {page} / {pages} 页 · 显示 {first}–{last} / {len(published)} 篇</p><ol class="timeline">{cards}</ol>{pager}</div>'''
-    return html_page(title=f'文章归档{" · 第 "+str(page)+" 页" if page>1 else ""} · leetcode-posts',description='按时间浏览 leetcode-posts 深度学习题目图解文章。',canonical=url_join(base,archive_page_url(page)),body=body,depth=1 if page==1 else 3,active='archive')
+    return html_page(title=f'文章归档{" · 第 "+str(page)+" 页" if page>1 else ""} · leetcode-posts',description='按时间浏览 leetcode-posts 的可视化算法题解。',canonical=url_join(base,archive_page_url(page)),body=body,depth=1 if page==1 else 3,active='archive')
 
 
 def write(out:Path,path:str,content:str):
