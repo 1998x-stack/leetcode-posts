@@ -1,0 +1,37 @@
+{
+  "problem": {
+    "number": 33,
+    "title": "Search in Rotated Sorted Array",
+    "difficulty": "Medium",
+    "url": "https://leetcode.com/problems/search-in-rotated-sorted-array/",
+    "verified_on": "2026-11-20"
+  },
+  "claims": [
+    {
+      "kind": "derived",
+      "claim": "若目标存在，它始终位于闭区间 [left,right]。旋转数组只有一个下降断点，所以以 mid 分割后至少一侧有序；判断 target 是否落在有序半区的值域内，就能安全丢弃另一半。",
+      "validated_by": [
+        "solution.py",
+        "tests/test_solutions.py"
+      ]
+    },
+    {
+      "kind": "derived",
+      "claim": "初始化区间覆盖全数组。每轮至少有一侧有序；其端点确定该侧的完整值域。若 target 不在值域内，该侧不可能含目标，可以安全丢弃；否则保留该侧。区间每轮至少减半，最终命中目标或变空。",
+      "validated_by": [
+        "Correctness review and differential tests"
+      ]
+    }
+  ],
+  "complexity": "时间 O(log n)，额外空间 O(1)。",
+  "implementation": {
+    "language": "Python 3",
+    "input_mutation": "none",
+    "reference_method": "exhaustive rotations vs linear search"
+  },
+  "visuals": {
+    "cover.svg": "旋转断点把数组分成两段有序区间，每轮保留目标可能所在的一段",
+    "trace.svg": "若 nums[left] <= nums[mid]，左半边有序：当 nums[left] <= target < nums[mid] 时保留左边，否则丢弃左边。否则右半边有序：当 nums[mid] < target <= nums[right] 时保留右边，否则丢弃右边。",
+    "pitfall.svg": "题目保证无重复值，因此 nums[left] <= nums[mid] 足以识别左半边有序。不要把边界写成 target > nums[left]，因为目标可能等于左端点；正确判断是 nums[left] <= target < nums[mid]。"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "problem": {
+    "number": 102,
+    "title": "Binary Tree Level Order Traversal",
+    "difficulty": "Medium",
+    "url": "https://leetcode.com/problems/binary-tree-level-order-traversal/",
+    "verified_on": "2026-11-20"
+  },
+  "claims": [
+    {
+      "kind": "derived",
+      "claim": "开始处理某层时，队列恰好是这一层从左到右的所有节点。先保存当前队列长度 level_size，再恰好弹出这么多个节点；它们的孩子只会进入下一层。",
+      "validated_by": [
+        "solution.py",
+        "tests/test_solutions.py"
+      ]
+    },
+    {
+      "kind": "derived",
+      "claim": "根节点深度为 0。FIFO 保证浅层节点先于其孩子出队。每轮固定 level_size 后，新加入的下一层节点不会在本轮被处理，因此本轮恰好收集同一深度，并保持从左到右顺序。每个节点只入队、出队一次。",
+      "validated_by": [
+        "Correctness review and differential tests"
+      ]
+    }
+  ],
+  "complexity": "设 n 为节点总数、w 为最大层宽。时间 O(n)，辅助队列 O(w)，返回的二维数组另占 O(n)。",
+  "implementation": {
+    "language": "Python 3",
+    "input_mutation": "none",
+    "reference_method": "DFS grouping by depth"
+  },
+  "visuals": {
+    "cover.svg": "队列按深度先进先出，固定每轮队列长度就能分清树的每一层",
+    "trace.svg": "使用 deque。每轮先读取 level_size，固定次数弹出节点、记录值，并按左孩子再右孩子的顺序把孩子加入队尾。当前层完成后，将 level_values 放入结果。",
+    "pitfall.svg": "不要在当前层处理中动态地以 while queue 非空作为本层条件，否则新加入的孩子也会被立即处理，层级会混在一起。必须冻结 level_size。使用 deque.popleft()，不要反复 list.pop(0)。"
+  }
+}
