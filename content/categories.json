@@ -86,5 +86,68 @@
       }
     ],
     "domain": "graphs-grids"
+  },
+  {
+    "slug": "arrays-hashing",
+    "title": "数组与哈希表",
+    "english": "Arrays & Hashing",
+    "description": "从连续存储、索引访问和哈希映射出发，掌握快速查找、集合判重与前后缀累计。",
+    "topics": [
+      {
+        "slug": "hash-lookup",
+        "title": "哈希查找与补数映射"
+      },
+      {
+        "slug": "set-membership",
+        "title": "集合判重与成员查询"
+      },
+      {
+        "slug": "prefix-suffix",
+        "title": "前后缀累计与空间优化"
+      }
+    ],
+    "domain": "linear-data-structures"
+  },
+  {
+    "slug": "binary-search",
+    "title": "二分查找",
+    "english": "Binary Search",
+    "description": "利用有序性或单调性不断排除一半候选，重点建立区间定义、循环不变量与边界语义。",
+    "topics": [
+      {
+        "slug": "exact-search",
+        "title": "精确查找与区间收缩"
+      },
+      {
+        "slug": "boundary-search",
+        "title": "边界查找与重复值范围"
+      },
+      {
+        "slug": "rotated-array",
+        "title": "旋转有序数组"
+      }
+    ],
+    "domain": "linear-patterns"
+  },
+  {
+    "slug": "binary-tree",
+    "title": "二叉树",
+    "english": "Binary Trees",
+    "description": "从节点与边的递归结构出发，理解 DFS、BFS、递归返回值、后序汇总与树上路径。",
+    "topics": [
+      {
+        "slug": "recursive-depth",
+        "title": "递归定义与树高"
+      },
+      {
+        "slug": "level-order",
+        "title": "层序遍历与队列分层"
+      },
+      {
+        "slug": "postorder-aggregation",
+        "title": "后序遍历与子树信息汇总"
+      }
+    ],
+    "domain": "trees-recursion"
   }
 ]

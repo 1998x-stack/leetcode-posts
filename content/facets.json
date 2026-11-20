@@ -25,6 +25,30 @@
     {
       "slug": "recursion-state",
       "title": "递归状态"
+    },
+    {
+      "slug": "set",
+      "title": "集合"
+    },
+    {
+      "slug": "prefix-products",
+      "title": "前后缀累计状态"
+    },
+    {
+      "slug": "sorted-array",
+      "title": "有序数组"
+    },
+    {
+      "slug": "binary-tree",
+      "title": "二叉树"
+    },
+    {
+      "slug": "tree-node",
+      "title": "树节点"
+    },
+    {
+      "slug": "queue",
+      "title": "队列"
     }
   ],
   "techniques": [
@@ -63,6 +87,42 @@
     {
       "slug": "flood-fill",
       "title": "洪水填充"
+    },
+    {
+      "slug": "hash-lookup",
+      "title": "哈希查找"
+    },
+    {
+      "slug": "set-membership",
+      "title": "集合成员查询"
+    },
+    {
+      "slug": "prefix-suffix",
+      "title": "前后缀累计"
+    },
+    {
+      "slug": "binary-search",
+      "title": "二分查找"
+    },
+    {
+      "slug": "lower-bound",
+      "title": "下界查找"
+    },
+    {
+      "slug": "upper-bound",
+      "title": "上界查找"
+    },
+    {
+      "slug": "recursive-dfs",
+      "title": "递归深度优先搜索"
+    },
+    {
+      "slug": "breadth-first-search",
+      "title": "广度优先搜索"
+    },
+    {
+      "slug": "postorder-traversal",
+      "title": "后序遍历"
     }
   ],
   "problem_shapes": [
@@ -85,6 +145,42 @@
     {
       "slug": "connected-component-count",
       "title": "连通分量计数"
+    },
+    {
+      "slug": "pair-sum",
+      "title": "两数配对"
+    },
+    {
+      "slug": "duplicate-detection",
+      "title": "重复元素检测"
+    },
+    {
+      "slug": "product-except-self",
+      "title": "除自身以外的乘积"
+    },
+    {
+      "slug": "exact-target-search",
+      "title": "有序数组精确查找"
+    },
+    {
+      "slug": "first-last-position",
+      "title": "目标值首末位置"
+    },
+    {
+      "slug": "rotated-array-search",
+      "title": "旋转数组查找"
+    },
+    {
+      "slug": "tree-height",
+      "title": "二叉树高度"
+    },
+    {
+      "slug": "level-order-groups",
+      "title": "逐层分组遍历"
+    },
+    {
+      "slug": "tree-diameter",
+      "title": "二叉树直径"
     }
   ],
   "reasoning": [
@@ -127,6 +223,54 @@
     {
       "slug": "graph-modeling",
       "title": "图建模"
+    },
+    {
+      "slug": "complement-invariant",
+      "title": "补数查找不变量"
+    },
+    {
+      "slug": "check-before-insert",
+      "title": "先查找再写入"
+    },
+    {
+      "slug": "set-prefix-invariant",
+      "title": "集合覆盖已扫描前缀"
+    },
+    {
+      "slug": "prefix-suffix-exclusion",
+      "title": "左右乘积排除当前元素"
+    },
+    {
+      "slug": "sorted-half-elimination",
+      "title": "有序半区排除"
+    },
+    {
+      "slug": "closed-interval-invariant",
+      "title": "闭区间候选不变量"
+    },
+    {
+      "slug": "half-open-boundary-invariant",
+      "title": "半开区间边界不变量"
+    },
+    {
+      "slug": "unique-half-invariant",
+      "title": "唯一值下的有序半区"
+    },
+    {
+      "slug": "empty-tree-base-case",
+      "title": "空树递归基例"
+    },
+    {
+      "slug": "level-boundary-snapshot",
+      "title": "固定当前层队列边界"
+    },
+    {
+      "slug": "postorder-dependency",
+      "title": "子树结果先于父节点"
+    },
+    {
+      "slug": "diameter-through-lca",
+      "title": "路径最高点分解"
     }
   ],
   "prerequisites": [
@@ -157,6 +301,34 @@
     {
       "slug": "dfs-basics",
       "title": "DFS 基础"
+    },
+    {
+      "slug": "array-traversal-basics",
+      "title": "数组遍历基础"
+    },
+    {
+      "slug": "hash-set-basics",
+      "title": "哈希集合基础"
+    },
+    {
+      "slug": "prefix-product-basics",
+      "title": "前后缀累计基础"
+    },
+    {
+      "slug": "sorted-array-basics",
+      "title": "有序数组基础"
+    },
+    {
+      "slug": "binary-search-basics",
+      "title": "二分区间基础"
+    },
+    {
+      "slug": "tree-recursion-basics",
+      "title": "树递归基础"
+    },
+    {
+      "slug": "queue-basics",
+      "title": "队列基础"
     }
   ],
   "learning_stages": [
