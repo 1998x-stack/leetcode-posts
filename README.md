@@ -20,11 +20,17 @@
 
 所有文章都独立提供 3 幅原创 SVG、可交互的步骤演示、Python 解法和测试，题面采用原创摘要并链接官方来源。
 
+## 分类体系
+
+采用 L0 学习阶段、L1 知识领域、L2 算法专题、L3 问题模式、L4 具体题目的纵向结构，并通过数据结构、技巧、问题形态、证明方法和前置知识建立横向关联。详见 [分类设计](docs/taxonomy.md)、[领域注册表](content/domains.json) 与 [横向标签词表](content/facets.json)。
+
 ## 架构
 
 ```text
-content/categories.json              # 分类与二级算法模式
-content/posts.json                   # 发布清单，draft 不输出
+content/domains.json                 # L1 知识领域与未来专题路线图
+content/categories.json              # 当前启用的 L2 专题与 L3 问题模式
+content/facets.json                  # 横向知识关系的受控词表
+content/posts.json                   # 发布清单、唯一主归属与多维 facets，draft 不输出
 content/reading_paths.json           # 专题学习路径
 posts/<category>/<slug>/index.html   # 图解文章
 posts/<category>/<slug>/assets/*.svg # 自绘机制图
