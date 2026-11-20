@@ -1,0 +1,1 @@
+Adapted from https://github.com/1998x-stack/xm-posts/tree/main/skills/olah-style-paper-posts. Generic SVG/CSS/browser QA implementation is migrated. Paper extraction is replaced by LeetCode problem verification, proof invariants, complexity analysis and tested solutions.
