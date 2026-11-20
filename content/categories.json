@@ -35,7 +35,7 @@
     "slug": "backtracking",
     "title": "回溯与搜索",
     "english": "Backtracking & Search",
-    "description": "把决策树拆成选择、递归、撤销，观察搜索空间和剪枝条件。",
+    "description": "把决策树拆成选择、递归、撤销，观察搜索空间和访问状态。",
     "topics": [
       {
         "slug": "permutations",
@@ -60,6 +60,66 @@
       {
         "slug": "shortest-path",
         "title": "最短路径"
+      }
+    ]
+  },
+  {
+    "slug": "binary-search",
+    "title": "二分查找",
+    "english": "Binary Search",
+    "description": "利用有序区间或单调判定，每轮安全排除一部分候选。",
+    "topics": [
+      {
+        "slug": "rotated-array",
+        "title": "旋转数组搜索"
+      }
+    ]
+  },
+  {
+    "slug": "dynamic-programming",
+    "title": "动态规划",
+    "english": "Dynamic Programming",
+    "description": "定义子问题状态与转移，让重叠子问题只计算一次。",
+    "topics": [
+      {
+        "slug": "unbounded-knapsack",
+        "title": "完全背包与零钱兑换"
+      }
+    ]
+  },
+  {
+    "slug": "monotonic-stack",
+    "title": "单调栈",
+    "english": "Monotonic Stack",
+    "description": "维护尚未解决的元素，在新元素到来时批量完成查询。",
+    "topics": [
+      {
+        "slug": "next-warmer-day",
+        "title": "下一个更大元素"
+      }
+    ]
+  },
+  {
+    "slug": "trees",
+    "title": "树与遍历",
+    "english": "Trees & Traversal",
+    "description": "围绕父子关系、深度和层级组织 DFS 与 BFS。",
+    "topics": [
+      {
+        "slug": "level-order-bfs",
+        "title": "层序遍历"
+      }
+    ]
+  },
+  {
+    "slug": "data-structures",
+    "title": "数据结构设计",
+    "english": "Data Structure Design",
+    "description": "组合多个基础结构，维护跨操作的一致性与复杂度约束。",
+    "topics": [
+      {
+        "slug": "lru-cache",
+        "title": "LRU 缓存"
       }
     ]
   }

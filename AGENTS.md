@@ -1,31 +1,39 @@
 # AGENTS.md — leetcode-posts
 
-适用于所有编辑、文章、技能、CI 和部署变更。算法正确性与可复现性优先于视觉效果。
+算法正确性、可复现性与教学清晰度优先于视觉效果。所有新增或修改必须遵循 Skill v2：skills/olah-style-leetcode-posts/SKILL.md。
 
-## 目标和来源
-- 面向大学生、研究生和面试学习者，解释 **为什么算法正确**，不止提供通过样例的代码。
-- 分类和稳定专题: `content/categories.json`；文章状态、封面和原题链接: `content/posts.json`。
-- 文章源码: `posts/<category>/<slug>/index.html`；独立 SVG: 同目录 `assets/*.svg`；证据: `evidence.json`；Python 参考实现: `solution.py`。
-- 站点生成: `scripts/build_site.py`；GitHub Pages: `.github/workflows/publish.yml`；不要提交 `_site/`。
-- Skill 正本: `skills/olah-style-leetcode-posts/`；必须同步 `.claude/`、`.pi/`、`.agent/`、`.opencode/` 的镜像。
+## Canonical architecture
+- Category/topic registry: content/categories.json
+- Published/draft manifest: content/posts.json
+- Curated learning routes: content/reading_paths.json
+- Article source: posts/<category>/<slug>/index.html
+- Three unique SVGs: posts/<category>/<slug>/assets/{cover,trace,pitfall}.svg
+- Python implementation: solution.py; provenance/proof ledger: evidence.json
+- Skill canonical: skills/olah-style-leetcode-posts; mirrors: .claude, .pi, .agent, .opencode
+- Static site builder: scripts/build_site.py; do not commit _site or .pdf-cache.
 
-## 解题文章质量门禁
-1. **题目事实**：核对 LeetCode 编号、官方难度、输入输出、关键约束；不得整段复制受版权保护的题面，用原创中文复述并链接原题。
-2. **循序渐进**：用真实样例手推朴素思路，再解释优化、状态定义和循环不变量；给反例与边界条件。
-3. **复杂度与证明**：讲清时间和空间复杂度计算所依赖的假设；不能将递归栈、结果集、排序额外空间略去。
-4. **SVG**：每篇至少三幅与算法机制相关的独立原创 SVG，专属封面、不同状态与错误示范，不得统一占位。提供 viewBox、title、可读文字和准确图注。
-5. **可交互**：用可键盘操作的逐步执行演示。页面无 JS 时应仍能阅读正确的静态图解。
-6. **代码**：Python 标准库实现、可运行单测；包含空输入、重复项与题目允许的边界，不报告未执行的测试为通过。
-7. **可用性**：每篇一个 H1、语义化 section/figure、响应式/打印/减少动画支持；检查手机 360/390px、桌面和页面溢出。
-8. **出版**：仅 `status: published` 出现在首页、归档、搜索、RSS；封面来自文章自身 SVG，封面说明独特；PR 验证，合并 main 后部署 Pages，再检查线上 URL。
+## Required article contract
+1. Verify exact problem number/title/difficulty/API/constraints on canonical LeetCode. Paraphrase; never copy the complete statement or editorial.
+2. Write a problem brief before HTML: baseline, pattern preconditions, state/invariant or recurrence, initialization, transition, termination, correctness proof and counterexample.
+3. The proof must match the implementation. Explain completeness/soundness and why each candidate can be discarded or retained.
+4. Audit time, auxiliary space, queue/stack/recursion, output space, input copy and mutation separately. Distinguish expected hash-table operations.
+5. Provide three distinct original SVGs: mechanism cover, worked trace and pitfall/counterexample. All labels and arrows must match code/test states.
+6. Provide a meaningful static default plus keyboard-accessible stepper; no autoplay; aria-live; visible focus; no-JS remains readable.
+7. Python solution uses standard library and the expected LeetCode interface. Add boundary, adversarial and differential tests where feasible.
+8. Evidence ledger separates official facts, derived proofs and locally executed checks. Do not invent acceptance rate, ranking or benchmark claims.
+9. Mobile/desktop/print/offline QA must cover 1440, 768, 390 and 360 widths. Skips are not passes.
+10. Keep taxonomy, unique cover captions, related reading paths and all five Skill mirrors in sync.
 
-## 新增题解
+## Release commands
 ```bash
-python scripts/new_post.py sliding-window example-problem --topic variable-window --title '题目标题' --subtitle '一句话目标' --problem-url https://leetcode.com/problems/example-problem/
 python scripts/sync_skills.py --check
+python -m pytest -q
+python scripts/audit_svg.py
 python scripts/build_site.py
 python scripts/validate_site.py
-python -m pytest -q
+python scripts/browser_check_all.py --workers 2
+python scripts/render_pdfs.py
+python scripts/validate_site.py --require-pdfs
 ```
 
-不要只复制经典题解代码。**必须**说明「不变量 → 指针/递归转移 → 何时结束 → 为什么不漏/不重」。
+New articles start as draft. Publish only after code, proof, tests, visuals and browser QA agree. PR first; merge only after required CI passes. Verify actual Pages deployment separately from a successful build.
