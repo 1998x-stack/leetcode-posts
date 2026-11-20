@@ -116,12 +116,24 @@ def test_islands_against_reference():
 def test_registry_and_original_svg_covers():
     cats = json.loads((ROOT / "content/categories.json").read_text())
     posts = json.loads((ROOT / "content/posts.json").read_text())
+    domains = json.loads((ROOT / "content/domains.json").read_text())
+    facets = json.loads((ROOT / "content/facets.json").read_text())
+    domain_ids = {domain["slug"] for domain in domains}
     registered = {c["slug"]: {t["slug"] for t in c["topics"]} for c in cats}
     assert len(posts) == 5
     assert sorted(p["status"] for p in posts) == ["published"] * 5
     assert len({p["cover"]["caption"] for p in posts}) == 5
+    allowed = {field: {item["slug"] for item in facets[field]}
+               for field in ("structures", "techniques", "problem_shapes", "reasoning", "prerequisites")}
+    stages = {item["slug"] for item in facets["learning_stages"]}
+    for category in cats:
+        assert category["domain"] in domain_ids
     for post in posts:
         assert post["topic"] in registered[post["category"]]
+        assert set(post["facets"]) == set(allowed) | {"learning_stage"}
+        for field, values in allowed.items():
+            assert set(post["facets"][field]) <= values
+        assert post["facets"]["learning_stage"] in stages
         folder = ROOT / "posts" / post["category"] / post["slug"]
         assert (folder / post["cover"]["src"]).is_file()
         assert len(list((folder / "assets").glob("*.svg"))) >= 3
