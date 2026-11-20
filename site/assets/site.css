@@ -462,7 +462,7 @@
 .taxonomy-domain-heading h2{font-size:clamp(25px,3vw,34px);line-height:1.35;letter-spacing:-.045em;margin:7px 0 0}
 .taxonomy-domain-heading>span{font-size:11px;color:#81928a;white-space:nowrap;padding-bottom:7px}
 .taxonomy-domain-description{max-width:800px;color:#71847d;font-size:13px;line-height:1.85;margin:12px 0 22px}
-.taxonomy-active-families{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.taxonomy-active-families{display:grid;grid-template-columns:repeat(auto-fit,minmax(320px,1fr));gap:14px}
 .taxonomy-family{min-width:0;border:1px solid #dfe8e1;background:#fffefa;border-radius:7px;padding:19px 20px}
 .taxonomy-family-heading{display:flex;align-items:baseline;justify-content:space-between;gap:12px}
 .taxonomy-family-heading h3{font-size:18px;margin:0;line-height:1.45}
