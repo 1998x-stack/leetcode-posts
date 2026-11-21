@@ -1,0 +1,17 @@
+{
+  "problem": {
+    "number": 424,
+    "title": "Longest Repeating Character Replacement",
+    "difficulty": "Medium",
+    "url": "https://leetcode.com/problems/longest-repeating-character-replacement/",
+    "facts": [
+      "At most k replacements may be made.",
+      "The string contains uppercase English letters.",
+      "Return the maximum achievable repeated-character substring length."
+    ]
+  },
+  "derived": [
+    "For a window, the minimum replacements equal window length minus its maximum character frequency.",
+    "With exact recomputation over 26 letters, time O(26n)=O(n) and auxiliary space O(1)."
+  ]
+}

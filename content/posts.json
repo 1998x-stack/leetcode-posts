@@ -761,5 +761,450 @@
       ],
       "learning_stage": "advanced"
     }
+  },
+  {
+    "slug": "valid-anagram",
+    "problem_number": 242,
+    "title": "LeetCode 242 · 有效的字母异位词",
+    "subtitle": "把两个单词变成同一张频次表：顺序不同，字符数量必须完全一致。",
+    "category": "arrays-hashing",
+    "topic": "hash-lookup",
+    "reading_minutes": 10,
+    "tags": [
+      "Easy",
+      "String",
+      "Frequency Count",
+      "Hashing"
+    ],
+    "summary": "用固定 26 位频次向量比较两个小写字符串，解释为什么字符顺序无关、重复次数必须相同，并用 O(n) 扫描与 O(1) 辅助空间完成判定。",
+    "problem_url": "https://leetcode.com/problems/valid-anagram/",
+    "illustration": "valid-anagram",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "两组字符频次逐项抵消，所有计数归零时才是异位词。"
+    },
+    "facets": {
+      "structures": [
+        "string",
+        "array"
+      ],
+      "techniques": [
+        "frequency-counting"
+      ],
+      "problem_shapes": [
+        "anagram-equivalence"
+      ],
+      "reasoning": [
+        "frequency-vector-equality"
+      ],
+      "prerequisites": [
+        "array-indexing"
+      ],
+      "learning_stage": "foundation"
+    },
+    "status": "published",
+    "published": "2026-11-20",
+    "updated": "2026-11-20"
+  },
+  {
+    "slug": "group-anagrams",
+    "problem_number": 49,
+    "title": "LeetCode 49 · 字母异位词分组",
+    "subtitle": "为每个单词生成规范化签名：签名相同，就进入同一个桶。",
+    "category": "arrays-hashing",
+    "topic": "hash-lookup",
+    "reading_minutes": 14,
+    "tags": [
+      "Medium",
+      "String",
+      "Hash Map",
+      "Frequency Signature"
+    ],
+    "summary": "将每个单词编码为 26 位字符频次签名，再用哈希表把相同签名的单词聚合，理解规范化键、分组不变量与 O(L+k) 时间界。",
+    "problem_url": "https://leetcode.com/problems/group-anagrams/",
+    "illustration": "group-anagrams",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "相同字符频次签名把不同排列映射到同一个分组桶。"
+    },
+    "facets": {
+      "structures": [
+        "string",
+        "array",
+        "hash-map"
+      ],
+      "techniques": [
+        "frequency-counting",
+        "canonical-signature"
+      ],
+      "problem_shapes": [
+        "group-by-signature"
+      ],
+      "reasoning": [
+        "canonical-key-equivalence"
+      ],
+      "prerequisites": [
+        "array-indexing",
+        "hash-map-basics"
+      ],
+      "learning_stage": "core"
+    },
+    "status": "published",
+    "published": "2026-11-20",
+    "updated": "2026-11-20"
+  },
+  {
+    "slug": "top-k-frequent-elements",
+    "problem_number": 347,
+    "title": "LeetCode 347 · 前 K 个高频元素",
+    "subtitle": "先统计频次，再用容量为 k 的最小堆保留最强候选。",
+    "category": "data-structures",
+    "topic": "heap-top-k",
+    "reading_minutes": 15,
+    "tags": [
+      "Medium",
+      "Hash Map",
+      "Heap",
+      "Top K"
+    ],
+    "summary": "先用哈希表统计不同元素的频次，再用容量为 k 的最小堆维护当前 Top-K，逐步解释堆顶淘汰、正确性不变量与 O(n+u log k) 复杂度。",
+    "problem_url": "https://leetcode.com/problems/top-k-frequent-elements/",
+    "illustration": "top-k-frequent-elements",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "频次表提供候选权重，容量 k 的最小堆保留最高频元素。"
+    },
+    "facets": {
+      "structures": [
+        "array",
+        "hash-map",
+        "heap"
+      ],
+      "techniques": [
+        "frequency-counting",
+        "heap-top-k"
+      ],
+      "problem_shapes": [
+        "top-k-frequency"
+      ],
+      "reasoning": [
+        "heap-boundary-invariant"
+      ],
+      "prerequisites": [
+        "hash-map-basics",
+        "heap-basics"
+      ],
+      "learning_stage": "core"
+    },
+    "status": "published",
+    "published": "2026-11-20",
+    "updated": "2026-11-20"
+  },
+  {
+    "slug": "valid-parentheses",
+    "problem_number": 20,
+    "title": "LeetCode 20 · 有效的括号",
+    "subtitle": "栈顶必须是最近一个尚未闭合的左括号：嵌套结构天然遵循后进先出。",
+    "category": "data-structures",
+    "topic": "stack-matching",
+    "reading_minutes": 10,
+    "tags": [
+      "Easy",
+      "Stack",
+      "String",
+      "Matching"
+    ],
+    "summary": "用栈保存尚未匹配的左括号，检查每个右括号是否关闭最近打开的同类型括号，解释前缀不变量、([)] 反例与 O(n) 时间复杂度。",
+    "problem_url": "https://leetcode.com/problems/valid-parentheses/",
+    "illustration": "valid-parentheses",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "栈顶保存最近打开的括号，只有同类型右括号才能将其闭合。"
+    },
+    "facets": {
+      "structures": [
+        "string",
+        "stack"
+      ],
+      "techniques": [
+        "stack-matching"
+      ],
+      "problem_shapes": [
+        "bracket-validation"
+      ],
+      "reasoning": [
+        "stack-prefix-validity"
+      ],
+      "prerequisites": [
+        "stack-basics"
+      ],
+      "learning_stage": "foundation"
+    },
+    "status": "published",
+    "published": "2026-11-20",
+    "updated": "2026-11-20"
+  },
+  {
+    "slug": "reverse-linked-list",
+    "problem_number": 206,
+    "title": "LeetCode 206 · 反转链表",
+    "subtitle": "用 prev、curr、next 三个引用：先保存后继，再把当前指针反向连接。",
+    "category": "data-structures",
+    "topic": "linked-list-reversal",
+    "reading_minutes": 12,
+    "tags": [
+      "Easy",
+      "Linked List",
+      "Pointers",
+      "In-place"
+    ],
+    "summary": "通过 prev、curr、next 三个引用逐个反转单链表的 next 指针，展示已反转与未处理部分的不变量，解释 O(n) 时间、O(1) 辅助空间及指针丢失陷阱。",
+    "problem_url": "https://leetcode.com/problems/reverse-linked-list/",
+    "illustration": "reverse-linked-list",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "先保存后继节点，再逐条反转 next 链接并扩展已反转前缀。"
+    },
+    "facets": {
+      "structures": [
+        "linked-list"
+      ],
+      "techniques": [
+        "pointer-reversal"
+      ],
+      "problem_shapes": [
+        "linked-list-reversal"
+      ],
+      "reasoning": [
+        "pointer-separation-invariant"
+      ],
+      "prerequisites": [
+        "linked-list-basics"
+      ],
+      "learning_stage": "foundation"
+    },
+    "status": "published",
+    "published": "2026-11-20",
+    "updated": "2026-11-20"
+  },
+  {
+    "slug": "linked-list-cycle",
+    "title": "LeetCode 141 · 环形链表",
+    "subtitle": "快慢指针与模环长相对速度证明环检测",
+    "category": "data-structures",
+    "topic": "fast-slow-pointers",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 12,
+    "tags": [
+      "Easy",
+      "Linked List",
+      "Fast & Slow Pointers",
+      "Cycle Detection"
+    ],
+    "summary": "用 Floyd 快慢指针判断 next 链是否回访节点，解释环内相对距离、节点身份比较与 O(1) 辅助空间。",
+    "problem_url": "https://leetcode.com/problems/linked-list-cycle/",
+    "illustration": "linked-list-cycle",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "快指针每轮走两步，慢指针每轮走一步；进入环后相对位置按模环长变化，最终相遇。"
+    },
+    "facets": {
+      "structures": [
+        "linked-list"
+      ],
+      "techniques": [
+        "fast-slow-pointers"
+      ],
+      "problem_shapes": [
+        "cycle-detection"
+      ],
+      "reasoning": [
+        "tortoise-hare-relative-speed"
+      ],
+      "prerequisites": [
+        "linked-list-basics"
+      ],
+      "learning_stage": "foundation"
+    }
+  },
+  {
+    "slug": "valid-palindrome",
+    "title": "LeetCode 125 · 验证回文串",
+    "subtitle": "过滤非字母数字字符后，从两端验证对称性",
+    "category": "two-pointer",
+    "topic": "opposite-direction",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 11,
+    "tags": [
+      "Easy",
+      "String",
+      "Two Pointers",
+      "Normalization"
+    ],
+    "summary": "先过滤非字母数字字符并统一大小写，再用对向双指针比较有效字符，达到 O(n) 时间与 O(1) 辅助空间。",
+    "problem_url": "https://leetcode.com/problems/valid-palindrome/",
+    "illustration": "valid-palindrome",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "跳过标点与空格，比较两端归一化字符；每次相等后向中心收缩。"
+    },
+    "facets": {
+      "structures": [
+        "string"
+      ],
+      "techniques": [
+        "two-pointers",
+        "character-normalization"
+      ],
+      "problem_shapes": [
+        "normalized-palindrome"
+      ],
+      "reasoning": [
+        "symmetric-comparison-after-filtering"
+      ],
+      "prerequisites": [
+        "two-pointer-basics"
+      ],
+      "learning_stage": "foundation"
+    }
+  },
+  {
+    "slug": "trapping-rain-water",
+    "title": "LeetCode 42 · 接雨水",
+    "subtitle": "左右历史最大边界决定每列水位",
+    "category": "two-pointer",
+    "topic": "boundary-maxima",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 17,
+    "tags": [
+      "Hard",
+      "Array",
+      "Two Pointers",
+      "Prefix Maximum"
+    ],
+    "summary": "用左右双指针和运行最大边界逐列累计雨水，解释较低端点的可确定贡献与 O(n) 时间、O(1) 空间。",
+    "problem_url": "https://leetcode.com/problems/trapping-rain-water/",
+    "illustration": "trapping-rain-water",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "每列水量由左右最高边界的较小者决定；处理当前较低端点即可安全累计。"
+    },
+    "facets": {
+      "structures": [
+        "array"
+      ],
+      "techniques": [
+        "two-pointers",
+        "boundary-maxima"
+      ],
+      "problem_shapes": [
+        "water-volume-between-boundaries"
+      ],
+      "reasoning": [
+        "smaller-boundary-determines-water"
+      ],
+      "prerequisites": [
+        "array-traversal-basics",
+        "two-pointer-basics"
+      ],
+      "learning_stage": "advanced"
+    }
+  },
+  {
+    "slug": "longest-repeating-character-replacement",
+    "title": "LeetCode 424 · 替换后的最长重复字符",
+    "subtitle": "窗口长度减最高频字符数就是最少替换预算",
+    "category": "sliding-window",
+    "topic": "replacement-budget-window",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 16,
+    "tags": [
+      "Medium",
+      "Sliding Window",
+      "String",
+      "Frequency Counting"
+    ],
+    "summary": "维护 26 个字母频次，使用窗口长度减最高频数判断替换预算，解释精确频次不变量与线性复杂度。",
+    "problem_url": "https://leetcode.com/problems/longest-repeating-character-replacement/",
+    "illustration": "longest-repeating-character-replacement",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "窗口内最少替换次数等于窗口长度减最高频字符数；超过 k 时收缩左边界。"
+    },
+    "facets": {
+      "structures": [
+        "string",
+        "array"
+      ],
+      "techniques": [
+        "sliding-window",
+        "frequency-counting"
+      ],
+      "problem_shapes": [
+        "longest-window-with-replacement-budget"
+      ],
+      "reasoning": [
+        "window-repair-budget"
+      ],
+      "prerequisites": [
+        "array-traversal-basics",
+        "sliding-window-basics"
+      ],
+      "learning_stage": "core"
+    }
+  },
+  {
+    "slug": "minimum-window-substring",
+    "title": "LeetCode 76 · 最小覆盖子串",
+    "subtitle": "用 deficit 计数处理重复字符的最小覆盖窗口",
+    "category": "sliding-window",
+    "topic": "minimum-cover-window",
+    "status": "published",
+    "published": "2026-11-21",
+    "updated": "2026-11-21",
+    "reading_minutes": 18,
+    "tags": [
+      "Hard",
+      "Sliding Window",
+      "Hash Map",
+      "Frequency Deficit"
+    ],
+    "summary": "用 need 频次缺口和 missing 计数维护目标多重集合覆盖状态，在 O(m+n) 期望时间内寻找最短覆盖子串。",
+    "problem_url": "https://leetcode.com/problems/minimum-window-substring/",
+    "illustration": "minimum-window-substring",
+    "cover": {
+      "src": "assets/cover.svg",
+      "caption": "need[c] 表示当前窗口还缺多少个字符 c；missing 为零当且仅当目标字符及重复次数全部覆盖。"
+    },
+    "facets": {
+      "structures": [
+        "string",
+        "hash-map"
+      ],
+      "techniques": [
+        "sliding-window",
+        "frequency-counting",
+        "deficit-counting"
+      ],
+      "problem_shapes": [
+        "minimum-covering-window"
+      ],
+      "reasoning": [
+        "coverage-deficit-invariant"
+      ],
+      "prerequisites": [
+        "hash-map-basics",
+        "sliding-window-basics"
+      ],
+      "learning_stage": "advanced"
+    }
   }
 ]

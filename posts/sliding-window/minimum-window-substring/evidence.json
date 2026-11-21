@@ -1,0 +1,18 @@
+{
+  "problem": {
+    "number": 76,
+    "title": "Minimum Window Substring",
+    "difficulty": "Hard",
+    "url": "https://leetcode.com/problems/minimum-window-substring/",
+    "facts": [
+      "Every character in t, including duplicates, must appear in the selected window.",
+      "Return the shortest covering substring or an empty string.",
+      "s and t contain uppercase and lowercase English letters."
+    ]
+  },
+  "derived": [
+    "need[c] tracks the remaining multiplicity deficit for character c.",
+    "missing equals the total number of required characters still missing; missing == 0 iff the window covers t.",
+    "Expected time O(|s|+|t|), auxiliary space O(distinct characters in t)."
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "problem": {
+    "number": 242,
+    "title": "Valid Anagram",
+    "difficulty": "Easy",
+    "url": "https://leetcode.com/problems/valid-anagram/",
+    "source": "Official LeetCode problem page; original Chinese explanation and proof.",
+    "facts": [
+      "Determine whether t is an anagram of s.",
+      "The inputs contain lowercase English letters.",
+      "The same character multiplicities are required; order is irrelevant."
+    ]
+  },
+  "claims": [
+    {
+      "type": "derived",
+      "claim": "A 26-slot difference vector is zero exactly when both strings have identical lowercase-letter frequencies.",
+      "validation": "Frequency-count proof and implementation; deterministic tests."
+    },
+    {
+      "type": "derived",
+      "claim": "Time O(n), auxiliary space O(1) under the fixed lowercase-English alphabet.",
+      "validation": "Two linear scans and a fixed-size 26-element array."
+    }
+  ]
+}

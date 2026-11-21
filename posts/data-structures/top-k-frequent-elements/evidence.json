@@ -1,0 +1,26 @@
+{
+  "problem": {
+    "number": 347,
+    "title": "Top K Frequent Elements",
+    "difficulty": "Medium",
+    "url": "https://leetcode.com/problems/top-k-frequent-elements/",
+    "source": "Official LeetCode problem page; original Chinese explanation and proof.",
+    "facts": [
+      "Return the k most frequent elements.",
+      "The answer can be returned in any order.",
+      "The problem guarantees the answer is unique."
+    ]
+  },
+  "claims": [
+    {
+      "type": "derived",
+      "claim": "A size-k min-heap keeps the k largest frequencies among the values processed so far.",
+      "validation": "Inductive heap invariant and heap push/pop implementation."
+    },
+    {
+      "type": "derived",
+      "claim": "Time O(n + u log k), auxiliary space O(u + k), where u is the number of distinct values.",
+      "validation": "Counter frequency scan and at most one push/pop pair per distinct value."
+    }
+  ]
+}
